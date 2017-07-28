@@ -4,7 +4,7 @@
    * [Displaying Dynamic Text](https://github.com/ajhenley/unofficialguides/blob/master/thymeleaf/02_Displaying_Dynamic_Text.md)
    * [Displaying External Text](https://github.com/ajhenley/unofficialguides/blob/master/thymeleaf/03_DisplayingExternalText.md)
    * [Displaying Unescaped Text](https://github.com/ajhenley/unofficialguides/blob/master/thymeleaf/04_DisplayingUnescapedText.md)
-   * Displaying Link Urls
+   * [Displaying Link Urls](05_DisplayingLinkURLsWithThymeleaf.md)
    * Displaying Appended Text
    * Displaying Substituted Text
    * Displaying Conditional Expression
