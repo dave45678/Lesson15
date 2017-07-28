@@ -5,9 +5,9 @@
    * [Displaying External Text](03_DisplayingExternalText.md)
    * [Displaying Unescaped Text](04_DisplayingUnescapedText.md)
    * [Displaying Link Urls](05_DisplayingLinkURLsWithThymeleaf.md)
-   * Displaying Appended Text
-   * Displaying Substituted Text
-   * Displaying Conditional Expression
+   * [Displaying Appended Text](06_DisplayingAppendedText.md)
+   * [Displaying Substituted Text](07_DisplayingSubstitutedText.md)
+   * [Displaying Conditional Expression](08_DisplayingConditionalText.md)
 3. Using Forms with Thymeleaf
    * Setting up forms
    * Using Text Inputs
