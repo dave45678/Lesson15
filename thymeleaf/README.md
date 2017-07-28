@@ -20,6 +20,21 @@
 4. Advanced Thymeleaf
    * Iteration
    * Selection - if statements
-   * Creating a Fragment - external
-   * Creating a Fragment - internal
+   * Using Fragments - external
+   * Using Fragments - internal
+   * Parameterized Fragments
+   * Formatting Text - Dates, Calendars & Numbers
+   * Parameterized External Text
+   * Working with Thymeleaf Extras for Spring Security
+5. Working with Bootstrap Controls
+   * Text Input
+   * Checkbox
+   * Radio Buttons
+   * Navbars
+   * Breadcrumbs
+   * progress bars
+   * modals
+   * dismissable alert
+   * accordion
+   * carousel
    
