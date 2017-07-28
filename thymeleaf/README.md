@@ -6,5 +6,20 @@
    * Displaying Unescaped Text
    * Displaying Link Urls
    * Displaying Appended Text
-   * Displaying Conditional Expressions
-   * 
+   * Displaying Substituted Text
+   * Displaying Conditional Expression
+3. Using Forms with Thymeleaf
+   * Setting up forms
+   * Using Text Inputs
+   * Using Checkboxes
+   * Using Radio Buttons
+   * Using Select
+   * Using Multiselect
+   * Using Form Validation - inline
+   * Using Form Validation - summary
+4. Advanced Thymeleaf
+   * Iteration
+   * Selection - if statements
+   * Creating a Fragment - external
+   * Creating a Fragment - internal
+   
