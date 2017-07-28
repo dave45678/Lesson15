@@ -1,9 +1,9 @@
 # Thymeleaf Guide for Spring Boot
 1. Introduction
 2. Basic of Using Thymeleaf
-   * Displaying Dynamic Text
-   * Displaying External Text
-   * Displaying Unescaped Text
+   * [Displaying Dynamic Text](https://github.com/ajhenley/unofficialguides/blob/master/thymeleaf/02_Displaying_Dynamic_Text.md)
+   * [Displaying External Text](https://github.com/ajhenley/unofficialguides/blob/master/thymeleaf/03_DisplayingExternalText.md)
+   * [Displaying Unescaped Text](https://github.com/ajhenley/unofficialguides/blob/master/thymeleaf/04_DisplayingUnescapedText.md)
    * Displaying Link Urls
    * Displaying Appended Text
    * Displaying Substituted Text
