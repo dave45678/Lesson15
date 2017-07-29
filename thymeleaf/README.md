@@ -6,7 +6,7 @@
    * [Displaying Unescaped Text](04_DisplayingUnescapedText.md)
    * [Displaying Link Urls](05_DisplayingLinkURLsWithThymeleaf.md)
    * [Building Complex Text](06_DisplayingComplexText.md)
-   * [Displaying Conditional Expression](08_DisplayingConditionalText.md)
+   * [Conditionally Displaying Text](07_DisplayingConditionalText.md)
 3. Using Forms with Thymeleaf
    * Setting up forms
    * Using Text Inputs
