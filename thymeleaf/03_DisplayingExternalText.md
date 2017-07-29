@@ -24,7 +24,7 @@ public class HomeController
 }
 ```
 
-2. Create a template called message.html by right-clicking  on the template folder and make it look like this:
+3. Create a template called message.html by right-clicking  on the template folder and make it look like this:
 
 ```html
 <!DOCTYPE html>
