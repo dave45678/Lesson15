@@ -10,7 +10,7 @@ In this exercise, you will see how to use thymeleaf to display a controller vari
 @Controller
 public class HomeContrller
 {
-  RequestMapping("/thymeleaf")
+  @RequestMapping("/thymeleaf")
   public String showThymeleaf(Model model){
     model.addAttribute("message", "Hello World, this is thymeleaf!");
     return "hello";
