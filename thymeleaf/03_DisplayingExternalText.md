@@ -4,15 +4,15 @@ In this exercise, you will see how to use thymeleaf to display a static block of
 
 ## What you should do
 
-1. Add a file called messages.properties, that looks like this:
-
+### 1. Add a file called messages.properties, that looks like this:
 ```
 hello.header=Welcome!
 hello.content=Click here to advance to the next page
 greeting.header=Hello on a second page!
 greeting.content=Click here to go back
 ```
-2. Create a controller called HomeController.java that looks like this:
+
+### 2. Create a controller called HomeController.java that looks like this:
 ```java
 @Controller
 public class HomeController
@@ -24,8 +24,7 @@ public class HomeController
 }
 ```
 
-3. Create a template called message.html by right-clicking  on the template folder and make it look like this:
-
+### 3. Create a template called message.html by right-clicking  on the template folder and make it look like this:
 ```html
 <!DOCTYPE html>
 <html xmlns:th="www.thymeleaf.org">
