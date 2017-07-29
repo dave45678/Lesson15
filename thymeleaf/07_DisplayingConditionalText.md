@@ -1,6 +1,6 @@
-# Displaying Complex Text with Thymeleaf
+# Displaying Conditional Text with Thymeleaf
 
-In this exercise, you will see how to use thymeleaf to concatenate text in your template.
+In this exercise, you will see how to use thymeleaf to display text in your template based on a condition.
 
 ## What you should do
 
@@ -9,11 +9,16 @@ In this exercise, you will see how to use thymeleaf to concatenate text in your 
 @Controller
 public class HomeContrller
 {
-    @RequestMapping("/concat")
-    public String showConcatenation(Model model){
-        model.addAttribute("fname", "AJ");
-        model.addAttribute("lname", "Henley");
-        return "concat";
+    @RequestMapping("/hasvalue")
+    public String hasValue(Model model){
+        model.addAttribute("isAdmin", true);
+        model.addAttribute("username", "ajhenley");
+        return "conditional";
+    }
+
+    @RequestMapping("/hasnovalue")
+    public String hasNoValue(){
+        return "conditional";
     }
 }
 ```
