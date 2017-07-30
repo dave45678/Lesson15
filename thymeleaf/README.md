@@ -8,8 +8,8 @@
    * [Building Complex Text](06_DisplayingComplexText.md)
    * [Conditionally Displaying Text](07_DisplayingConditionalText.md)
 3. Using Forms with Thymeleaf
-   * [Basic Form with Text Inputs](08_BasicForms.md)
-   * Using Checkboxes
+   * [Basic Form with Text Inputs](08_BasicForm.md)
+   * [Using Checkboxes](09_Checkboxes.md)
    * Using Radio Buttons
    * Using Select
    * Using Multiselect
