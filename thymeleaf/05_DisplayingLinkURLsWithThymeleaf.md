@@ -29,12 +29,14 @@ public class HomeContrller
     <body>
         <a href="showproduct.html" th:href="@{/product/3}">Show Product</a><br />
         <a href="showproduct.html" th:href="@{/product/{productid}(productid=${id})}">Show Product</a><br />
-        <a href="showproduct.html" th:href="@{/product/{productid}/{category}(productid=${id},category=${category})}">Show Product</a>
+        <a href="showproduct.html" 
+        th:href="@{/product/{productid}/{category}(productid=${id},category=${category})}">Show Product</a>
     </body>
 </html>
 ```
 
-If it is done properly, when you run your application, you will be able to navigate to localhost:8080/thymeleaf and see this:
+If it is done properly, when you run your application, you will be able to navigate to localhost:8080/thymeleaf 
+and see this:
 
 This is because the template will render into this html:
 
