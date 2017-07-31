@@ -77,7 +77,8 @@ This is because the template will render into this html:
     Hourly Rate: <input type="number" id="hourlyrate" name="hourlyrate" value="0" /><br />
     <div>
         <label for="available1">Available for Assignment</label>
-        <input type="checkbox" id="available1" name="available" value="true" /><input type="hidden" name="_available" value="on" />
+        <input type="checkbox" id="available1" name="available" value="true" />
+        <input type="hidden" name="_available" value="on" />
     </div>
   </form>
 </body>
