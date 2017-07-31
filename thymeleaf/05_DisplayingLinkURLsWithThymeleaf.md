@@ -28,9 +28,11 @@ public class HomeContrller
     </head>
     <body>
         <a href="showproduct.html" th:href="@{/product/3}">Show Product</a><br />
-        <a href="showproduct.html" th:href="@{/product/{productid}(productid=${id})}">Show Product</a><br />
+        <a href="showproduct.html" th:href="@{/product/{productid}(productid=${id})}">
+            Show Product</a><br />
         <a href="showproduct.html" 
-        th:href="@{/product/{productid}/{category}(productid=${id},category=${category})}">Show Product</a>
+        th:href="@{/product/{productid}/{category}(productid=${id},category=${category})}">
+            Show Product</a>
     </body>
 </html>
 ```
