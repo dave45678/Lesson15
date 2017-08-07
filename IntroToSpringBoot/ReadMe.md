@@ -4,7 +4,7 @@
 3. [Hello World with External Variables](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson03.md)  
 4. [Handling form values – the hard way](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson04.md)   
 5. [Creating a java bean](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson05.md)   
-6. Catching form values – route to plain page 
+6. Handling form values – the easy way 
 7. Form Validation 
 8. Persisting to the Database 
 9. Looping through list with Thymeleaf in Spring Boot 
