@@ -3,7 +3,7 @@
 2. [Hello World with Template with variable](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson02.md)
 3. [Hello World with External Variables](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson03.md)  
 4. [Handling form values – the hard way](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson04.md)   
-5. Creating a java bean 
+5. [Creating a java bean](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson05.md)   
 6. Catching form values – route to plain page 
 7. Form Validation 
 8. Persisting to the Database 
