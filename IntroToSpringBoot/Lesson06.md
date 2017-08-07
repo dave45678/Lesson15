@@ -113,17 +113,17 @@ This specifies that a model attribute of type Song which will be referred to as 
 
 ### In the View (HTML Templates) 
 
-songform.html 
+**songform.html** 
 A form is being created to accept values from the user. Since you are accepting values from the user, when he/she clicks the submit button (the HTML element with input type=“submit”), then the form values will be sent via a POST request to “/songform”. This will access the processSongForm method. 
-th:action indicates what sould happen when the submit button is pressed. It uses a URL expression to indicate the route the user will be directed to in the controller. 
+**th:action** indicates what sould happen when the submit button is pressed. It uses a URL expression to indicate the route the user will be directed to in the controller. 
 
-th:object indicates that the form’s values will be saved in the object called “song”, which was passed from the controller. 
+**th:object** indicates that the form’s values will be saved in the object called “song”, which was passed from the controller. 
 
-th:field indicates that the value that is entered into an element corresponds to the value of the Song object referred to as song in the html template. When the form is posted, that value will be posted to the corresponding variable in the controller, and can also be accessed with getter methods if necessary. When the form is posted, the setters for song are called, so that the variable values can be assigned to the object. For example, song.setName() will be called to set the value of the name that the user entered into the input with attribute th:field=“*{name}”.
+**th:field** indicates that the value that is entered into an element corresponds to the value of the Song object referred to as song in the html template. When the form is posted, that value will be posted to the corresponding variable in the controller, and can also be accessed with getter methods if necessary. When the form is posted, the setters for song are called, so that the variable values can be assigned to the object. For example, song.setName() will be called to set the value of the name that the user entered into the input with attribute th:field=“*{name}”.
 The input types show components that are best suited for capturing the selected type of information. For example, the number type will show a component that is best suited for increasing and decreasing integer values, while a text input will allow users to enter string values. 
 *{} is a Thymeleaf selection expression that refers to a previously defined object, and indicates that all fields that are being referred to are from that object. In this case, the name, artist, album, rating and year fields all belong to the Song object called ‘song’ in the songform.html template. 
 
-confirmsong.html
+**confirmsong.html**
 When the user entered values into songform.html, and the Song object was populated with the values, it was passed to the processSongForm method as part of a post request. The Song object was then passed to confirmsong.html, and is still accessible as “song”. This means that song's values can be accessed in confirmsong.html. 
 The getter and setter methods you created are used to read and modify the values of the Song object. For example, [[${song.name}]] calls the value of song.getName(), and displays it in the html field. Make sure you create getters and setters for each field, otherwise you will not be able to set or access values for the objects you create. 
 
