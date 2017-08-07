@@ -48,52 +48,17 @@ Run your application and open a browser, if you type in the URL http://localhost
 ![Running your 2nd Spring Boot Application](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson02.png "Running your 2nd Spring Boot Application")
 
 ## What is Going On
-Lines 1 and 2 of HomeController.java import the classes into your project that make the @Controller 
-and @RequestMapping annotations work.  
+In the homePage method that maps out the application’s default route, some data is being added.  
 
-The @Controller annotation tells the compiler that there is a list of routes in this file that the user 
-of the application can browse to within the HomeController class. By using this annotation, we have made 
-the HomeController like a phone directory or reference list for our application, where all the routes 
-are mapped out.  
+A Model object named model is being passed as an argument to the homePage method. This is a container that can hold any objects that you put in it. Think of it as a container that is passed between the controller and the view so that they can share objects.  
 
-@RequestMapping indicates what route or end point the user will visit. The method underneath the 
-@RequestMapping annotation is run each time that route is called.  
-In this case, the default route is the only route that is mapped out.  
+The objects that the model holds are called attributes. This is why you add attributes to the model, using the model.addAttributes method. The arguments passed are the name you want the object to have (this is what your templates will call that object), and the actual object you want to make available.   
 
-When a user browses to http://localhost:8080 (or the default route on the port that has been set 
-for the application if 8080 is not in use), then the application will return a template (html file) 
-called hometemplate.html from the templates folder. The extension is left out because the application 
-assumes the extension, and appends it to the filename at runtime.  
+In the above example, a string of value “Say hello to the people” is being passed to the model, and it is named “myvar”. This is why “myvar" is being used in the template, and it displays the value that was assigned to it from the HomeController.  
+The ${} in the template indicates that a variable is expected, and its value should be displayed. This is a Thymeleaf variable expression.  
 
-### What’s a Route?  
-Think of this as a part of your application that that can be mapped out so that when you type an address 
-in the browser, the application can visit it.  
+You are using this variable expression to tell the template that text should be displayed within the paragraph tag, and that text should be the value of the object called myvar.  
 
-The default route is mapped out using (“/”). This means that when you visit http://localhost:8080 or 
-http://localhost:8080/ when the application is running, the application will run the code in the method 
-under the @RequestMapping annotation for the default route.  
-@RequestMapping maps out both GET and POST requests. 
+There is also static text in the HTML file - this is the Hello World text within the level 2 heading tags. It doesn't change at runtime. The user will see both types of text when the hometemplate file is displayed.
 
-The easiest way to think about GET and POST requests is that you use GET requests in your application 
-when the user is getting information from the server. It results in a response that he user can see - 
-e.g. browsing to a page. A user can type parameters in the URL to provide additional information, 
-e.g. his/her name, and those will provide extra information to the application that it can use to 
-show the user more information based on those parameters. Since the parameters in the URL are visible 
-to the user, make sure that you use GET requests for parameters that are not sensitive 
-(e.g. NO PASSWORDS!!) 
-
-You will use POST requests for all routes that are posting or sending information to the server. If a 
-user enters details in a form, use a POST request so that when the user clicks the “Submit” button, the 
-details will be sent to the server and will be hidden from view (i.e. they will not be in the URL).  
-For more about GET and POST requests, see these articles:  
-* http://www.diffen.com/difference/GET-vs-POST-HTTP-Requests 
-* https://www.w3schools.com/tags/ref_httpmethods.asp 
-
-By default, @RequestMapping maps to a GET request. 
-
-### What’s a template?  
-A template is a blueprint for a dynamic page. This is a page that can change based on the user’s interaction with the application. A template is different from a static page because what you will see can change depending on the user who is logged in, and the data that the user requests. A template is what allows you to greet a user based on the time of day, or a name that he/she enters. A static page cannot do this, because it will always be the same.  
-
-Templating engines (like Thymeleaf) are used to show data that is passed from the application, which may changed depending on the user’s interaction with the application. Thymeleaf templates have  expressions in it that accept contextual information at runtime -  when the application is running.
-
-[Github Repository](https://github.com/ajhenley/SpringBoot_01)
+[Github Repository](https://github.com/ajhenley/SpringBoot_02)
