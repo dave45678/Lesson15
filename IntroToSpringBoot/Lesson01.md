@@ -42,7 +42,7 @@ public class HomeController {
 ```
 
 Run your application and open a browser, if you type in the URL http://localhost:8080 you should see this: 
-![Running your first Spring Boot Application](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson01.png "Running your first Spring Boot Application")
+![Running your first Spring Boot Application](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/img/Lesson01.png "Running your first Spring Boot Application")
 
 ## What is Going On
 Lines 1 and 2 of HomeController.java import the classes into your project that make the @Controller 
