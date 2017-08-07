@@ -45,7 +45,7 @@ public class HomeController {
 ```
 
 Run your application and open a browser, if you type in the URL http://localhost:8080 you should see this: 
-![Running your 2nd Spring Boot Application](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson02.png "Running your 2nd Spring Boot Application")
+![Running your 2nd Spring Boot Application](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/img/Lesson02.png "Running your 2nd Spring Boot Application")
 
 ## What is Going On
 In the homePage method that maps out the application’s default route, some data is being added.  
