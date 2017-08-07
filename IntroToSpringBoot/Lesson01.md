@@ -83,8 +83,8 @@ You will use POST requests for all routes that are posting or sending informatio
 user enters details in a form, use a POST request so that when the user clicks the “Submit” button, the 
 details will be sent to the server and will be hidden from view (i.e. they will not be in the URL).  
 For more about GET and POST requests, see these articles:  
-http://www.diffen.com/difference/GET-vs-POST-HTTP-Requests 
-https://www.w3schools.com/tags/ref_httpmethods.asp 
+* http://www.diffen.com/difference/GET-vs-POST-HTTP-Requests 
+* https://www.w3schools.com/tags/ref_httpmethods.asp 
 By default, @RequestMapping maps to a GET request. 
 
 ### What’s a template?  
