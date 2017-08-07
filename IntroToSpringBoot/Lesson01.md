@@ -28,7 +28,7 @@ public class HomeController {
   * Right click on templates and click New -> Html 
 	* Name it hometemplate.html 
 	* Edit it to look like this: 
-```java
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
