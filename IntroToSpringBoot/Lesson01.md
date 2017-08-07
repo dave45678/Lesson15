@@ -42,4 +42,4 @@ public class HomeController {
 ```
 
 Run your application and open a browser, if you type in the url localhost:8080 you should see this: 
-![alt text]()
+![Running your first Spring Boot Application](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson01.png "Running your first Spring Boot Application")
