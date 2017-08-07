@@ -62,7 +62,7 @@ for the application if 8080 is not in use), then the application will return a t
 called hometemplate.html from the templates folder. The extension is left out because the application 
 assumes the extension, and appends it to the filename at runtime.  
 
-###What’s a Route?  
+### What’s a Route?  
 Think of this as a part of your application that that can be mapped out so that when you type an address 
 in the browser, the application can visit it.  
 
@@ -87,7 +87,7 @@ http://www.diffen.com/difference/GET-vs-POST-HTTP-Requests
 https://www.w3schools.com/tags/ref_httpmethods.asp 
 By default, @RequestMapping maps to a GET request. 
 
-###What’s a template?  
+### What’s a template?  
 A template is a blueprint for a dynamic page. This is a page that can change based on the user’s 
 interaction with the application. A template is different from a static page because what you will 
 see can change depending on the user who is logged in, and the data that the user requests. A template 
