@@ -1,4 +1,4 @@
-# Lesson 2 - Hello World with External Variables 
+# Lesson 3 - Hello World with External Variables 
 ## The Walkthrough 
 
 1. Create a Spring Boot Application 
