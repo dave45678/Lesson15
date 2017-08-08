@@ -15,6 +15,12 @@
 14. Running in Debug Mode 
 15. Live Edit 
 16. Creating Queries by Method Name 
-17. Adding Security to Spring Boot 
-18. Custom Error Pages 
-19. Deploying to Heroku
+17. Security - Basic Security
+18. Security - Adding a Custom Login Page
+19. Security - Specific Permissions
+20. Security - Using Database based Authentication
+21. Security - Adding User Registration
+22. Security - Encrypting Passwords
+23. Security - Automatically adding accounts to database when the Application Loads
+23. Custom Error Pages 
+24. Deploying to Heroku
