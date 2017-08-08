@@ -17,7 +17,7 @@
 16. Creating Queries by Method Name 
 17. [Security - Basic Security](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson17.md) 
 18. [Security - Adding a Custom Login Page](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson18.md) 
-19. Security - Specific Permissions
+19. [Security - Specific Permissions](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson19.md)
 20. Security - Using Database based Authentication
 21. Security - Adding User Registration
 22. Security - Encrypting Passwords
