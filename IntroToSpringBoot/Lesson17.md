@@ -75,7 +75,7 @@ public class HomeController {
 ![Login Error](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/img/Lesson17b.png "Login Error")
 
 8. Add Manual User Accounts
-  * Edit your SecurityConfiguration.java and add the following method:
+	* Edit your SecurityConfiguration.java and add the following method:
 ```java
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
