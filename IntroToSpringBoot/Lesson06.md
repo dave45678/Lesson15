@@ -33,13 +33,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HomeController {
-    @RequestMapping("/songform")
+
+    @GetMapping("/songform")
     public String loadFormPage(Model model){
         model.addAttribute("song', new Song());
         return "songform";
     }
 
-    @RequestMapping("/songform")
+    @PostMapping("/songform")
     public String loadFromPage(@ModelAttribute Song song){
         return "confirmsong";
     }
