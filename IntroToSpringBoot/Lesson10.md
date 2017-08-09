@@ -83,13 +83,13 @@ public class HomeController {
     CourseRepository courseRepository;
 
     @RequestMapping("/")
-    public String listJobs(Model model){
+    public String listCourses(Model model){
         model.addAttribute("courses", courseRepository.findAll());
         return "list";
     }
 
     @GetMapping("/add")
-    public String jobForm(Model model){
+    public String courseForm(Model model){
         model.addAttribute("course", new Course());
         return "courseform";
     }
@@ -104,7 +104,7 @@ public class HomeController {
     }
 
     @RequestMapping("/detail/{id}")
-    public String showJob(@PathVariable("id") long id, Model model){
+    public String showCourse(@PathVariable("id") long id, Model model){
         model.addAttribute("course", courseRepository.findOne(id));
         return "show";
     }
@@ -116,7 +116,7 @@ public class HomeController {
     }
 
     @RequestMapping("/delete/{id}")
-    public String delJob(@PathVariable("id") long id){
+    public String delCourse(@PathVariable("id") long id){
         courseRepository.delete(id);
         return "redirect:/";
     }
@@ -142,7 +142,7 @@ public class HomeController {
       <input type="hidden" th:field="*{id}" />
     Title :<input type="text" th:field="*{title}" />
     <span th:if="${#fields.hasErrors('title')}"
-          th:errors="*{name}"></span><br />
+          th:errors="*{title}"></span><br />
     Instructor :<input type="text" th:field="*{instructor}" />
     <span th:if="${#fields.hasErrors('instructor')}"
           th:errors="*{instructor}"></span><br />
@@ -184,6 +184,7 @@ public class HomeController {
         <td th:text="${course.instructor}"></td>
         <td th:text="${course.credit}"></td>
         <td>
+            <a th:href="@{/update/{id}(id=${course.id})}">Update</a> -
             <a th:href="@{/detail/{id}(id=${course.id})}">Details</a> -
             <a th:href="@{/delete/{id}(id=${course.id})}">Delete</a>
         </td>
