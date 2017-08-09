@@ -9,7 +9,7 @@
 8. [Persisting to the Database](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson08.md)  
 9. [Looping through list with Thymeleaf in Spring Boot](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson09.md) 
 10. [Complete data life cycle – form, list, detail, delete](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson10.md) 
-11. Adding bootstrap to spring boot 
+11. [Adding Twitter Bootstrap to Spring Boot](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson11.md) 
 12. Uploading images to Spring Boot with Cloudinary 
 13. Using Session Variables in Spring Boot 
 14. Running in Debug Mode 
