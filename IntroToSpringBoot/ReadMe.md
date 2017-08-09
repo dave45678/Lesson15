@@ -6,7 +6,7 @@
 5. [Creating a java bean](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson05.md)   
 6. [Handling form values – the easy way](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson06.md)
 7. [Form Validation](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson07.md) 
-8. Persisting to the Database 
+8. [Persisting to the Database](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson08.md)  
 9. Looping through list with Thymeleaf in Spring Boot 
 10. Complete data life cycle – form, list, detail, delete 
 11. Adding bootstrap to spring boot 
