@@ -139,6 +139,7 @@ public class HomeController {
       th:action="@{/process}"
       th:object="${course}"
       method="post">
+      <input type="hidden" th:field="*{id}" />
     Title :<input type="text" th:field="*{title}" />
     <span th:if="${#fields.hasErrors('title')}"
           th:errors="*{name}"></span><br />
