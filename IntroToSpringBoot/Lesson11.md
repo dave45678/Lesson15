@@ -26,7 +26,7 @@ public class HomeController {
 
 3. Create a Template 
   	* Right click on templates and click New -> Html 
-	* Name it hometemplate.html 
+	* Name it index.html 
 	* Edit it to look like this: 
 ```html
 <!DOCTYPE html>
