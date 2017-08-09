@@ -21,11 +21,6 @@ public class HomeController {
     public String index(){
         return "index";
     }
-    
-    @RequestMapping("/page2")
-    public String page2(){
-        return "page2";
-    }
 }
 ```
 
