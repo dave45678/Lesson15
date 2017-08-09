@@ -155,10 +155,10 @@ public class HomeController {
 ```
 
 7. Run your application and open a browser, if you type in the URL http://localhost:8080/add you should see this: 
-![Adding a job](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/img/Lesson19a.png "Adding a job")
+![Adding a job](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/img/Lesson09a.png "Adding a job")
 
 8. If you enter values and submit the form, it will show you a list of all the jobs added so far. So, you should see a page that looks like this:  
-![List of Jobs](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/img/Lesson19b.png "List of Jobs")
+![List of Jobs](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/img/Lesson09b.png "List of Jobs")
 
 
 ## What is Going On
