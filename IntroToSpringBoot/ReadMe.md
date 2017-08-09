@@ -7,7 +7,7 @@
 6. [Handling form values – the easy way](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson06.md)
 7. [Form Validation](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson07.md) 
 8. [Persisting to the Database](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson08.md)  
-9. Looping through list with Thymeleaf in Spring Boot 
+9. [Looping through list with Thymeleaf in Spring Boot](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson17.md) 
 10. Complete data life cycle – form, list, detail, delete 
 11. Adding bootstrap to spring boot 
 12. Uploading images to Spring Boot with Cloudinary 
