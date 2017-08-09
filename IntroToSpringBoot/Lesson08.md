@@ -8,7 +8,7 @@
 
 2. Create a Class 
 	* Right click on com.example.demo and click New -> Class 
-	* Name it Tvshow.java 
+	* Name it Person.java 
 	* Edit it to look like this: 
 ```java
 package com.example.demo;
