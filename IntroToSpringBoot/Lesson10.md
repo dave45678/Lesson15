@@ -109,6 +109,12 @@ public class HomeController {
         return "show";
     }
 
+    @RequestMapping("/update/{id}")
+    public String updateCourse(@PathVariable("id") long id, Model model){
+        model.addAttribute("course", courseRepository.findOne(id));
+        return "courseform";
+    }
+
     @RequestMapping("/delete/{id}")
     public String delJob(@PathVariable("id") long id){
         courseRepository.delete(id);
