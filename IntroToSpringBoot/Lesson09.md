@@ -2,7 +2,7 @@
 ## The Walkthrough 
 
 1. Create a Spring Boot Application 
-	* Name it SpringBoot_07 
+	* Name it SpringBoot_09 
 	* Add the dependencies for web, thymeleaf, jpa and h2 
 	* Hit next until you finish the wizard, and then wait until it's done.    
 
