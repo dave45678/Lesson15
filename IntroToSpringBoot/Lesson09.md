@@ -110,25 +110,22 @@ public class HomeController {
     <title>Title</title>
 </head>
 <body>
-    <form action="#" 
-          th:action="@{/tvform}" 
-          th:object="${tvshow}" 
-          method="post">
-        Id :<input type="number" th:field="*{id}" />
-        <span th:if="${#fields.hasErrors('id')}" 
-              th:errors="*{id}"></span><br />
-        Name :<input type="text" th:field="*{name}" />
-        <span th:if="${#fields.hasErrors('name')}" 
-              th:errors="*{name}"></span><br />
-        Type :<input type="text" th:field="*{type}" />
-        <span th:if="${#fields.hasErrors('type')}" 
-              th:errors="*{type}"></span><br />
-        Description :<textarea rows="3" th:field="*{description}" />
-        <span th:if="${#fields.hasErrors('description')}"
-              th:errors="*{description}"></span>
-        <br />
-        <input type="submit" value="Submit" />
-    </form>
+<form action="#"
+      th:action="@{/process}"
+      th:object="${job}"
+      method="post">
+    Title :<input type="text" th:field="*{title}" />
+    <span th:if="${#fields.hasErrors('title')}"
+          th:errors="*{name}"></span><br />
+    Employer :<input type="text" th:field="*{employer}" />
+    <span th:if="${#fields.hasErrors('employer')}"
+          th:errors="*{type}"></span><br />
+    Description :<textarea rows="3" th:field="*{description}" />
+    <span th:if="${#fields.hasErrors('description')}"
+          th:errors="*{description}"></span>
+    <br />
+    <input type="submit" value="Submit" />
+</form>
 </body>
 </html>
 ```
