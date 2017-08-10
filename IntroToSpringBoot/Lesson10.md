@@ -237,13 +237,17 @@ spring.jpa.hibernate.ddl-auto=create
 
 ## What is Going On
 
-Congratulations on your first 'full' application! You can now add data to the database, as well as review, modify and delete. 
+Congratulations on your first 'full' application! You can now add data to the database, as well as review, modify and delete it. 
 
 ### Model 
 The @Entity annotation tells your application that a table should be created in your database that has fields named after the variables in the class. Depending on the database you are using, the data types may have slightly different names, but they will be the best types for the kind of data you are working with, so you don't have to think about how the data is stored and retrieved. Remember your getters and setters! They are used to tell the database which values go where. 
 
 The annotations for validation should be familiar - these are used to determine whether the information input by the user is what is expected by the applicaition. If so, the data can be stored. If not, the view will indicate to the user where the problems are (for details, see the 'View' section), so they can be corrected. 
 
+#### CrudRepository 
+This acts as a pipeline to your database, automagically storing, modifying and retrieving data. Through the methods that CrudRepository makes available to you, you can instantly save, find one or all, and delete records by using very simple methods. 
+
+![CrudRepository Methods]https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html
 
 ### Controller 
 This is where the action happens. Routes are mapped out for each action - Creating, Reading, Updating and Deleting data (CRUD). 
