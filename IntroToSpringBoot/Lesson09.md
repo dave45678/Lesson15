@@ -116,10 +116,10 @@ public class HomeController {
       method="post">
     Title :<input type="text" th:field="*{title}" />
     <span th:if="${#fields.hasErrors('title')}"
-          th:errors="*{name}"></span><br />
+          th:errors="*{title}"></span><br />
     Employer :<input type="text" th:field="*{employer}" />
     <span th:if="${#fields.hasErrors('employer')}"
-          th:errors="*{type}"></span><br />
+          th:errors="*{employer}"></span><br />
     Description :<textarea rows="3" th:field="*{description}" />
     <span th:if="${#fields.hasErrors('description')}"
           th:errors="*{description}"></span>
