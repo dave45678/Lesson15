@@ -236,3 +236,9 @@ spring.jpa.hibernate.ddl-auto=create
 
 
 ## What is Going On
+
+Congratulations on your first 'full' application! You can now add data to the database, as well as review, modify and delete. 
+# Model 
+# Controller 
+# View 
+
