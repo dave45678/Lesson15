@@ -251,5 +251,12 @@ This acts as a pipeline to your database, automagically storing, modifying and r
 
 ### Controller 
 This is where the action happens. Routes are mapped out for each action - Creating, Reading, Updating and Deleting data (CRUD). 
+
+#### What does @Autowired do? 
+When you create an instance of an object, you use the format ObjectClass someObject = new ObjectClass(); 
+This creates an instance of the object, and you can use it within the method where it is called. 
+For CrudRepository, that would mean that you had to instantiate the object within each method, but that would be a pain. 
+
+@Autowired tells the compiler to instantiate the repository object when the application runs, so you don’t have to type out that line so many times! 
 ### View 
 
