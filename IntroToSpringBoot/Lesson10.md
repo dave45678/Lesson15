@@ -252,6 +252,11 @@ This acts as a pipeline to your database, automagically storing, modifying and r
 ### Controller 
 This is where the action happens. Routes are mapped out for each action - Creating, Reading, Updating and Deleting data (CRUD). 
 
+#### The routes 
+##### Default Route (“/”)
+When a user visits this route, a new instance of the Courses class will be created and passed to the view. This will hold all values that the user enters into the form and return them to the controller at the route specified on the form by the POST method. 
+
+
 #### What does @Autowired do? 
 When you create an instance of an object, you use the format ObjectClass someObject = new ObjectClass(); 
 This creates an instance of the object, and you can use it within the method where it is called. 
