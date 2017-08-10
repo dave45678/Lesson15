@@ -12,7 +12,7 @@
 11. [Adding Twitter Bootstrap to Spring Boot](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson11.md) 
 12. Uploading images to Spring Boot with Cloudinary 
 13. Using Session Variables in Spring Boot 
-14. Running in Debug Mode 
+14. [Running in Debug Mode](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson14.md) 
 15. Live Edit 
 16. Creating Queries by Method Name 
 17. [Security - Basic Security](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson17.md) 
