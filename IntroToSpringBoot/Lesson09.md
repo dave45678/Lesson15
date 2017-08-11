@@ -40,8 +40,8 @@ public class Job {
 ```
 
 3. Autogenerate getters and setters
-  * Right-click on the word Job and select generate -> Getters and Setters
-  * Select all the fields list and click OK
+  	* Right-click on the word Job and select generate -> Getters and Setters
+  	* Select all the fields list and click OK
 
 4. Create a Repository 
 	* Right click on com.example.demo and click New -> Class 
