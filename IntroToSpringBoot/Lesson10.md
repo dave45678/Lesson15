@@ -260,10 +260,13 @@ For CrudRepository, that would mean that you had to instantiate the object withi
 @Autowired tells the compiler to instantiate the repository object when the application runs, so you don’t have to type out that line so many times! 
 
 #### The routes 
+
 ##### Default Route (“/”)
-When a user visits this route, a new instance of the Courses class will be created and passed to the view. This will hold all values that the user enters into the form and return them to the controller at the route specified on the form by the POST method. 
+When the user visits this route, the user will see a list of all the course entries that have been made. 
+This is because the model contains the result of the .findAll() method, which pulls all the data for a selected model from the database. This data is made available to the view as a variable named ("courses"). 
 
 #### Add route ("/add")
+When a user visits this route, a new instance of the Courses class will be created and passed to the view. This will hold all values that the user enters into the form and return them to the controller at the route specified on the form by the POST method. 
 
 #### Process route ("/process")
 This route validates the course for errors, saves it to the database (using the CourseRepository object created by the @Autowired annotation), and redirects the user to the default route. 
