@@ -11,7 +11,7 @@
         http
                 .authorizeRequests()
 			.antMatchers("/").access("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')")
-			.antMatchers("/admin").access("hasRole('ROLE_USER')")
+			.antMatchers("/admin").access("hasRole('ROLE_ADMIN')")
                 .anyRequest().authenticated()
                 .and()
                 .formLogin().loginPage("/login").permitAll()
