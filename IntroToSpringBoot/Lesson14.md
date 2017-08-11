@@ -76,3 +76,12 @@ public class HomeController {
 
 
 ## What is Going On
+
+### The Controller 
+By clicking to the left of line 15, you are creating a *__BREAKPOINT__*. This means that the code will stop at that point when you run the application in debug mode, so you can do a *__STEP TRACE__* (run the program line by line) to see what is happening within your code. This is useful for troubleshooting errors, especially when you want to make sure that the correct values are assigned to variables at runtime. 
+
+You are running a step trace on the application to see the value of i, after which you are continuing the program. 
+
+You can put breakpoints anywhere a statement is being executed in a class, and you can have more than one breakpoint at a time. 
+
+When you click the run-until button the program will run untill the next breakpoint. 
