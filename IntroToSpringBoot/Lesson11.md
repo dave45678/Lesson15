@@ -51,10 +51,10 @@ public class HomeController {
 </body>
 </html>
 ```
-  * Go to http://getbootstrap.com/getting-started and copy the Bootstrap CDN links
-  * Paste that code right above the &lt;/head> tag
+  * Go to http://getbootstrap.com/gettingh-started and copy the Bootstrap CDN links
+  * Paste that code right above the </head> tag
 
 4. Run your application and open a browser, if you type in the URL http://localhost:8080 you should see this: 
 ![](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/img/Lesson11.png)
 
-## What is Going On
+
