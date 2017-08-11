@@ -77,12 +77,12 @@ public class HomeController {
 
 
 ## What is Going On
-The “loadform” route displays the formtemplate to the user.  
+The “/loadform” route displays the template formtemplate to the user.  
 
-The “processform” route processes both get and post requests in the same way, by so if you type http://localhost:8080/processform?login=Randomusername, you should see the same value as if you enter Randomusername in the login box displayed when you visit the ”loadform” route.  
+The “/processform” route processes both get and post requests in the same way, so if you type http://localhost:8080/processform?login=Randomusername, you should see the same value as if you enter Randomusername in the login box displayed when you visit the ”loadform” route.  
 
-@RequestParam means that the loadFromPage method expects a parameter (either in the URL as a GET request, or posted to the form via a POST request) that is called login, and passes the value of that parameter to the model as “loginval”. The html templates can now access the value of the login string as “loginval”.  
+**@RequestParam** means that the loadFromPage method expects a parameter (either in the URL as a GET request, or posted to the form via a POST request) that is called login, and passes the value of that parameter to the model as “loginval”. The html templates can now access the value of the login string as “loginval”.  
 
-th:inline indicates that the value of text to be displayed is shown within the angular brackets. To make sure the values of your Thymeleaf expresssions are evaluated, enclose your expressions in double square parentheses - [[]]. 
+**th:inline** indicates that the value of text to be displayed is shown within the tag. To make sure the values of your Thymeleaf expresssions are evaluated, enclose your expressions in double square parentheses - [[]]. 
 
 [Github Repository](https://github.com/ajhenley/SpringBoot_04)
