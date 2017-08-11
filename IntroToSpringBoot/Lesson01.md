@@ -26,7 +26,7 @@ public class HomeController {
 
 3. Create a Template 
   	* Right click on templates and click New -> Html 
-	* Name it hometemplate.html 
+	* Name it index.html 
 	* Edit it to look like this: 
 ```html
 <!DOCTYPE html>
@@ -49,12 +49,12 @@ Lines 1 and 2 of HomeController.java import the classes into your project that m
 and @RequestMapping annotations work.  
 
 The @Controller annotation tells the compiler that there is a list of routes in this file that the user 
-of the application can browse to within the HomeController class. By using this annotation, we have made 
+can browse to within the HomeController class. By using this annotation, we have made 
 the HomeController like a phone directory or reference list for our application, where all the routes 
 are mapped out.  
 
 @RequestMapping indicates what route or end point the user will visit. The method underneath the 
-@RequestMapping annotation is run each time that route is called.  
+@RequestMapping annotation is run each time that the route is called.  
 In this case, the default route is the only route that is mapped out.  
 
 When a user browses to http://localhost:8080 (or the default route on the port that has been set 
@@ -63,8 +63,9 @@ called hometemplate.html from the templates folder. The extension is left out be
 assumes the extension, and appends it to the filename at runtime.  
 
 ### What’s a Route?  
-Think of this as a part of your application that that can be mapped out so that when you type an address 
-in the browser, the application can visit it.  
+A route is a path from the base URL that your application can respond to. If your site is served up at 
+http://localhost:8080, then telling a user to go to http://localhost:8080/add means that the route is "/add". 
+Telling a user to load http://localhost:8080/ means that the route is "/".
 
 The default route is mapped out using (“/”). This means that when you visit http://localhost:8080 or 
 http://localhost:8080/ when the application is running, the application will run the code in the method 
@@ -89,8 +90,8 @@ For more about GET and POST requests, see these articles:
 By default, @RequestMapping maps to a GET request. 
 
 ### What’s a template?  
-A template is a blueprint for a dynamic page. This is a page that can change based on the user’s interaction with the application. A template is different from a static page because what you will see can change depending on the user who is logged in, and the data that the user requests. A template is what allows you to greet a user based on the time of day, or a name that he/she enters. A static page cannot do this, because it will always be the same.  
+A template is a blueprint for a dynamic page. A template is different from a static page because what you will see can change depending on the user who is logged in, and the data that the user requests. A template is what allows you to greet a user based on the time of day, or a name that he/she enters. A static page cannot do this, because it will always be the same.  
 
-Templating engines (like Thymeleaf) are used to show data that is passed from the application, which may changed depending on the user’s interaction with the application. Thymeleaf templates have  expressions in it that accept contextual information at runtime -  when the application is running.
+Templating engines (like Thymeleaf) are used to show data that is passed from the application, which may change depending on the user’s interaction with the application. 
 
 [Github Repository](https://github.com/ajhenley/SpringBoot_01)
