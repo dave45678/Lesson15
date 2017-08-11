@@ -247,7 +247,7 @@ The annotations for validation should be familiar - these are used to determine 
 #### CrudRepository 
 This acts as a pipeline to your database, automagically storing, modifying and retrieving data. Through the methods that CrudRepository makes available to you, you can instantly save, find one or all, and delete records by using very simple methods. 
 
-![CrudRepository Methods](https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html)
+[CrudRepository Methods](https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html)
 
 ### Controller 
 This is where the action happens. Routes are mapped out for each action - Creating, Reading, Updating and Deleting data (CRUD). 
