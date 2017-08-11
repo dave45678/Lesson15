@@ -148,7 +148,7 @@ public class HomeController {
           th:errors="*{instructor}"></span><br />
     Description :<textarea rows="3" th:field="*{description}" />
     <span th:if="${#fields.hasErrors('description')}"
-          th:errors="*{description}"></span>
+          th:errors="*{description}"></span><br />
     Credits :<input type="text" th:field="*{credit}" />
     <span th:if="${#fields.hasErrors('credit')}"
           th:errors="*{credit}"></span><br />
@@ -229,10 +229,10 @@ spring.jpa.hibernate.ddl-auto=create
 ```
 
 9. Run your application and open a browser, if you type in the URL http://localhost:8080/add you should see this: 
-![Adding a job](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/img/Lesson09a.png "Adding a job")
+![Adding a course](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/img/Lesson10b.png "Adding a course")
 
 10. If you enter values and submit the form, it will show you a list of all the jobs added so far. So, you should see a page that looks like this:  
-![List of Jobs](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/img/Lesson09b.png "List of Jobs")
+![List of Courses](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/img/Lesson10a.png "List of Courses")
 
 
 ## What is Going On
