@@ -1,4 +1,4 @@
-# Lesson 10 - Complete data life cycle – form, list, detail, delete 
+# Lesson 10 - Complete data life cycle – input, update, list, detail, delete 
 ## The Walkthrough 
 
 1. Create a Spring Boot Application 
