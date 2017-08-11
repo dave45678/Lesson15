@@ -249,13 +249,8 @@ This acts as a pipeline to your database, automagically storing, modifying and r
 
 [CrudRepository Methods](https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html)
 
-### Controller 
+### The Controller 
 This is where the action happens. Routes are mapped out for each action - Creating, Reading, Updating and Deleting data (CRUD). 
-
-#### The routes 
-##### Default Route (“/”)
-When a user visits this route, a new instance of the Courses class will be created and passed to the view. This will hold all values that the user enters into the form and return them to the controller at the route specified on the form by the POST method. 
-
 
 #### What does @Autowired do? 
 When you create an instance of an object, you use the format ObjectClass someObject = new ObjectClass(); 
@@ -263,5 +258,29 @@ This creates an instance of the object, and you can use it within the method whe
 For CrudRepository, that would mean that you had to instantiate the object within each method, but that would be a pain. 
 
 @Autowired tells the compiler to instantiate the repository object when the application runs, so you don’t have to type out that line so many times! 
-### View 
+
+#### The routes 
+##### Default Route (“/”)
+When a user visits this route, a new instance of the Courses class will be created and passed to the view. This will hold all values that the user enters into the form and return them to the controller at the route specified on the form by the POST method. 
+
+#### Add route ("/add")
+
+#### Process route ("/process")
+This route validates the course for errors, saves it to the database (using the CourseRepository object created by the @Autowired annotation), and redirects the user to the default route. 
+
+#### Update 
+
+@RequestMapping("/update/{id}")
+    public String updateCourse(@PathVariable("id") long id, Model model){
+        model.addAttribute("course", courseRepository.findOne(id));
+        return "courseform";
+    }
+
+#### Delete 
+@RequestMapping("/delete/{id}")
+    public String delCourse(@PathVariable("id") long id){
+        courseRepository.delete(id);
+        return "redirect:/";
+
+### The View 
 
