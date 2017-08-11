@@ -35,8 +35,8 @@ public class Tvshow {
 ```
 
 3. Autogenerate getters and setters
-  * Right-click on the word Tvshow and select generate -> Getters and Setters
-  * Select all the fields list and click OK
+  	* Right-click on the word Tvshow and select generate -> Getters and Setters
+  	* Select all the fields list and click OK
 
 4. Create a Controller 
 	* Right click on com.example.demo and click New -> Class 
@@ -106,7 +106,7 @@ public class HomeController {
 
 6. Create a Template for the confirmation
   	* Right click on templates and click New -> Html 
-	* Name it confirmsong.html 
+	* Name it tvshowconfirm.html 
 	* Edit it to look like this: 
 ```html
 <!DOCTYPE html>
