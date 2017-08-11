@@ -52,14 +52,14 @@ spring.jpa.hibernate.ddl-auto=create
 	* Click connect and you should see this:
 ![H2 Console](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/img/Lesson08b.png "H2 Console")
 
-# What's Going ON 
+## What's Going ON 
 You are creating a Spring Boot application that uses an in-memory
 database called H2 to store its data. If you create a Spring Boot application with the correct dependencies, you do not need to download additional software. 
 
 Everything the application needs to run will be included when Maven downloads and includes the dependencies your application needs to work with. 
 
 
-## The Controller 
+### The Controller 
 Start by creating a class that uses the @Entity annotation to create a table in your database. The database in which the table will be located is determined by the application properties. 
 
 The fields in the Person class determine what data types will be used to store the data in the database, and also what kind of constraints will be used to ensure only valid data is stored.
@@ -76,9 +76,8 @@ The annotations being used on the Person class are as follows:
 
 Remember the getters and setters! They are used to save and retrieve data to and from the database. 
 
-## Application Properties 
+### Application Properties 
 spring.h2.console.enabled=true permits access to the database outside the application (using the h2 console). 
 spring.h2.console.path=/h2-console allows you to browse to the database to view the data in it by typing http://localhost:8080/h2-console. If your server port is not 8080, you will have to modify the path accordingly. 
 spring.jpa.hibernate.ddl-auto=create 
 This allows the application to create database tables. In this mode, every time you run the application, it will create tables to store the data if they do not already exist. If the tables already exist, all data will be cleared, and any data you enter will last until you restart the application. 
-	
