@@ -68,7 +68,7 @@ The constraints are denoted by annotations. A list of annotations that can be us
 
 [Java Documentation](https://docs.oracle.com/javaee/7/api/javax/validation/constraints/package-summary.html)
 
-[Hibernate Documentation] (http://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/#validator-defineconstraints-spec)
+[Hibernate Documentation](http://docs.jboss.org/hibernate/stable/validator/reference/en-US/html_single/#validator-defineconstraints-spec)
 
 The annotations being used on the Person class are as follows: 
 @Id - this indicates that the field is the unique identifier that will be used for each row in the database. 
