@@ -13,7 +13,7 @@
 12. [Uploading images to Spring Boot with Cloudinary](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson12.md)  
 13. [Using Database Relationships with Spring Boot - ManyToMany](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson13.md)  
 14. [Using Database Relationships with Spring Boot - OneToMany](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson14.md) 
-15. Live Edit 
+15. [Using Database Relationships with Spring Boot - OneToOne](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson15.md) 
 16. Creating Queries by Method Name 
 17. [Security - Basic Security](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson17.md) 
 18. [Security - Adding a Custom Login Page](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson18.md) 
