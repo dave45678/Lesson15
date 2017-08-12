@@ -1,4 +1,4 @@
-# Lesson 15 - Running in Debug Mode 
+# Lesson 15 - Using Database Relationships with Spring Boot - OneToOne 
 ## The Walkthrough 
 
 1. Create a Spring Boot Application 
