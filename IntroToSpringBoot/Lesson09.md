@@ -10,6 +10,7 @@
 	* Right click on com.example.demo and click New -> Class 
 	* Name it Job.java 
 	* Edit it to look like this: 
+
 ```java
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -47,6 +48,7 @@ public class Job {
 	* Right click on com.example.demo and click New -> Class 
 	* Name it JobRepository.java 
 	* Edit it to look like this: 
+	
 ```java
 import org.springframework.data.repository.CrudRepository;
 
@@ -58,6 +60,7 @@ public interface JobRepository extends CrudRepository<Job, Long> {
 	* Right click on com.example.demo and click New -> Class 
 	* Name it HomeController.java 
 	* Edit it to look like this: 
+
 ```java
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -159,3 +162,14 @@ public class HomeController {
 
 
 ## What is Going On
+
+You are using an in-memory database to store information about jobs. This information is captured from a user (or users) via an HTML form. The process  is the same as for any other database (MySQL, Postgres, SQL Server, etc.), and you benefit from The Java Persistence API's ability to 'talk to' many different databases using the same Spring Boot code. 
+
+### The Model 
+
+### The Job Class 
+You are creating a class that will become a table in the H2 datbase. The annotations being used will determine how your application interacts with the database (e.g. automatically generating the Id which is used as the primary key for that table), and what kind of information the database stores in each field. 
+
+### The Job Repository
+This acts as your 'pipeline' to the database. The Job Repository has in-built methods that you can use to save, locate, and delete data. The Job Repository can return single and multiple instances of the jobs that are in the database, depending on the *__criteria__* used to locate fields. You will see more details in ![Exercise 10] (https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson10.md "Complete Data Life Cycle")
+
