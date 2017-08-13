@@ -1,5 +1,5 @@
 # Intro to Spring Boot
-1. [Hello World with Template – no variable](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson01.md) - ![Walkthrough](img/i_list.png) ![Explanation](img/i_book.png) ![Code](img/i_code.png)
+1. [Hello World with Template – no variable](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson01.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Explanation](img/i_book.png "Explanation") ![Code](img/i_code.png "Github Code")
 2. [Hello World with Template with variable](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson02.md) - ![Walkthrough](img/i_list.png) ![Explanation](img/i_book.png) ![Code](img/i_code.png)
 3. [Hello World with External Variables](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson03.md) - ![Walkthrough](img/i_list.png) ![Explanation](img/i_book.png) ![Code](img/i_code.png)  
 4. [Handling form values – the hard way](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson04.md) - ![Walkthrough](img/i_list.png) ![Explanation](img/i_book.png) ![Code](img/i_code.png)   
