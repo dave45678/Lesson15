@@ -171,6 +171,16 @@ You are using an in-memory database to store information about jobs. This inform
 You are creating a class that will become a table in the H2 datbase. The annotations being used will determine how your application interacts with the database (e.g. automatically generating the Id which is used as the primary key for that table), and what kind of information the database stores in each field. 
 
 ### The Job Repository
-This acts as your 'pipeline' to the database. The Job Repository has in-built methods that you can use to save, locate, and delete data. The Job Repository can return single and multiple instances of the jobs that are in the database, depending on the *__criteria__* used to locate fields. You will see more details in 
-![Exercise 10](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson10.md "Complete Data Life Cycle")
+This acts as your 'pipeline' to the database. The Job Repository has in-built methods that you can use to save, locate, and delete data. The Job Repository can return single and multiple instances of the jobs that are in the database, depending on the *__criteria__* used to locate fields. 
+
+### The Controller
+
+__@RequestMapping("/")__: When a user visits the default route (e.g. http://localhost:8080), the user will see a list of records that have been saved in the database. This is because the Job Repository is being used to retrieve all available records, and the result of this search is being passed to the view. The view will display the results of the retrieval using a Thymeleaf loop. 
+
+__@GetMapping("/add")__: When a user visits the default route (e.g. http://localhost:8080), a new and empty instance of the Job class will be created. This will be passed to the view (where it is referred to as 'jobs'), so that the user's input can be stored in fields within that model, and validated according to the rules set in the Job class. 
+
+
+
+
+
 
