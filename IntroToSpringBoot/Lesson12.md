@@ -6,7 +6,7 @@
     * Add the dependencies for web, thymeleaf, jpa and h2
     * Hit next until you finish the wizard, and then wait until it's done.
 
-2. Sign up for a cloudinary account if you do not already have one 
+2. Sign up for a Cloudinary account (www.cloudinary.com) if you do not already have one 
 
 3. Manually add Cloudinary dependencies
       * Open the pom.xml file and add this to the dependencies section
