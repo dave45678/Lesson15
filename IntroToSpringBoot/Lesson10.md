@@ -64,6 +64,7 @@ public interface CourseRepository extends CrudRepository<Course, Long>{
 	* Right click on com.example.demo and click New -> Class 
 	* Name it HomeController.java 
 	* Edit it to look like this: 
+
 ```java
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -123,10 +124,12 @@ public class HomeController {
 }
 ```
 
+
 6. Create a Template for the form
   	* Right click on templates and click New -> Html 
 	* Name it courseform.html 
 	* Edit it to look like this: 
+
 ```html
 <!DOCTYPE html>
 <html lang="en" xmlns:th="www.thymeleaf.org">
@@ -163,6 +166,7 @@ public class HomeController {
   	* Right click on templates and click New -> Html 
 	* Name it list.html 
 	* Edit it to look like this: 
+
 ```html
 <!DOCTYPE html>
 <html lang="en" xmlns:th="www.thymeleaf.org">
@@ -198,6 +202,7 @@ public class HomeController {
   	* Right click on templates and click New -> Html 
 	* Name it show.html 
 	* Edit it to look like this: 
+
 ```html
 <!DOCTYPE html>
 <html lang="en" xmlns:th="www.thymeleaf.org">
@@ -221,10 +226,10 @@ Credits :<span th:text="${course.credit}" ></span><br />
     * Configure H2
     * Open application.properties
     * Edit it to look like this:
+
 ```
 spring.h2.console.enabled=true
 spring.h2.console.path=/h2-console
-
 spring.jpa.hibernate.ddl-auto=create
 ```
 
@@ -271,19 +276,17 @@ When a user visits this route, a new instance of the Courses class will be creat
 #### Process route ("/process")
 This route validates the course for errors, saves it to the database (using the CourseRepository object created by the @Autowired annotation), and redirects the user to the default route. 
 
-#### Update 
+#### Update route ("/update/{id}")
+When a user wants to modify a record, that user can retrieve the details of that record by opening up http://localhost/8080/update, and adding the ID of the user whose record is being modified. The {id} parameter in this case is a primary key that exists in the database, because there should be only one record that matches this criterion. 
 
-@RequestMapping("/update/{id}")
-    public String updateCourse(@PathVariable("id") long id, Model model){
-        model.addAttribute("course", courseRepository.findOne(id));
-        return "courseform";
-    }
+The .findOne() method is used to pull up that record, and it is passed to the view as an object named "course". 
+
 
 #### Delete 
-@RequestMapping("/delete/{id}")
-    public String delCourse(@PathVariable("id") long id){
-        courseRepository.delete(id);
-        return "redirect:/";
+The delete route follows the same pattern, but instead of showing the record, it is immediately deleted from the database. When the user is re-directed to the default route, this will show in the list that is displayed, as that record will not be shown in the list. 
+
+For more information about how to use parameters in URLs with Thymeleaf, see this page: 
+[Parameters in URLS with Thymeleaf](http://www.thymeleaf.org/doc/articles/standardurlsyntax.html#adding-parameters)
 
 ### The View 
 
