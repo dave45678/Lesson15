@@ -6,7 +6,9 @@
     * Add the dependencies for web, thymeleaf, jpa and h2
     * Hit next until you finish the wizard, and then wait until it's done.
 
-2. Manually add Cloudinary dependencies
+2. Sign up for a cloudinary account if you do not already have one 
+
+3. Manually add Cloudinary dependencies
       * Open the pom.xml file and add this to the dependencies section
       ```xml
       <dependency>
@@ -21,7 +23,7 @@
 		</dependency>
       ```
 
-3. Create a Class
+4. Create a Class
     * Right-click on com.example.demo and click New -> Class
     * Name it Actor.java
     * Edit it to look like this:
@@ -45,11 +47,11 @@ public class Actor {
 }
 ```
 
-4. Autogenerate getters and setters
+5. Autogenerate getters and setters
     * Right-click on the word Actor and select generate -> Getters and Setters
     * Select all the fields list and click OK
     
-5. Create a Repository
+6. Create a Repository
     * Right click on com.example.demo and click New -> Class
     * Name it ActorRepository.java
     * Edit it to look like this:
@@ -60,7 +62,7 @@ public interface ActorRepository extends CrudRepository<Actor, Long> {
 }
 ```
 
-6. Create a Cloudinary Class
+7. Create a Cloudinary Class
     * Right-click on com.example.demo and click New -> Class
     * Name it CloudinaryConfig.java
     * Edit it to look like this:
@@ -104,7 +106,7 @@ public class CloudinaryConfig {
 }
 ```
 
-7. Edit the Configuration
+8. Edit the Configuration
     * Open the application.properties file
     * Edit it to look like this:
 ```
@@ -119,7 +121,7 @@ spring.h2.console.path=/h2-console
 spring.h2.console.enabled=true
 ```
 
-8. Create a Controller
+9. Create a Controller
     * Right-click on com.example.demo and click New -> Class
     * Name it HomeController.java
     * Edit it to look like this:
@@ -172,7 +174,7 @@ public class HomeController {
 }
 ```
 
-9. Create a Template for the actor listings
+10. Create a Template for the actor listings
     * Right click on templates and click New -> Html
     * Name it list.html
     * Edit it to look like this:
@@ -197,7 +199,7 @@ public class HomeController {
 </html>
 ```
 
-10. Create a Template for the actor form
+11. Create a Template for the actor form
     * Right click on templates and click New -> Html
     * Name it form.html
     * Edit it to look like this:
@@ -223,9 +225,9 @@ public class HomeController {
 </html>
 ```
 
-11. Run your application and open a browser, it you type in the URL http://localhost:8080 you should see this:
+12. Run your application and open a browser, it you type in the URL http://localhost:8080 you should see this:
 
-12. If you enter the values and upload an image, it will show you a list of all the actors added so far. So, you should see a page that looks like this:
+13. If you enter the values and upload an image, it will show you a list of all the actors added so far. So, you should see a page that looks like this:
 
 
 ## What's Going On
