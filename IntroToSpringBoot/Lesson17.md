@@ -92,7 +92,7 @@ public class HomeController {
         //           .withUser("dave").password("begreat").roles("USER");
     }
 ```
-##What's Going On
+## What's Going On
 
 Congratulations! You're ready to add basic security to your Spring Boot web application. This will help to ensure that people are who they say they are (because they use the appropriate passwords to sign in), and that they can access information within your application because they are authorized to have access to it, since they are assigned __ROLES__. 
 
