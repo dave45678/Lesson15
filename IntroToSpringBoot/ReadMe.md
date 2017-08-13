@@ -11,8 +11,8 @@
 10. [Complete data life cycle – form, list, detail, delete](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson10.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Explanation](img/i_book.png "Explanation") 
 11. [Adding Twitter Bootstrap to Spring Boot](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson11.md)  - ![Walkthrough](img/i_list.png "Walkthrough") ![Explanation](img/i_book.png "Explanation")  
 12. [Uploading images to Spring Boot with Cloudinary](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson12.md) -  - ![Walkthrough](img/i_list.png "Walkthrough")    
-13. [Using Database Relationships with Spring Boot - ManyToMany](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson13.md)  
-14. [Using Database Relationships with Spring Boot - OneToMany](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson14.md) 
+13. [Using Database Relationships with Spring Boot - ManyToMany](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson13.md) - ![Walkthrough](img/i_list.png "Walkthrough")  
+14. [Using Database Relationships with Spring Boot - OneToMany](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson14.md) - ![Walkthrough](img/i_list.png "Walkthrough") 
 15. [Using Database Relationships with Spring Boot - OneToOne](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson15.md) 
 16. Creating Queries by Method Name 
 17. [Security - Basic Security](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson17.md) - ![Walkthrough](img/i_list.png "Walkthrough") 
