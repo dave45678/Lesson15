@@ -10,7 +10,8 @@
 	* Right click on com.example.demo and click New -> Class 
 	* Name it HomeController.java 
 	* Edit it to look like this: 
-```java
+
+``` java
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -34,6 +35,7 @@ public class HomeController {
   	* Right click on templates and click New -> Html 
 	* Name it randomnum.html 
 	* Edit it to look like this: 
+
 ```html
 <!DOCTYPE html>
 <html lang="en" xmlns:th="www.thymeleaf.org">
