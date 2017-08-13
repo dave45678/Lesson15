@@ -2,7 +2,7 @@
 ## The Walkthrough 
 
 1. Create a Spring Boot Application 
-	* Name it SpringBoot_14 
+	* Name it SpringBoot_13 
 	* Add the dependencies for the web and for thymeleaf 
 	* Hit next until you finish the wizard, and then wait until it's done.    
 
