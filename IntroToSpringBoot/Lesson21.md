@@ -35,9 +35,6 @@ public class UserService {
     RoleRepository roleRepository;
 
     @Autowired
-    private PasswordEncoder passwordEncoder;
-
-    @Autowired
     public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
@@ -52,13 +49,11 @@ public class UserService {
     }
     public void saveUser(User user) {
         user.setRoles(Arrays.asList(roleRepository.findByRole("USER")));
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
         user.setEnabled(true);
         userRepository.save(user);
     }
     public void saveAdmin(User user) {
         user.setRoles(Arrays.asList(roleRepository.findByRole("ADMIN")));
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
         user.setEnabled(true);
         userRepository.save(user);
     }
@@ -84,7 +79,6 @@ public class UserService {
 	Model model){
 
         model.addAttribute("user", user);
-        userValidator.validate(user, result);
 
         if (result.hasErrors()) {
             return "registration";
