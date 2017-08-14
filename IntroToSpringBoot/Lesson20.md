@@ -3,9 +3,10 @@
 
 1. Start with the code from the previous lesson
 
-2. Add the dependencies for jpa and h2
-    * Open the pom.xml file
-    * Add the following xml right before the line that reads:  &lt;/dependencies>
+2. Setup H2
+	* Add the dependencies by:
+	* Open the pom.xml file
+    	* Add the following xml right before the line that reads:  &lt;/dependencies>
 ```xml
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -21,6 +22,13 @@
 			<artifactId>h2</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+```
+	* Edit the application.properties file to look like this:
+```
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+
+spring.jpa.hibernate.ddl-auto=create
 ```
 
 3. Import your maven dependencies:
