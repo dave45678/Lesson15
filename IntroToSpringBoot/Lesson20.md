@@ -23,6 +23,8 @@
 			<scope>runtime</scope>
 		</dependency>
 ```
+
+
 	* Edit the application.properties file to look like this:
 ```
 spring.h2.console.enabled=true
