@@ -19,7 +19,7 @@
 18. [Security - Adding a Custom Login Page](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson18.md)  - ![Walkthrough](img/i_list.png "Walkthrough") 
 19. [Security - Specific Permissions](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson19.md) - ![Walkthrough](img/i_list.png "Walkthrough") 
 20. [Security - Using Database based Authentication](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson20.md) - ![Walkthrough](img/i_list.png "Walkthrough") 
-21. Security - Adding User Registration
+21. [Security - Adding User Registration](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson21.md) - ![Walkthrough](img/i_list.png "Walkthrough")
 22. Security - Encrypting Passwords
 23. Security - Automatically adding accounts to database when the Application Loads
 23. Custom Error Pages 
