@@ -20,6 +20,6 @@
 19. [Security - Specific Permissions](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson19.md) - ![Walkthrough](img/i_list.png "Walkthrough") 
 20. [Security - Using Database based Authentication](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson20.md) - ![Walkthrough](img/i_list.png "Walkthrough") 
 21. [Security - Adding User Registration](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson21.md) - ![Walkthrough](img/i_list.png "Walkthrough")
-22. Automatically adding records to database when the Application Loads
+22. [Automatically adding records to database when the Application Loads](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson22.md) - ![Walkthrough](img/i_list.png "Walkthrough")
 23. Custom Error Pages 
 24. Deploying to Heroku
