@@ -168,7 +168,7 @@ public interface RoleRepository extends CrudRepository<Role, Long>{
 
 11. Create the SSUserDetailsService
     * Right click on com.example.demo and click New -> Class
-    * Name it RoleRepository.java
+    * Name it SSUserDetailsService.java
     * Edit it to look like this:
 ```java
 @Transactional
@@ -209,9 +209,7 @@ public class SSUserDetailsService implements UserDetailsService {
 }
 ```
 
-12. Create a Controller 
-    * Right click on com.example.demo and click New -> Class
-    * Name it HomeController.java
+12. Edit The Controller 
     * Edit it to look like this:
 ```java
 import org.springframework.stereotype.Controller;
@@ -236,9 +234,7 @@ public class HomeController {
 }
 ```
 
-13. Create a Login Template 
-  	* Right click on templates and click New -> Html 
-	  * Name it login.html 
+13. Edit The Login Template
 	  * Edit it to look like this: 
 ```html
 <!DOCTYPE html>
@@ -263,9 +259,7 @@ public class HomeController {
 </html>
 ```
 
-14. Create a Index Template 
-  	* Right click on templates and click New -> Html 
-	  * Name it index.html 
+14. Edit The Index Template 
 	  * Edit it to look like this: 
 ```html
 <!DOCTYPE html>
