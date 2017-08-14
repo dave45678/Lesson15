@@ -70,5 +70,5 @@ public class HomeController {
 ![Custom Login](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/img/Lesson18a.png "Custom Login")
 
 6. If you successfully login(using the accounts created in the SecurityConfiguration file), you will see this:  
-![Login Error](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/img/Lesson18b.png "Login Error")
+![Login Success](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/img/Lesson18b.png "Login Success")
 
