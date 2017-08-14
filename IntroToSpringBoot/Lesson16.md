@@ -117,4 +117,5 @@ And if you type in the URL http://localhost:8080/2 you should see this:
 ![](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/img/Lesson16b.png )
 
 Notice that the navigation links and the copyright are the same on every page. If you change the 
-contents of the navlinks div or the footer div and it will change on every page automatically.
+contents of the navlinks div or the footer div in the base.html template and it will change on 
+every page automatically.
