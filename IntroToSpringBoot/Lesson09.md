@@ -221,7 +221,9 @@ When an error occurs, the errors captured in the BindingResult object are passed
 ${#fields.hasErrors('fieldname')
 ```
 , where fieldname is the name of the field into which data was entered. If the th:if statement evaluates to true, then the span
-will display the default (or modified) error for that field: ``` th:errors="*{title}
+will display the default (or modified) error for that field: 
+``` 
+th:errors="*{title}
 ```
 
 #### Remember: 
