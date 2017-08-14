@@ -100,7 +100,8 @@ public class CloudinaryConfig {
 
     public String createUrl(String name, int width, int height, String action){
         return cloudinary.url()
-                .transformation(new Transformation().width(width).height(height).border("2px_solid_black").crop(action))
+                .transformation(new Transformation().width(width).height(height)
+		.border("2px_solid_black").crop(action))
                 .imageTag(name);
     }
 }
@@ -157,12 +158,14 @@ public class HomeController {
     }
 
     @PostMapping("/add")
-    public String processActor(@ModelAttribute Actor actor, @RequestParam("file")MultipartFile file){
+    public String processActor(@ModelAttribute Actor actor, 
+    	@RequestParam("file")MultipartFile file){
         if (file.isEmpty()){
             return "redirect:/add";
         }
         try {
-            Map uploadResult =  cloudc.upload(file.getBytes(), ObjectUtils.asMap("resourcetype", "auto"));
+            Map uploadResult =  cloudc.upload(file.getBytes(), 
+	    	ObjectUtils.asMap("resourcetype", "auto"));
             actor.setHeadshot(uploadResult.get("url").toString());
             actorRepository.save(actor);
         } catch (IOException e){
@@ -205,7 +208,8 @@ public class HomeController {
     * Edit it to look like this:
 ```html
 <!DOCTYPE html>
-<html lang="en" xmlns:th="www.thymeleaf.org " xmlns:sec="www.thymeleaf.org/extras/spring-security">
+<html lang="en" xmlns:th="www.thymeleaf.org" 
+	xmlns:sec="www.thymeleaf.org/extras/spring-security">
   <head>
       <meta charset="utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -215,7 +219,8 @@ public class HomeController {
   <body>
     <br /><br />
     <h1>Spring Boot file upload example</h1>
-    <form method="POST" action="/add" th:object="${actor}" enctype="multipart/form-data">
+    <form method="POST" action="/add" th:object="${actor}" 
+    	enctype="multipart/form-data">
         Name: <input type="text" th:field="*{name}" />
         Real Name: <input type="text" th:field="*{realname}" />
         <input type="file" name="file" /><br/><br/>
@@ -227,7 +232,8 @@ public class HomeController {
 
 12. Run your application and open a browser, it you type in the URL http://localhost:8080 you should see this:
 
-13. If you enter the values and upload an image, it will show you a list of all the actors added so far. So, you should see a page that looks like this:
+13. If you enter the values and upload an image, it will show you a list of all the actors added so far. So, you
+should see a page that looks like this:
 
 
 ## What's Going On
