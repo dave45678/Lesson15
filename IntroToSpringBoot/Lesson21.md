@@ -78,7 +78,10 @@ public class UserService {
     }
 
     @RequestMapping(value="/register", method = RequestMethod.POST)
-    public String processRegistrationPage(@Valid @ModelAttribute("user") User user, BindingResult result, Model model){
+    public String processRegistrationPage(
+    	@Valid @ModelAttribute("user") User user, 
+	BindingResult result, 
+	Model model){
 
         model.addAttribute("user", user);
         userValidator.validate(user, result);
