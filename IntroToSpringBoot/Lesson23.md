@@ -105,9 +105,7 @@ public class HomeController {
 </html>
 ```
 
-7. 
-
-Run your application and open a browser, if you type in the URL http://localhost:8080 you should see this: 
+7. Run your application and open a browser, if you type in the URL http://localhost:8080 you should see this: 
 ![](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/img/Lesson16a.png )
 
 And if you type in the URL http://localhost:8080/2 you should see this: 
