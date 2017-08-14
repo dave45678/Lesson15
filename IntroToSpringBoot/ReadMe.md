@@ -14,7 +14,7 @@
 13. [Using Database Relationships with Spring Boot - ManyToMany](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson13.md) - ![Walkthrough](img/i_list.png "Walkthrough")  
 14. [Using Database Relationships with Spring Boot - OneToMany](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson14.md) - ![Walkthrough](img/i_list.png "Walkthrough") 
 15. [Using Database Relationships with Spring Boot - OneToOne](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson15.md) - ![Walkthrough](img/i_list.png "Walkthrough") 
-16. Creating Queries by Method Name 
+16. [Using Page Fragments with Thymeleaf](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson16.md) - ![Walkthrough](img/i_list.png "Walkthrough") 
 17. [Security - Basic Security](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson17.md) - ![Walkthrough](img/i_list.png "Walkthrough") 
 18. [Security - Adding a Custom Login Page](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson18.md)  - ![Walkthrough](img/i_list.png "Walkthrough") 
 19. [Security - Specific Permissions](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson19.md) - ![Walkthrough](img/i_list.png "Walkthrough") 
