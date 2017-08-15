@@ -8,8 +8,36 @@
   	https://github.com/twbs/bootstrap/releases/download/v3.3.7/bootstrap-3.3.7-dist.zip
   	* Unzip the file 
   	* Copy the css, fonts and js folders into the static folder inside the resources folder
+
+3. Edit the Security Configuration
+	* Open SecurityConfiguration.java
+	* Edit it to look like this:
+```java
+@Configuration
+@EnableWebSecurity
+public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+                .authorizeRequests()
+                .antMatchers("/", "/css/**", "/js/**").permitAll()
+                .anyRequest().authenticated()
+                .and()
+                .formLogin()
+                .and()
+                .httpBasic();
+    }
+
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.inMemoryAuthentication().
+                withUser("user").password("password").roles("USER");
+    }
+}
+```
   
-3. Create a Bootstrap Fragment Template
+4. Create a Bootstrap Fragment Template
   	* Right click on templates and click New -> Html 
 	* Name it base.html 
 	* Edit it to look like this: 
@@ -79,7 +107,7 @@
 </html>
 ```
 
-4. Edit the index Template
+5. Edit the index Template
   	* Edit it to look like this: 
 ```html
 <!DOCTYPE html>
@@ -102,7 +130,7 @@
 </html>
 ```
 
-5. Create a Template
+6. Create a Template
   	* Right click on templates and click New -> Html 
 	* Name it secure.html 
 	* Edit it to look like this: 
@@ -126,7 +154,7 @@
 </html>
 ```
 
-6. Edit the Controller 
+7. Edit the Controller 
 	* Right click on com.example.demo and click New -> Class 
 	* Name it HomeController.java 
 	* Edit it to look like this: 
@@ -149,5 +177,5 @@ public class HomeController {
 }
 ```
 
-7. Run your application and open a browser, if you type in the URL 
+8. Run your application and open a browser, if you type in the URL 
 http://localhost:8080 you should see you home page styled with TwitterBootstrap.
