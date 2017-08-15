@@ -4,13 +4,13 @@
 1. Start with an application based on Lesson 17 (an application with at least basic security) 
 
 2. Get Twitter Bootstrap
-  * Download the file by using this link: 
-  https://github.com/twbs/bootstrap/releases/download/v3.3.7/bootstrap-3.3.7-dist.zip
-  * Unzip the file 
-  * Copy the css, fonts and js folders into the static folder inside the resources folder
+  	* Download the file by using this link: 
+  	https://github.com/twbs/bootstrap/releases/download/v3.3.7/bootstrap-3.3.7-dist.zip
+  	* Unzip the file 
+  	* Copy the css, fonts and js folders into the static folder inside the resources folder
   
 3. Create a Bootstrap Fragment Template
-  * Right click on templates and click New -> Html 
+  	* Right click on templates and click New -> Html 
 	* Name it base.html 
 	* Edit it to look like this: 
 ```html
@@ -80,7 +80,7 @@
 ```
 
 4. Edit the index Template
-  * Edit it to look like this: 
+  	* Edit it to look like this: 
 ```html
 <!DOCTYPE html>
 <html lang="en" xmlns:th="www.thymeleaf.org">
@@ -103,7 +103,7 @@
 ```
 
 5. Create a Template
-  * Right click on templates and click New -> Html 
+  	* Right click on templates and click New -> Html 
 	* Name it secure.html 
 	* Edit it to look like this: 
 ```html
