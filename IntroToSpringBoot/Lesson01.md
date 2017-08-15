@@ -30,7 +30,7 @@ public class HomeController {
 	* Edit it to look like this: 
 ```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="www.thymeleaf.org">
 <head>
     <meta charset="UTF-8" />
     <title>Title</title>
