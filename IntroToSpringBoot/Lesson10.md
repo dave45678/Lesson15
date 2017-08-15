@@ -285,8 +285,29 @@ The .findOne() method is used to pull up that record, and it is passed to the vi
 #### Delete 
 The delete route follows the same pattern, but instead of showing the record, it is immediately deleted from the database. When the user is re-directed to the default route, this will show in the list that is displayed, as that record will not be shown in the list. 
 
+### The View 
+
+This is an introduction to parameterised thymeleaf URLs. Sometimes you want to pass additional information to a URL so that you can perform operations on data. This option allows you to add paraemters to a route, so that the values that are passed can be used in your controller. You determine what these values are, and how they are processed. 
+
 For more information about how to use parameters in URLs with Thymeleaf, see this page: 
 [Parameters in URLS with Thymeleaf](http://www.thymeleaf.org/doc/articles/standardurlsyntax.html#adding-parameters)
 
-### The View 
+#### courseform.html
+This is the form that allows users to add new courses. It is tied to the course model (th:object="${course}"), and has validation that uses the default error messaging for the fields that have been annotated in the model (e.g. title and instructor). 
+ 
+#### list.html
+This form uses a thymeleaf loop (th:each) to show the details of each course that is passed in the courses object (a collection of course items) from the default route.
+
+It also includes links for updating, showing details of, and deleting listed courses using __URL PARAMETERS__ - so you have the potential to acces all your CRUD (Create Read Update Delete) operations in one form. The user will be re-directed to different routes when he/she clicks each link. Each one will allow the user to carry out the selected CRUD operation. 
+
+It also allows users to add a new course by clicking the appopriate link towards the top of the page.
+
+Note that there is no thymeleaf action on this form - because the __anchor tag__ used has a thymeleaf attribute for the relevant route in your application. There is therefore no need to post the data with a button - you call a particular route instead.  
+
+#### show.html  
+This shows information for a single course, and has an option to delete the course, using its id as a __PARAMETER__ in the route to delete the item. 
+
+
+
+
 
