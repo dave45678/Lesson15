@@ -9,7 +9,7 @@
 8. [Persisting to the Database](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson08.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Explanation](img/i_book.png "Explanation")  
 9. [Looping through list with Thymeleaf in Spring Boot](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson09.md) - ![Walkthrough](img/i_list.png "Walkthrough") 
 10. [Complete data life cycle – form, list, detail, delete](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson10.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Explanation](img/i_book.png "Explanation") 
-11. [Adding Twitter Bootstrap to Spring Boot](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson11.md)  - ![Walkthrough](img/i_list.png "Walkthrough") ![Explanation](img/i_book.png "Explanation")  
+11. [Adding Twitter Bootstrap to Spring Boot - the Easy Way](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson11.md)  - ![Walkthrough](img/i_list.png "Walkthrough") ![Explanation](img/i_book.png "Explanation")  
 12. [Uploading images to Spring Boot with Cloudinary](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson12.md) -  - ![Walkthrough](img/i_list.png "Walkthrough")    
 13. [Using Database Relationships with Spring Boot - ManyToMany](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson13.md) - ![Walkthrough](img/i_list.png "Walkthrough")  
 14. [Using Database Relationships with Spring Boot - OneToMany](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson14.md) - ![Walkthrough](img/i_list.png "Walkthrough") 
@@ -22,4 +22,5 @@
 21. [Security - Adding User Registration](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson21.md) - ![Walkthrough](img/i_list.png "Walkthrough")
 22. [Automatically adding records to database when the Application Loads](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson22.md) - ![Walkthrough](img/i_list.png "Walkthrough")
 23. [Custom Error Pages](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson23.md) - ![Walkthrough](img/i_list.png "Walkthrough") 
-24. Deploying to Heroku
+24. [Adding Twitter Bootstrap to Spring Boot - the Complete Way](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson24.md)  - ![Walkthrough](img/i_list.png "Walkthrough")   
+25. Deploying to Heroku
