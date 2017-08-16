@@ -271,6 +271,7 @@ In this class, you have the following:
 This is a simple entity that saves information about the actor. 
 
 #The View
+
 ### list.html
 This displays actors' names and pictures. The pictures are displayed using the image tag, but using a thymeleaf attribute, th:src, instead of a regular html attribute. 
 
