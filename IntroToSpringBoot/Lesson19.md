@@ -10,7 +10,8 @@
     protected void configure(HttpSecurity http) throws Exception {
         http
                 .authorizeRequests()
-			.antMatchers("/").access("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')")
+			.antMatchers("/")
+			.access("hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')")
 			.antMatchers("/admin").access("hasRole('ROLE_ADMIN')")
                 .anyRequest().authenticated()
                 .and()
