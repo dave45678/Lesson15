@@ -10,6 +10,7 @@
 	* Right click on com.example.demo and click New -> Class 
 	* Name it HomeController.java 
 	* Edit it to look like this: 
+
 ```java
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

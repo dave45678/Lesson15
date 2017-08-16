@@ -10,6 +10,7 @@
 	* Right click on com.example.demo and click New -> Class
 	* Name it Movie.java
 	* Edit it to look like this:
+
 ```java
 import javax.persistence.*;
 import java.util.Set;
@@ -40,6 +41,7 @@ public class Movie {
 	* Right click on com.example.demo and click New -> Class
 	* Name it Actor.java
 	* Edit it to look like this:
+
 ```java
 import javax.persistence.*;
 import java.util.Set;
@@ -65,6 +67,7 @@ public class Actor {
 	* Right click on com.example.demo and click New -> Class
 	* Name it MovieRepository.java
 	* Edit it to look like this:
+
 ```java
 import org.springframework.data.repository.CrudRepository;
 
@@ -87,6 +90,7 @@ public interface ActorRepository extends CrudRepository<Actor, Long>{
 	* Right click on com.example.demo and click New -> Class 
 	* Name it HomeController.java 
 	* Edit it to look like this: 
+
 ``` java
 import com.example.demo.models.Actor;
 import com.example.demo.models.Movie;

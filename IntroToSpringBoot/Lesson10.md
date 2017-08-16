@@ -10,6 +10,7 @@
 	* Right click on com.example.demo and click New -> Class 
 	* Name it Course.java 
 	* Edit it to look like this: 
+
 ```java
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -53,6 +54,7 @@ public class Course {
 	* Right click on com.example.demo and click New -> Class 
 	* Name it CourseRepository.java 
 	* Edit it to look like this: 
+
 ```java
 import org.springframework.data.repository.CrudRepository;
 
@@ -306,8 +308,4 @@ Note that there is no thymeleaf action on this form - because the __anchor tag__
 
 #### show.html  
 This shows information for a single course, and has an option to delete the course, using its id as a __PARAMETER__ in the route to delete the item. 
-
-
-
-
 
