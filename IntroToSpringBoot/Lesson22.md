@@ -71,5 +71,5 @@ public class DataLoader implements CommandLineRunner{
 
 ```
 
-3. Assuming your dataloader implements CommandLineRunner, you can use this as a template for 
+7. Assuming your dataloader implements CommandLineRunner, you can use this as a template for 
 how you would implement this type of functionality in your own applications.
