@@ -23,4 +23,4 @@
 22. [Automatically adding records to database when the Application Loads](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson22.md) - ![Walkthrough](img/i_list.png "Walkthrough")
 23. [Custom Error Pages](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson23.md) - ![Walkthrough](img/i_list.png "Walkthrough") 
 24. [Adding Twitter Bootstrap to Spring Boot - the Complete Way](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson24.md)  - ![Walkthrough](img/i_list.png "Walkthrough")   
-25. Deploying to Heroku
+25. [Deploying to Heroku](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson25.md)  - ![Walkthrough](img/i_list.png "Walkthrough")
