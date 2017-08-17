@@ -124,3 +124,22 @@ $ git push heroku master
 ```
 
 2. Run your application and open a browser
+
+
+# What's Going On 
+Now that you've created an entire application, you probably want to share it with people. Heroku is a free app hosting service that lets you put your appication in the cloud. You can create up to 5 free applications on Heroku, and as long as you are using a PostgreSQL database, your app(s) will be hosted at no cost to you. 
+
+If you already have a GitHub repository for your application, deploying to Heroku is easy. All you need to do (once you have an account) is log in to the terminal, create an application, and a database that will be used to hold your application's data. 
+
+#### CONFIGURING THE DATABASE (DON'T FORGET YOUR DEPENDENCY!)
+
+When configuring your database settings, you will have to include a dependency to allow you to connect to a PostgreSQL database - the same way you did with MySQL. You can't connect without it!
+
+You will also need to change the settings to make sure your datasource now points to your new repository in the application properties file. The url, username, and password will automatically be taken from your database when you create it with 
+
+``` 
+heroku addons:create heroku-postgresql:hobby-dev
+```
+
+Once everything is configured, you can push to your remote URL like you're used to. 
+
