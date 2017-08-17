@@ -261,7 +261,22 @@ __REMEMBER YOUR GETTERS AND SETTERS!!__
 
 You will need to create a class that interacts with the Cloudinary server, and makes all of the transformations available ot your application. This class (CloudinaryConfig) will use a number of classes that were imported when you added the dependency to the .pom file. 
 
-In this class, you have the following: 
+## The Cloudinary Configuration Class
+### private Cloudinary cloudinary 
+This is an object that will be used to apply your image tranfomations, and generate a URL with those transformations so that you can use the image later.
+
+In the class, you will see the following:
+### public CloudinaryConfig()
+This constructor for the class you have created. It takes the values of the cloudinary settings you entered in your application.properties file, and assigns those to the variables that the Singleton class will use to connect to Cloudinary. 
+
+
+### public Map upload (Object file, Map options)
+
+This passes the file from the user's computer to Cloudinary, returning an object which contains all of the properties for the transformed image. 
+
+### public String createUrl()
+This creates a Cloudinary URL 'preset' trasnformations. In this case, the width, height and border can automatically be applied each time this method is called, and a URL to the transformed image will be returned. 
+
 
 # The Model 
 ### Actor 
@@ -302,20 +317,5 @@ The resulting image is saved into a Map called uploadResult (to prepare it for C
 ObjectUtils.asMap("resourcetype","auto") indicates that Cloudinary should automatically try to detect what kind of file has been uploaded. 
 
 Once the file has been successfully saved on the Cloudinary server, and a URL is available, it is saved to the actor object (using the setter for headshot), and the actor model is saved to the database, with the name entered by the user and the file uploaded.  The user is then returned to the default route and should see the list of actors and their headshots. 
-
-## The Cloudinary Configuration Class
-### private Cloudinary cloudinary 
-This is an object that will be used to apply your image tranfomations, and generate a URL with those transformations so that you can use the image later.
-
-### public CloudinaryConfig()
-This constructor for the class you have created. It takes the values of the cloudinary settings you entered in your application.properties file, and assigns those to the variables that the Singleton class will use to connect to Cloudinary. 
-
-
-### public Map upload (Object file, Map options)
-
-This passes the file from the user's computer to Cloudinary, returning an object which contains all of the properties for the transformed image. 
-
-### public String createUrl()
-This creates a Cloudinary URL 'preset' trasnformations. In this case, the width, height and border can automatically be applied each time this method is called, and a URL to the transformed image will be returned. 
 
 
