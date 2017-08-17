@@ -42,7 +42,7 @@ Git remote heroku added
 	* Run the following:
 
 ```ShellSession
-$ heroku create
+$ git push heroku master
 Initializing repository, done.
 Counting objects: 110, done.
 Delta compression using up to 4 threads.
