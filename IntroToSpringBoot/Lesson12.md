@@ -278,7 +278,7 @@ This passes the file from the user's computer to Cloudinary, returning an object
 This creates a Cloudinary URL 'preset' trasnformations. In this case, the width, height and border can automatically be applied each time this method is called, and a URL to the transformed image will be returned. 
 
 
-# The Model 
+## The Model 
 ### Actor 
 This is a simple entity that saves information about the actor. 
 
@@ -299,7 +299,7 @@ indicates that a file is expected, and
 ```
 indicates that additional data is going to be posted with the form (i.e. the picture). This means that the post variables for the form will include the file which is uploaded. The uploaded file can be processed, as you will see in the PostMapping method for the "add" route. 
 
-# The Controller
+## The Controller
 
 ### @RequestMapping("/")
 This route lists all of the actors in the database and displays their images using list.html. 
