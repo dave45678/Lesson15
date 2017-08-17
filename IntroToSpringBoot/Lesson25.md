@@ -16,7 +16,7 @@
 4. Login in to the Heroku CLI
     * Open a Terminal
 ```text
-heroku login
+$ <b>heroku login</b>
 Enter your Heroku credentials.
 Email: java@example.com
 Password:
@@ -26,179 +26,87 @@ Generating new SSH public key.
 Uploading ssh public key /Users/java/.ssh/id_rsa.pub
 ```
     
-2. Get Twitter Bootstrap
-  	* Download the file by using this link: 
-  	https://github.com/twbs/bootstrap/releases/download/v3.3.7/bootstrap-3.3.7-dist.zip
-  	* Unzip the file 
-  	* Copy the css, fonts and js folders into the static folder inside the resources folder
-
-3. Edit the Security Configuration
-	* Open SecurityConfiguration.java
-	* Edit it to look like this:
-```java
-@Configuration
-@EnableWebSecurity
-public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
-
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http
-                .authorizeRequests()
-                .antMatchers("/", "/css/**", "/js/**").permitAll()
-                .anyRequest().authenticated()
-                .and()
-                .formLogin()
-                .and()
-                .httpBasic();
-    }
-
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication().
-                withUser("user").password("password").roles("USER");
-    }
-}
+6. Provision a new Heroku App
+	* Navigate to the directory your application is in
+	* Run the following:
+```text
+$ <b>heroku create</b>
+Creating nameless-lake-8055 in organization heroku... done, stack is cedar-14
+http://nameless-lake-8055.herokuapp.com/ | git@heroku.com:nameless-lake-8055.git
+Git remote heroku added
 ```
-  
-4. Create a Bootstrap Fragment Template
-  	* Right click on templates and click New -> Html 
-	* Name it base.html 
-	* Edit it to look like this: 
-```html
-<!DOCTYPE html>
-<html lang="en" xmlns:th="www.thymeleaf.org">
-<head th:fragment="headstuff">
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap 101 Template</title>
-    <link href="/css/bootstrap.min.css" rel="stylesheet" />
-    <style>
-        body { padding-bottom: 70px; }
-    </style>
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head>
-<body>
-<nav class="navbar navbar-default" th:fragment="navbar">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" 
-                    data-toggle="collapse" 
-                    data-target="#bs-example-navbar-collapse-1" 
-                    aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">LearningByCoding</a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li><a href="/">Home </a></li>
-                <li><a href="/secure">Secure </a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="/login">Login</a></li>
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-</nav>
+	
+7. Deploy your code
+	* Run the following:
+```text
+$ <b>heroku create</b>
+Initializing repository, done.
+Counting objects: 110, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (87/87), done.
+Writing objects: 100% (110/110), 212.71 KiB | 0 bytes/s, done.
+Total 110 (delta 30), reused 0 (delta 0)
 
-<h1>Hello, world!</h1>
+-----> Java app detected
+-----> Installing OpenJDK 1.8... done
+-----> Installing Maven 3.3.3... done
+-----> Executing: mvn -B -DskipTests=true clean install
+       [INFO] Scanning for projects......
+       [INFO] --------------------------------------------------------
+       [INFO] BUILD SUCCESS
+       [INFO] --------------------------------------------------------
+       [INFO] Total time: 11.417s
+       [INFO] Finished at: Thu Sep 11 17:16:38 UTC 2014
+       [INFO] Final Memory: 21M/649M
+       [INFO] -------------------------------------------------------> 
+       Discovering process types
+       Procfile declares types -> web
+```
+	
+8. Open your application	
+```text
+$ <b>heroku open</b>
+```	
 
-<nav class="navbar navbar-default navbar-fixed-bottom" th:fragment="footer">
-    <div class="container">
-        <ul class="nav navbar-nav">
-            <li><a href="/">Home </a></li>
-            <li><a href="/secure">Secure </a></li>
-            <li><a href="#">Copyright 2017 - Learning By Coding</a></li>
-        </ul>
-    </div>
-</nav>
+### Connecting to a database
 
-<th:block th:fragment="jslinks">
-    <script
-       src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
-    </script>
-    <script src="/js/bootstrap.js"></script>
-</th:block>
-</body>
-</html>
+9. Create the hobby database for your application
+	* Run the following:
+```text
+$ <b>heroku addons:create heroku-postgresql:hobby-dev</b>
+Creating heroku-postgresql:hobby-dev on ajspringboot24... free
+Database has been created and is available
+ ! This database is empty. If upgrading, you can transfer
+ ! data from another database with pg:copy
+Created postgresql-sinuous-90403 as HEROKU_POSTGRESQL_BRONZE_URL
+Use heroku addons:docs heroku-postgresql to view documentation
 ```
 
-5. Edit the index Template
-  	* Edit it to look like this: 
-```html
-<!DOCTYPE html>
-<html lang="en" xmlns:th="www.thymeleaf.org">
-    <head th:replace="base :: headstuff"></head>
-    <body>
-        <nav th:replace="base :: navbar"></nav>
-        <div class="container">
-            <div class="jumbotron">
-                <h1>Hello, world!</h1>
-                <p>...</p>
-                <p><a class="btn btn-primary btn-lg"
-                      href="/secure" role="button">Go to Secure</a>
-                </p>
-            </div>
-        </div>
-        <nav th:replace="base :: footer"></nav>
-        <th:block th:replace="base :: jslinks"></th:block>
-    </body>
-</html>
+10. Use Postgresql
+	* If you aren't already using postgres in your application add this to your dependencies:
+```xml
+<dependency>
+  <groupId>org.postgresql</groupId>
+  <artifactId>postgresql</artifactId>
+  <version>9.4-1201-jdbc4</version>
+</dependency>
 ```
 
-6. Create a Template
-  	* Right click on templates and click New -> Html 
-	* Name it secure.html 
-	* Edit it to look like this: 
-```html
-<!DOCTYPE html>
-<html lang="en" xmlns:th="www.thymeleaf.org">
-<head th:replace="base :: headstuff"></head>
-<body>
-<nav th:replace="base :: navbar"></nav>
-<div class="container">
-    <div class="jumbotron">
-        <h1>You have reached the Secure Page</h1>
-        <p><a class="btn btn-primary btn-lg"
-              href="/" role="button">Go to Home</a>
-        </p>
-    </div>
-</div>
-<nav th:replace="base :: footer"></nav>
-<th:block th:replace="base :: jslinks"></th:block>
-</body>
-</html>
+	* Add this to your application.properties (and comment out your local database properties)
+```text
+spring.datasource.url=${JDBC_DATABASE_URL}
+spring.datasource.username=${JDBC_DATABASE_USERNAME}
+spring.datasource.password=${JDBC_DATABASE_PASSWORD}
+spring.jpa.show-sql=false
+spring.jpa.generate-ddl=true
+spring.jpa.hibernate.ddl-auto=update
 ```
 
-7. Edit the Controller 
-	* Right click on com.example.demo and click New -> Class 
-	* Name it HomeController.java 
-	* Edit it to look like this: 
-```java
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-@Controller
-public class HomeController {
-
-    @RequestMapping("/")
-    public String index(){
-        return "index";
-    }
-    
-    @RequestMapping("/secure")
-    public String secure(){
-        return "secure";
-    }
-}
+11. Push these new changes to Heroku
+```text
+$ git add .
+$ git commit -m "Database Changes for Heroku"
+$ git push heroku master
 ```
 
-8. Run your application and open a browser, if you type in the URL 
-http://localhost:8080 you should see you home page styled with TwitterBootstrap.
+8. Run your application and open a browser
