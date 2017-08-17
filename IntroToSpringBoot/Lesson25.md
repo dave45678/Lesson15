@@ -15,6 +15,7 @@
     
 4. Login in to the Heroku CLI
     * Open a Terminal
+
 ```ShellSession
 $ heroku login
 Enter your Heroku credentials.
@@ -29,6 +30,7 @@ Uploading ssh public key /Users/java/.ssh/id_rsa.pub
 6. Provision a new Heroku App
 	* Navigate to the directory your application is in
 	* Run the following:
+
 ```ShellSession
 $ heroku create
 Creating nameless-lake-8055 in organization heroku... done, stack is cedar-14
@@ -38,6 +40,7 @@ Git remote heroku added
 	
 7. Deploy your code
 	* Run the following:
+
 ```ShellSession
 $ heroku create
 Initializing repository, done.
