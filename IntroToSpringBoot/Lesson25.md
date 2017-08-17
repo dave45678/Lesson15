@@ -141,5 +141,9 @@ You will also need to change the settings to make sure your datasource now point
 heroku addons:create heroku-postgresql:hobby-dev
 ```
 
-Once everything is configured, you can push to your remote URL like you're used to. 
+Once everything is configured, you can push to your remote URL like you're used to doing, and open the app in a browser with 
+
+```
+heroku open
+``` 
 
