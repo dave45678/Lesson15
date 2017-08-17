@@ -15,8 +15,8 @@
     
 4. Login in to the Heroku CLI
     * Open a Terminal
-```text
-$ **heroku login**
+```shell
+$ heroku login
 Enter your Heroku credentials.
 Email: java@example.com
 Password:
