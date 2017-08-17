@@ -53,6 +53,7 @@ public class HomeController {
 ```
   * Go to http://getbootstrap.com/getting-started and copy the Bootstrap CDN links
   * Paste that code right above the  &lt;/head> tag
+  * Note that this code is not HTML5 compliant. To make it compliant add the closing tags for the </link> element.
 
 4. Run your application and open a browser, if you type in the URL http://localhost:8080 you should see this: 
 ![](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/img/Lesson11.png)
