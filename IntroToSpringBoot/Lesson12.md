@@ -277,13 +277,6 @@ This passes the file from the user's computer to Cloudinary, returning an object
 ### public String createUrl()
 This creates a Cloudinary URL 'preset' trasnformations. In this case, the width, height and border can automatically be applied each time this method is called, and a URL to the transformed image will be returned. 
 
-The resulting image is saved into a Map called uploadResult (to prepare it for Cloudinary). 
-
-ObjectUtils.asMap("resourcetype","auto") indicates that Cloudinary should automatically try to detect what kind of file has been uploaded. 
-
-Once the file has been successfully saved on the Cloudinary server, and a URL is available, it is saved to the actor object (using the setter for headshot), and the actor model is saved to the database, with the name entered by the user and the file uploaded.  The user is then returned to the default route and should see the list of actors and their headshots. 
-
-
 ## The Model 
 ### Actor 
 This is a simple entity that saves information about the actor. 
@@ -318,5 +311,9 @@ Users can input these details in form.html.
 ### @PostMapping("/add")
 This is where the magic happens. Once a user clicks 'submit' on form.html, then the details are submitted to the controller. Here, the file (passed as a request parameter, as it is not part of the model) is uploaded to cloudinary. 
 
+The resulting image is saved into a Map called uploadResult (to prepare it for Cloudinary). 
 
+ObjectUtils.asMap("resourcetype","auto") indicates that Cloudinary should automatically try to detect what kind of file has been uploaded. 
+
+Once the file has been successfully saved on the Cloudinary server, and a URL is available, it is saved to the actor object (using the setter for headshot), and the actor model is saved to the database, with the name entered by the user and the file uploaded.  The user is then returned to the default route and should see the list of actors and their headshots. 
 
