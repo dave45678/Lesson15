@@ -1,9 +1,33 @@
 # Lesson 22 - Automatically adding records to database when the Application Loads
 ## Walkthrough
 
-1. Take an existing application like Lesson 21
+1. Take your existing application from Lesson 21
 
-2. Add a DataLoader Class
+2. Add loaded constructor to User
+    * Edit the User.java file
+    * Right-click the word Java and Select Generate -> Constructor
+    * Click on email, password, firstName, lastName, enabled, username
+    * Click OK
+    
+3. Add default constructor to User
+    * Edit the User.java file
+    * Right-click the word Java and Select Generate -> Constructor
+    * Click on the "Select None" button
+    * Click OK
+ 
+4. Add loaded constructor to Role
+    * Edit the Role.java file
+    * Right-click the word Java and Select Generate -> Constructor
+    * Click on role
+    * Click OK
+    
+5. Add default constructor to Role
+    * Edit the Role.java file
+    * Right-click the word Java and Select Generate -> Constructor
+    * Click on the "Select None" button
+    * Click OK
+
+6. Add a DataLoader Class
     * Right-click on  and click New -> Class
     * Name it DataLoader.java
     * Edit the contents to look like this:
