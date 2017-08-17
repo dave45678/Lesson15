@@ -113,8 +113,7 @@ public class CloudinaryConfig {
 
 8. Edit the Configuration
     * Open the application.properties file
-    * Edit it to look like this:
-
+    * Edit it to look like this (keep in mind that you need to replace <<your cloud name>>, <<your api secret>>, and <<your api key>> with the values from Cloudinary Dashboard :
 ```
 # ===============================
 # = Cloudinary configurations
