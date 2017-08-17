@@ -92,9 +92,6 @@ public interface ActorRepository extends CrudRepository<Actor, Long>{
 	* Edit it to look like this: 
 
 ``` java
-import com.example.demo.models.Actor;
-import com.example.demo.models.Movie;
-import com.example.demo.repositories.ActorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
