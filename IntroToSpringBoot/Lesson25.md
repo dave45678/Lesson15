@@ -1,9 +1,9 @@
 # Lesson 25 - Deploying Your Application to Heroku 
 ## The Walkthrough 
 
-1. Start with any application you from any previous lesson 
+### 1.  Start with any application you from any previous lesson 
 
-2. Create a Heroku Account
+### 2.  Create a Heroku Account
     * If you don't already have one, go to Heroku.com and create an account
 
 3. Download the Heroku CLI 
@@ -13,8 +13,9 @@
       * Win64: https://devcenter.heroku.com/toolbelt-downloads/windows64
       * Debian/Ubuntu: https://devcenter.heroku.com/toolbelt-downloads/debian
     
-4. Login in to the Heroku CLI
-    * Open a Terminal
+### 3. Log in to the Heroku CLI
+
+Open a Terminal
 
 ```ShellSession
 $ heroku login
@@ -26,10 +27,11 @@ Would you like to generate one? [Yn]
 Generating new SSH public key.
 Uploading ssh public key /Users/java/.ssh/id_rsa.pub
 ```
-    
-6. Provision a new Heroku App
-	* Navigate to the directory your application is in
-	* Run the following:
+
+### 4. Provision a new Heroku App:
+1. Navigate to the directory your application is in
+
+2. Run the following:
 
 ```ShellSession
 $ heroku create
@@ -37,10 +39,50 @@ Creating nameless-lake-8055 in organization heroku... done, stack is cedar-14
 http://nameless-lake-8055.herokuapp.com/ | git@heroku.com:nameless-lake-8055.git
 Git remote heroku added
 ```
-	
-7. Deploy your code
-	* Run the following:
 
+### 5. Connect to a database
+
+9. Create the hobby database for your application
+	* Run the following:
+	
+
+```ShellSession
+$ heroku addons:create heroku-postgresql:hobby-dev
+Creating heroku-postgresql:hobby-dev on ajspringboot24... free
+Database has been created and is available
+ ! This database is empty. If upgrading, you can transfer
+ ! data from another database with pg:copy
+Created postgresql-sinuous-90403 as HEROKU_POSTGRESQL_BRONZE_URL
+Use heroku addons:docs heroku-postgresql to view documentation
+```
+
+10. Use Postgresql
+	* If you aren't already using postgres in your application add this to your dependencies:
+
+ ```xml
+<dependency>
+  <groupId>org.postgresql</groupId>
+  <artifactId>postgresql</artifactId>
+  <version>9.4-1201-jdbc4</version>
+</dependency>
+```
+
+11. Add postgres settings to your properties
+	* Add this to your application.properties (and comment out your local database properties)
+
+```
+spring.datasource.url=${JDBC_DATABASE_URL}
+spring.datasource.username=${JDBC_DATABASE_USERNAME}
+spring.datasource.password=${JDBC_DATABASE_PASSWORD}
+spring.jpa.show-sql=false
+spring.jpa.generate-ddl=true
+spring.jpa.hibernate.ddl-auto=update
+```
+
+	
+### 6. Deploy your code
+1. Run the following:
+	
 ```ShellSession
 $ git push heroku master
 Initializing repository, done.
@@ -66,51 +108,19 @@ Total 110 (delta 30), reused 0 (delta 0)
        Procfile declares types -> web
 ```
 	
-8. Open your application	
+2. Open your application	
+
 ```ShellSession
 $ heroku open
 ```	
 
-### Connecting to a database
+### 7. Push new changes to Heroku
+1. Update the code in your local repository and push to heroku
 
-9. Create the hobby database for your application
-	* Run the following:
-```ShellSession
-$ heroku addons:create heroku-postgresql:hobby-dev
-Creating heroku-postgresql:hobby-dev on ajspringboot24... free
-Database has been created and is available
- ! This database is empty. If upgrading, you can transfer
- ! data from another database with pg:copy
-Created postgresql-sinuous-90403 as HEROKU_POSTGRESQL_BRONZE_URL
-Use heroku addons:docs heroku-postgresql to view documentation
 ```
-
-10. Use Postgresql
-	* If you aren't already using postgres in your application add this to your dependencies:
-```xml
-<dependency>
-  <groupId>org.postgresql</groupId>
-  <artifactId>postgresql</artifactId>
-  <version>9.4-1201-jdbc4</version>
-</dependency>
-```
-
-11. Add postgres settings to your properties
-	* Add this to your application.properties (and comment out your local database properties)
-```text
-spring.datasource.url=${JDBC_DATABASE_URL}
-spring.datasource.username=${JDBC_DATABASE_USERNAME}
-spring.datasource.password=${JDBC_DATABASE_PASSWORD}
-spring.jpa.show-sql=false
-spring.jpa.generate-ddl=true
-spring.jpa.hibernate.ddl-auto=update
-```
-
-12. Push these new changes to Heroku
-```text
 $ git add .
 $ git commit -m "Database Changes for Heroku"
 $ git push heroku master
 ```
 
-13. Run your application and open a browser
+2. Run your application and open a browser
