@@ -284,7 +284,7 @@ indicates that a file is expected, and
 ```
 indicates that additional data is going to be posted with the form (i.e. the picture). This means that the post variables for the form will include the file which is uploaded. The uploaded file can be processed, as you will see in the PostMapping method for the "add" route. 
 
-#The Controller
+# The Controller
 
 ### @RequestMapping("/")
 This route lists all of the actors in the database and displays their images using list.html. 
