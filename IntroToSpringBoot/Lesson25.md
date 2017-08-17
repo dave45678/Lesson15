@@ -29,8 +29,8 @@ Uploading ssh public key /Users/java/.ssh/id_rsa.pub
 6. Provision a new Heroku App
 	* Navigate to the directory your application is in
 	* Run the following:
-```text
-$ <b>heroku create</b>
+```ShellSession
+$ heroku create
 Creating nameless-lake-8055 in organization heroku... done, stack is cedar-14
 http://nameless-lake-8055.herokuapp.com/ | git@heroku.com:nameless-lake-8055.git
 Git remote heroku added
@@ -38,8 +38,8 @@ Git remote heroku added
 	
 7. Deploy your code
 	* Run the following:
-```text
-$ <b>heroku create</b>
+```ShellSession
+$ heroku create
 Initializing repository, done.
 Counting objects: 110, done.
 Delta compression using up to 4 threads.
@@ -64,16 +64,16 @@ Total 110 (delta 30), reused 0 (delta 0)
 ```
 	
 8. Open your application	
-```text
-$ <b>heroku open</b>
+```ShellSession
+$ heroku open
 ```	
 
 ### Connecting to a database
 
 9. Create the hobby database for your application
 	* Run the following:
-```text
-$ <b>heroku addons:create heroku-postgresql:hobby-dev</b>
+```ShellSession
+$ heroku addons:create heroku-postgresql:hobby-dev
 Creating heroku-postgresql:hobby-dev on ajspringboot24... free
 Database has been created and is available
  ! This database is empty. If upgrading, you can transfer
