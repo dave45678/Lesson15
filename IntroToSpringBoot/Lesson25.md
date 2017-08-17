@@ -4,16 +4,16 @@
 ### 1.  Start with any application you from any previous lesson 
 
 ### 2.  Create a Heroku Account
-    * If you don't already have one, go to Heroku.com and create an account
+    If you don't already have one, go to Heroku.com and create an account
 
-3. Download the Heroku CLI 
+### 3.  Download the Heroku CLI 
     * Find the right download for your platform and install it:
       * Mac: https://devcenter.heroku.com/toolbelt-downloads/osx
       * Win32: https://devcenter.heroku.com/toolbelt-downloads/windows32
       * Win64: https://devcenter.heroku.com/toolbelt-downloads/windows64
       * Debian/Ubuntu: https://devcenter.heroku.com/toolbelt-downloads/debian
     
-### 3. Log in to the Heroku CLI
+### 4. Log in to the Heroku CLI
 
 Open a Terminal
 
@@ -28,7 +28,7 @@ Generating new SSH public key.
 Uploading ssh public key /Users/java/.ssh/id_rsa.pub
 ```
 
-### 4. Provision a new Heroku App:
+### 5. Provision a new Heroku App:
 1. Navigate to the directory your application is in
 
 2. Run the following:
@@ -40,9 +40,9 @@ http://nameless-lake-8055.herokuapp.com/ | git@heroku.com:nameless-lake-8055.git
 Git remote heroku added
 ```
 
-### 5. Connect to a database
+### 6. Connect to a database
 
-9. Create the hobby database for your application
+1. Create the hobby database for your application
 	* Run the following:
 	
 
@@ -56,7 +56,7 @@ Created postgresql-sinuous-90403 as HEROKU_POSTGRESQL_BRONZE_URL
 Use heroku addons:docs heroku-postgresql to view documentation
 ```
 
-10. Use Postgresql
+2. Use Postgresql
 	* If you aren't already using postgres in your application add this to your dependencies:
 
  ```xml
@@ -67,7 +67,7 @@ Use heroku addons:docs heroku-postgresql to view documentation
 </dependency>
 ```
 
-11. Add postgres settings to your properties
+3. Add postgres settings to your properties
 	* Add this to your application.properties (and comment out your local database properties)
 
 ```
@@ -80,7 +80,7 @@ spring.jpa.hibernate.ddl-auto=update
 ```
 
 	
-### 6. Deploy your code
+### 7. Deploy your code
 1. Run the following:
 	
 ```ShellSession
@@ -114,7 +114,7 @@ Total 110 (delta 30), reused 0 (delta 0)
 $ heroku open
 ```	
 
-### 7. Push new changes to Heroku
+### 8. Push new changes to Heroku
 1. Update the code in your local repository and push to heroku
 
 ```
