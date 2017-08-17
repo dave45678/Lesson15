@@ -92,6 +92,7 @@ Use heroku addons:docs heroku-postgresql to view documentation
 </dependency>
 ```
 
+11. Add postgres settings to your properties
 	* Add this to your application.properties (and comment out your local database properties)
 ```text
 spring.datasource.url=${JDBC_DATABASE_URL}
@@ -102,11 +103,11 @@ spring.jpa.generate-ddl=true
 spring.jpa.hibernate.ddl-auto=update
 ```
 
-11. Push these new changes to Heroku
+12. Push these new changes to Heroku
 ```text
 $ git add .
 $ git commit -m "Database Changes for Heroku"
 $ git push heroku master
 ```
 
-8. Run your application and open a browser
+13. Run your application and open a browser
