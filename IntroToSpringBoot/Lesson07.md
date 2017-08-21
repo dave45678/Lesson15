@@ -10,122 +10,126 @@
 	* Right click on com.example.demo and click New -> Class 
 	* Name it Tvshow.java 
 	* Edit it to look like this: 
-```java
-import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
-public class Tvshow {
-    @NotNull
-    @Min(1)
-    private long id;
-
-    @NotNull
-    @Size(min=3, max=20)
-    private String name;
-
-    @NotNull
-    @Size(min=3, max=10)
-    private String type;
-
-    @NotNull
-    @Size(min=10, max=30)
-    private String description;
-}
-```
+	```java
+	import javax.validation.constraints.Min;
+	import javax.validation.constraints.NotNull;
+	import javax.validation.constraints.Size;
+	
+	public class Tvshow {
+	    @NotNull
+	    @Min(1)
+	    private long id;
+	
+	    @NotNull
+	    @Size(min=3, max=20)
+	    private String name;
+	
+	    @NotNull
+	    @Size(min=3, max=10)
+	    private String type;
+	
+	    @NotNull
+	    @Size(min=10, max=30)
+	    private String description;
+	}
+	```
 
 3. Autogenerate getters and setters
-  	* Right-click on the word Tvshow and select generate -> Getters and Setters
-  	* Select all the fields list and click OK
+	* Right-click on the word Tvshow and select generate -> Getters and Setters
+	* Select all the fields list and click OK
 
 4. Create a Controller 
 	* Right click on com.example.demo and click New -> Class 
 	* Name it HomeController.java 
 	* Edit it to look like this: 
-```java
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-
-import javax.validation.Valid;
-
-@Controller
-public class HomeController {
-    @GetMapping("/tvform")
-    public String loadTvForm(Model model){
-        model.addAttribute("tvshow", new Tvshow());
-        return "tvform";
-    }
-
-    @PostMapping("/tvform")
-    public String processTvForm(@Valid Tvshow tvshow, BindingResult result){
-        if (result.hasErrors()){
-            return "tvform";
-        }
-        return "tvshowconfirm";
-    }
-}
-```
+	
+	```java
+	import org.springframework.stereotype.Controller;
+	import org.springframework.ui.Model;
+	import org.springframework.validation.BindingResult;
+	import org.springframework.web.bind.annotation.GetMapping;
+	import org.springframework.web.bind.annotation.PostMapping;
+	
+	import javax.validation.Valid;
+	
+	@Controller
+	public class HomeController {
+	    @GetMapping("/tvform")
+	    public String loadTvForm(Model model){
+	        model.addAttribute("tvshow", new Tvshow());
+	        return "tvform";
+	    }
+	
+	    @PostMapping("/tvform")
+	    public String processTvForm(@Valid Tvshow tvshow, BindingResult result){
+	        if (result.hasErrors()){
+	            return "tvform";
+	        }
+	        return "tvshowconfirm";
+	    }
+	}
+	```
 
 5. Create a Template for the form
-  	* Right click on templates and click New -> Html 
+	* Right click on templates and click New -> Html 
 	* Name it tvform.html 
 	* Edit it to look like this: 
-```html
-<!DOCTYPE html>
-<html lang="en" xmlns:th="www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8" />
-    <title>Title</title>
-</head>
-<body>
-    <form action="#" 
-          th:action="@{/tvform}" 
-          th:object="${tvshow}" 
-          method="post">
-        Id :<input type="number" th:field="*{id}" />
-        <span th:if="${#fields.hasErrors('id')}" 
-              th:errors="*{id}"></span><br />
-        Name :<input type="text" th:field="*{name}" />
-        <span th:if="${#fields.hasErrors('name')}" 
-              th:errors="*{name}"></span><br />
-        Type :<input type="text" th:field="*{type}" />
-        <span th:if="${#fields.hasErrors('type')}" 
-              th:errors="*{type}"></span><br />
-        Description :<textarea rows="3" th:field="*{description}" />
-        <span th:if="${#fields.hasErrors('description')}"
-              th:errors="*{description}"></span>
-        <br />
-        <input type="submit" value="Submit" />
-    </form>
-</body>
-</html>
-```
+	
+	```html
+	<!DOCTYPE html>
+	<html lang="en" xmlns:th="www.thymeleaf.org">
+	<head>
+	    <meta charset="UTF-8" />
+	    <title>Title</title>
+	</head>
+	<body>
+	    <form action="#" 
+	          th:action="@{/tvform}" 
+	          th:object="${tvshow}" 
+	          method="post">
+	        Id :<input type="number" th:field="*{id}" />
+	        <span th:if="${#fields.hasErrors('id')}" 
+	              th:errors="*{id}"></span><br />
+	        Name :<input type="text" th:field="*{name}" />
+	        <span th:if="${#fields.hasErrors('name')}" 
+	              th:errors="*{name}"></span><br />
+	        Type :<input type="text" th:field="*{type}" />
+	        <span th:if="${#fields.hasErrors('type')}" 
+	              th:errors="*{type}"></span><br />
+	        Description :<textarea rows="3" th:field="*{description}" />
+	        <span th:if="${#fields.hasErrors('description')}"
+	              th:errors="*{description}"></span>
+	        <br />
+	        <input type="submit" value="Submit" />
+	    </form>
+	</body>
+	</html>
+	```
 
-6. Create a Template for the confirmation
-  	* Right click on templates and click New -> Html 
-	* Name it tvshowconfirm.html 
+6. Create a Template for the confirmation 
+	* Right click on templates and click New -> Html 
+	* Name it tvshowconfirm.html
 	* Edit it to look like this: 
-```html
-<!DOCTYPE html>
-<html lang="en" xmlns:th="www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8" />
-    <title>Title</title>
-</head>
-<body>
-<p th:inline="text">
-    The tv show's name was [[${tvshow.name}]].<br />
-    It is a [[${tvshow.type}]].<br />
-    It could be best described as
-    [[${tvshow.description}]].
-</p>
-</body>
-</html>
-
-```
+	
+	```html
+	<!DOCTYPE html>
+	<html lang="en" xmlns:th="www.thymeleaf.org">
+	<head>
+	    <meta charset="UTF-8" />
+	    <title>Title</title>
+	</head>
+	<body>
+	<p th:inline="text">
+	    The tv show's name was [[${tvshow.name}]].<br />
+	    It is a [[${tvshow.type}]].<br />
+	    It could be best described as
+	    [[${tvshow.description}]].
+	</p>
+	</body>
+	</html>
+	
+	```
 
 7. Run your application and open a browser, if you type in the URL http://localhost:8080/tvform you should see this: 
 ![Creating a form](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/img/Lesson07a.png "Creating a form")
