@@ -61,7 +61,7 @@ public class UserService {
 ```
 
 5. Edit the HomeController
-    * Edit it to look like this:    
+    * Add the following:    
 ```java
     @Autowired
     private UserService userService;
