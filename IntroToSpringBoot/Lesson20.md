@@ -45,6 +45,7 @@ spring.jpa.hibernate.ddl-auto=create
     * Edit it to look like this:    
 ```java
 @Entity
+@Table(name="USER_DATA")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
