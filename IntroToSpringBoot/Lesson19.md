@@ -73,4 +73,4 @@ public class HomeController {
 </html>
 ```
 
-5. Run your application and open a browser, if you Login as user / password you should see the User Page. However, if you login as admin / password you should see the Admin Page.
+5. Run your application and open a browser, if you Login as user / password you should not be able to navigate to the Admin page. However, if you login as admin / password you should be able to see the Admin Page.
