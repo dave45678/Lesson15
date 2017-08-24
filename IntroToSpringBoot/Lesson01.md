@@ -100,4 +100,21 @@ A template is a blueprint for a dynamic page. A template is different from a sta
 
 Templating engines (like Thymeleaf) are used to show data that is passed from the application, which may change depending on the user’s interaction with the application. 
 
+## Questions
+1. What is a template?
+	* a blueprint
+	* a static page
+	* a controller
+	* a variable
+2. What's a route?
+	* a way to get home
+	* a page request path
+	* a url
+	* a way to interpret a variable
+3. What is the difference between GET and POST?
+	* one is an action and other isn't
+	* post is for sending data through email
+	* get is for asking for things
+	* get loads forms and post submits them
+	
 [Github Repository](https://github.com/ajhenley/SpringBoot_01)
