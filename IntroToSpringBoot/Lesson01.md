@@ -1,4 +1,10 @@
 # Lesson 1 - Hello World with Template 
+## Learning Objectives
+* Creating a Spring Boot Application
+* Creating a Controller
+* Creating a Thymeleaf Template
+* Passing a variable to the template from the controller
+
 ## The Walkthrough 
 
 1. Create a Spring Boot Application 
