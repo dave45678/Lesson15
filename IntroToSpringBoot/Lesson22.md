@@ -1,4 +1,4 @@
-# Lesson 21 - Security - Adding User Registration 
+# Lesson 22 - Security - Controllers and Thymeleaf 
 ## The Walkthrough 
 
 1. Start with the code from the previous lesson
