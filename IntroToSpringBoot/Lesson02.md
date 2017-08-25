@@ -72,9 +72,9 @@ There is also static text in the HTML file - this is the Hello World text within
 	* model.addAttribute("val", "greeting")
 	* model.attribute("val","greeting")
 2. If you successfully send a variable called "myvar" to the template, which of the following would work on the template?
-	* <div th:text="${myvar}"></div>
-	* <div th:text="myvar"></div>
-	* <div> th:text="${myvar}"</div>
-	* <div "${myvar}"></div>
+	* &lt;div th:text="${myvar}">&lt;/div>
+	* &lt;div th:text="myvar">&lt;/div>
+	* &lt;div> th:text="${myvar}"&lt;/div>
+	* &lt;div "${myvar}">&lt;/div>
 
 [Github Repository](https://github.com/ajhenley/SpringBoot_02)
