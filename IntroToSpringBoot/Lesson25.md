@@ -1,4 +1,4 @@
-# Lesson 24 - Adding Twitter Bootstrap (or any other template) to Spring Boot 
+# Lesson 25 - Adding Twitter Bootstrap (or any other template) to Spring Boot 
 ## The Walkthrough 
 
 1. Start with an application based on Lesson 17 (an application with at least basic security) 
