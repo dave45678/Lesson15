@@ -3,7 +3,6 @@
 * Creating a Spring Boot Application
 * Creating a Controller
 * Creating a Thymeleaf Template
-* Passing a variable to the template from the controller
 
 ## The Walkthrough 
 
