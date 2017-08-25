@@ -1,4 +1,10 @@
 # Lesson 4 - Handling Form Values -- the hard way 
+## Learning Objectives
+* Capturing form values in the controller
+* Using the thymeleaf th:action attribute
+* Using the thymeleaf th:object attribute
+* Using the thymeleaf th:field attribute
+
 ## The Walkthrough 
 
 1. Create a Spring Boot Application 
@@ -85,4 +91,37 @@ The “/processform” route processes both get and post requests in the same wa
 
 **th:inline** indicates that the value of text to be displayed is shown within the tag. To make sure the values of your Thymeleaf expresssions are evaluated, enclose your expressions in double square parentheses - [[]]. 
 
+## Questions
+1. Which of the following tells thymeleaf what variable to use for all the fields in the form?
+	* th:object
+	* th:action
+	* th:text
+	* th:field
+	
+2. Which of the following tells thymeleaf what variable attribute (variable.attribute) to map to a particular input control?
+	* th:object
+	* th:action
+	* th:text
+	* th:field
+	
+3. Which of the following tells thymeleaf what route to use to submit the form to?
+	* th:object
+	* th:action
+	* th:text
+	* th:field	
+
+4. Webpages are usually loaded using which HTML verb?
+	* GET
+	* PUT
+	* POST
+	* DELETE
+
+5. Web forms are usually submitted using which HTML verb?
+	* GET
+	* PUT
+	* POST
+	* DELETE
+	
+	
+	
 [Github Repository](https://github.com/ajhenley/SpringBoot_04)
