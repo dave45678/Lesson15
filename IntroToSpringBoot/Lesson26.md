@@ -1,4 +1,4 @@
-# Lesson 25 - Deploying Your Application to Heroku 
+# Lesson 26 - Deploying Your Application to Heroku 
 ## The Walkthrough 
 
 ### 1.  Start with any application you from any previous lesson 
