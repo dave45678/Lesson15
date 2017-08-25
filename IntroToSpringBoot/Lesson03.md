@@ -1,4 +1,7 @@
 # Lesson 3 - Hello World with External Variables 
+## Learning Objectives
+* Loading a value in the template from the messages.properties file
+
 ## The Walkthrough 
 
 1. Create a Spring Boot Application 
@@ -64,5 +67,12 @@ Again, there is also static text in the HTML file - this is the Hello World text
 
 For more information about Thymeleaf expressions, see the “Thymeleaf Expression Sytnax” section of the link below:  
 http://www.thymeleaf.org/doc/articles/standarddialect5minutes.html
+
+## Question
+If you have an entry in your messages.properties that looks like:  myval.name=Alton, which of the following would work on the template?
+	* <div th:text="#{myval}"></div>
+	* <div th:text="#myval.name"></div>
+	* <div> th:text="#{myval}"</div>
+	* <div th:text="#{myval.name}"></div>
 
 [Github Repository](https://github.com/ajhenley/SpringBoot_03)
