@@ -1,6 +1,7 @@
 # Lesson 2 - Hello World with Variables 
 ## Learning Objectives
 * Passing a variable to the template from the controller
+* Using the thymeleaf th:text attribute
 
 ## The Walkthrough 
 
