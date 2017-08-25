@@ -1,4 +1,4 @@
-# Lesson 23 - Custom Error Pages 
+# Lesson 24 - Custom Error Pages 
 ## The Walkthrough 
 
 1. Create a Spring Boot Application 
