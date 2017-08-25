@@ -1,4 +1,4 @@
-# Lesson 22 - Automatically adding records to database when the Application Loads
+# Lesson 23 - Automatically adding records to database when the Application Loads
 ## Walkthrough
 
 1. Take your existing application from Lesson 21
