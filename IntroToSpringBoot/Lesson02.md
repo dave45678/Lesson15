@@ -1,4 +1,7 @@
 # Lesson 2 - Hello World with Variables 
+## Learning Objectives
+* Passing a variable to the template from the controller
+
 ## The Walkthrough 
 
 1. Create a Spring Boot Application 
@@ -62,5 +65,16 @@ The "${}" in the template indicates that a variable is expected, and its value s
 You are using this variable expression to tell the template that text should be displayed within the paragraph tag, and that the text should be the value of the object called myvar.  
 
 There is also static text in the HTML file - this is the Hello World text within the level 2 heading tags. It doesn't change at runtime. The user will see both types of text when the hometemplate file is displayed.
+
+## Questions
+1. If you declared your controller method like this: public String myVals(Model model, then how do you send a value to the template?
+	* model.add("val", "greeting")
+	* model.addAttribute("val", "greeting")
+	* model.attribute("val","greeting")
+2. If you successfully send a variable called "myvar" to the template, which of the following would work on the template?
+	* <div th:text="${myvar}"></div>
+	* <div th:text="myvar"></div>
+	* <div> th:text="${myvar}"</div>
+	* <div "${myvar}"></div>
 
 [Github Repository](https://github.com/ajhenley/SpringBoot_02)
