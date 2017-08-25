@@ -19,7 +19,7 @@
 18. [Security - Adding a Custom Login Page](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson18.md)  - ![Walkthrough](img/i_list.png "Walkthrough") ![Explanation](img/i_book.png "Explanation") ![Code](img/i_code.png "Github Code") 
 19. [Security - Specific Permissions](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson19.md) - ![Walkthrough](img/i_list.png "Walkthrough") 
 20. [Security - Using Database based Authentication](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson20.md) - ![Walkthrough](img/i_list.png "Walkthrough") 
-21. [Security - Adding User Registration](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson21.md) - ![Walkthrough](img/i_list.png "Walkthrough")
+21. [Security - Adding User Registration](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson21.md) - ![Walkthrough](img/i_list.png "Walkthrough") 
 21a. [Security - Controllers and Templates](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson21a.md) - ![Walkthrough](img/i_list.png "Walkthrough")
 22. [Automatically adding records to database when the Application Loads](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson22.md) - ![Walkthrough](img/i_list.png "Walkthrough")
 23. [Custom Error Pages](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson23.md) - ![Walkthrough](img/i_list.png "Walkthrough") 
