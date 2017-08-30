@@ -1,9 +1,9 @@
-# Lesson 13 - Using Database Relationships with Spring Boot - ManyToMany 
-## The Walkthrough 
+# Lesson 13 - Using Database Relationships with Spring Boot - ManyToMany
+## The Walkthrough
 
-1. Create a Spring Boot Application 
-	* Name it SpringBoot_13 
-	* Add the dependencies for the web, jpa, h2 and thymeleaf 
+1. Create a Spring Boot Application
+	* Name it SpringBoot_13
+	* Add the dependencies for the web, jpa, h2 and thymeleaf
 	* Hit next until you finish the wizard, and then wait until it's done.    
 
 2. Create a Class
@@ -84,12 +84,12 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface ActorRepository extends CrudRepository<Actor, Long>{
 }
-```
 
-8. Create a Controller 
-	* Right click on com.example.demo and click New -> Class 
-	* Name it HomeController.java 
-	* Edit it to look like this: 
+
+8. Create a Controller
+	* Right click on com.example.demo and click New -> Class
+	* Name it HomeController.java
+	* Edit it to look like this:
 
 ``` java
 import org.springframework.beans.factory.annotation.Autowired;
@@ -111,24 +111,24 @@ public class HomeController {
         Actor actor = new Actor();
         actor.setName("Sandra Bullock");
         actor.setRealname("Sandra Mae Bullowski");
-        
+
         // Now let's create a movie
         Movie movie = new Movie();
         movie.setTitle("Emoji Movie");
         movie.setYear(2017);
         movie.setDescription("About Emojis...");
-        
+
         // Add the movie to an empty list
         Set<Movie> movies = new HashSet<Movie>();
         movies.add(movie);
-        
+
         // Add the list of movies to the actor's movie list
         actor.setMovies(movies);
-        
+
         // Save the actor to the database
         actorRepository.save(actor);
-        
-        // Grad all the actors from the database and send them to 
+
+        // Grad all the actors from the database and send them to
         // the template
         model.addAttribute("actors", actorRepository.findAll());
         return "index";
@@ -136,10 +136,11 @@ public class HomeController {
 }
 ```
 
-9. Create a Template 
-  	* Right click on templates and click New -> Html 
-	* Name it index.html 
-	* Edit it to look like this: 
+9. Create a Template
+  	* Right click on templates and click New -> Html
+	* Name it index.html
+	* Edit it to look like this:
+
 ```html
 <!DOCTYPE html>
 <html lang="en" xmlns:th="www.thymeleaf.org">
@@ -161,6 +162,20 @@ public class HomeController {
 </html>
 ```
 
-10. Run your application and open a browser, if you type in the URL http://localhost:8080 you should see something like this: 
-![Relationships](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/img/Lesson13.png)
+10. Run your application and open a browser, if you type in the URL http://localhost:8080 you should see something like this:
+![Relationships](img/Lesson13.png)
 
+
+### What's Going On?
+
+Our application is tracking actors and movies. Each actor can be in **many** movies. And each movie can contain **many** actors. So the relationship between actors and movies in the database is described as Many to Many.
+
+How does a database keep track of which actors go with which movies? We can't add a movie id to the actor table because that would allow only one movie per actor. We can't add an actor id field to the movie table because then there would only be room for one actor in every movie.
+
+The solution? Use annotations to tell Spring Boot what we want.
+
+There's not much we actually have to do because Spring Boot will handle the situation for us using annotations. Annotations are instructions to Spring Boot letting it know what our intentions are. Spring Boot will read the annotations and create the appropriate code and tables. Create a table that contains only actor ids and movie ids. Then we could have as many actor/movie combinations as we desired. We should add a limitation that the movie id and actor id combination can only be in the table once but we'll let the database deal with that. This table is defined in the Movie class using the ```@JoinTable``` annotation. The parameters of the annotation are used to create the movie_actor join table.
+
+Look in the Actor class. Notice the annotation ```@ManyToMany(mappedBy = "cast")```? This annotation points back to the Movie class. The Movie class contains a data member for cast of type ```Set<Actor>```. This links the two together.
+
+When the database is created it will contain three tables: movie, actor and movie_actor. And all our data will be properly related. And the only thing you did is set some values in annotations. Pretty cool, right?
