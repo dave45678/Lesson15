@@ -25,3 +25,5 @@
 24. [Custom Error Pages](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson24.md) - ![Walkthrough](img/i_list.png "Walkthrough")  
 25. [Adding Twitter Bootstrap to Spring Boot - the Complete Way](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson25.md)  - ![Walkthrough](img/i_list.png "Walkthrough")   
 26. [Deploying to Heroku](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson26.md)  - ![Walkthrough](img/i_list.png "Walkthrough")![Explanation](img/i_book.png "Explanation")
+27. Unit Tests
+28. Unit Tests II
