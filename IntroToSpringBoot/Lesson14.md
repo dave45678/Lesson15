@@ -54,6 +54,7 @@ public class Movie {
 
 6. Create a Repository
 	* Right click on com.example.demo and click New -> Class
+	* Change the value of the drop-down box to Interface
 	* Name it MovieRepository.java
 	* Edit it to look like this:
 ```java
@@ -65,6 +66,7 @@ public interface MovieRepository extends CrudRepository<Movie, Long>{
 
 7. Create a Repository
 	* Right click on com.example.demo and click New -> Class
+	* Change the value of the drop-down box to Interface	
 	* Name it DirectorRepository.java
 	* Edit it to look like this:
 ```java

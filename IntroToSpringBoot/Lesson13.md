@@ -65,6 +65,7 @@ public class Actor {
 
 6. Create a Repository
 	* Right click on com.example.demo and click New -> Class
+	* Change the value of the drop-down box to Interface
 	* Name it MovieRepository.java
 	* Edit it to look like this:
 
@@ -77,6 +78,7 @@ public interface MovieRepository extends CrudRepository<Movie, Long>{
 
 7. Create a Repository
 	* Right click on com.example.demo and click New -> Class
+	* Change the value of the drop-down box to Interface
 	* Name it ActorRepository.java
 	* Edit it to look like this:
 ```java
@@ -137,7 +139,7 @@ public class HomeController {
 ```
 
 9. Create a Template
-  	* Right click on templates and click New -> Html
+  * Right click on templates and click New -> Html
 	* Name it index.html
 	* Edit it to look like this:
 
