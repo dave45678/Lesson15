@@ -1,5 +1,5 @@
 <!-- enter lesson number and title below separated by hyphen-->
-# Lesson 1 - Hello World with Servlet and external variables
+# Lesson 3 - Hello World with Servlet and external variables
 ## Learning Objectives
 * Create dynamic web application
 * Create Servlet
