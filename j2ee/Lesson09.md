@@ -1,5 +1,5 @@
 <!-- enter lesson number and title below separated by hyphen-->
-# Lesson 9 - Looping through a table from the database
+# Lesson 9 - Looping through a table from the database using JPA
 ## Learning Objectives
 * connect to the mySQL database using JPA
 * display all the records in one page

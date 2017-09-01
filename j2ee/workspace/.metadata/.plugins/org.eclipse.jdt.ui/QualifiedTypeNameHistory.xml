@@ -1,2 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
+<fullyQualifiedTypeName name="customTools.DbUtil"/>
+<fullyQualifiedTypeName name="model.Customer"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+</qualifiedTypeNameHistroy>

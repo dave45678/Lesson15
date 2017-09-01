@@ -3,7 +3,7 @@
 ## Learning Objectives
 *
 *
-
+<!-- see http://www.informit.com/articles/article.aspx?p=1334089&seqNum=4 -->
 ## The Walkthrough
 
 1. Create a Controller
