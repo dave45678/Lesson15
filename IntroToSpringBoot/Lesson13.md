@@ -30,6 +30,11 @@ public class Movie {
             joinColumns=@JoinColumn(name="MOVIE_ID", referencedColumnName = "ID"),
             inverseJoinColumns = @JoinColumn(name="ACTOR_ID", referencedColumnName = "ID"))
     private Set<Actor> cast;
+    
+    public void addActor(Actor actor)
+    {
+        cast.add(actor);
+    }
 }
 ```
 
@@ -134,8 +139,10 @@ public class HomeController {
         model.addAttribute("actors", actorRepository.findAll());
         return "index";
     }
-
-
+    public void addMovie(Movie actor)
+    {
+        movies.add(actor);
+    }
 }
 
 ```
