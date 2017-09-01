@@ -30,7 +30,10 @@ public class Movie {
             joinColumns=@JoinColumn(name="MOVIE_ID", referencedColumnName = "ID"),
             inverseJoinColumns = @JoinColumn(name="ACTOR_ID", referencedColumnName = "ID"))
     private Set<Actor> cast;
-    
+
+    public Movie() {
+        cast = new HashSet<Actor>();
+    }
     public void addActor(Actor actor)
     {
         cast.add(actor);
@@ -61,6 +64,12 @@ public class Actor {
 
     @ManyToMany(mappedBy = "cast")
     private Set<Movie> movies;
+    
+    
+    public Actor() {
+        movies = new HashSet<Movie>();
+    }
+
 }
 ```
 
