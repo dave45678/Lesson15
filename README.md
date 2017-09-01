@@ -3,7 +3,7 @@
 A series of user guides that provide the kind of documentation that we wanted by didn't have to various technologies.
 
 This will include:
-1. Learning Spring Boot by Coding
+1. [Learning Spring Boot by Coding](https://github.com/ajhenley/unofficialguides/tree/master/IntroToSpringBoot)
 2. Learning JavaEE by Coding
 3. Learning Laravel by Coding
 2. Working with Thymeleaf in Spring Boot
