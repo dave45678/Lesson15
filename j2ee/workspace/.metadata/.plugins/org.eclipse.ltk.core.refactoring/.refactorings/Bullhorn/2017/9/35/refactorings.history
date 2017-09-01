@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 3 elements to &apos;lib&apos;&#x0A;- Original project: &apos;Bullhorn&apos;&#x0A;- Destination element: &apos;lib&apos;&#x0A;- Original elements:&#x0A;     eclipselink.jar&#x0A;     javax.persistence_2.1.0.v201304241213.jar&#x0A;     ojdbc6.jar" description="Copy files" element1="WebContent/WEB-INF/lib/eclipselink.jar" element2="WebContent/WEB-INF/lib/javax.persistence_2.1.0.v201304241213.jar" element3="WebContent/WEB-INF/lib/ojdbc6.jar" files="3" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1504276788462" target="/Lesson09/WebContent/WEB-INF/lib" units="0" version="1.0"/>
+</session>
