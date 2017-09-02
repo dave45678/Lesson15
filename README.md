@@ -9,5 +9,5 @@ This will include:
 4. [Learning Ruby on Rails by Coding](https://github.com/ajhenley/unofficialguides/tree/master/RubyOnRails)
 5. Learning .Net by Coding
 6. Learning Flask by Coding
-
+7. Learning Swift by Coding
   
