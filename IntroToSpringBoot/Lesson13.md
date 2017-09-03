@@ -108,17 +108,6 @@ public interface ActorRepository extends CrudRepository<Actor, Long>{
 	* Edit it to look like this:
 
 ``` java
-package com.example.demo.controllers;
-
-import com.example.demo.models.Actor;
-import com.example.demo.models.Movie;
-import com.example.demo.repositories.ActorRepository;
-import com.example.demo.repositories.MovieRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-
 @Controller
 public class HomeController {
 
@@ -129,7 +118,7 @@ public class HomeController {
     MovieRepository movieRepository;
 
     @RequestMapping("/")
-    public String index(Model model){
+    public String loadData(){
 
         Actor a = new Actor();
         a.setName("Sandra Bullock");
@@ -142,17 +131,18 @@ public class HomeController {
         movie.setDescription("About Emojis...");
 
         movie.addActor(a);
-
         movieRepository.save(movie);
 
+        return "redirect:/view";
+    }
+
+    @RequestMapping("/view")
+    public String showData(Model model){
         model.addAttribute("actors", actorRepository.findAll());
         return "index";
     }
-    public void addMovie(Movie actor)
-    {
-        movies.add(actor);
-    }
 }
+
 
 ```
 
