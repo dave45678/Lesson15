@@ -29,7 +29,7 @@ public class Movie {
             name="movie_actor",
             joinColumns=@JoinColumn(name="MOVIE_ID", referencedColumnName = "ID"),
             inverseJoinColumns = @JoinColumn(name="ACTOR_ID", referencedColumnName = "ID"))
-    private Set<Actor> cast;
+    private Set<Actor> cast = new HashSet<Actor>();
 
     public void addActor(Actor actor)
     {
@@ -60,13 +60,7 @@ public class Actor {
     private String realname;
 
     @ManyToMany(mappedBy = "cast")
-    private Set<Movie> movies;
-    
-    
-    public Actor() {
-        movies = new HashSet<Movie>();
-    }
-
+    private Set<Movie> movies = new HashSet<Movie>();
 }
 ```
 
@@ -97,7 +91,7 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface ActorRepository extends CrudRepository<Actor, Long>{
 }
-
+```
 
 8. Create a Controller
 	* Right click on com.example.demo and click New -> Class
@@ -139,8 +133,6 @@ public class HomeController {
         return "index";
     }
 }
-
-
 ```
 
 9. Create a Template
