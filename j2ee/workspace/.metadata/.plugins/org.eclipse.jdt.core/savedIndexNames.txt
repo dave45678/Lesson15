@@ -1,0 +1,7 @@
+INDEX VERSION 1.130+/home/student/unofficialguides/j2ee/workspace/.metadata/.plugins/org.eclipse.jdt.core
+1195848311.index
+2910308419.index
+1383129452.index
+611384071.index
+3653380813.index
+2960037371.index

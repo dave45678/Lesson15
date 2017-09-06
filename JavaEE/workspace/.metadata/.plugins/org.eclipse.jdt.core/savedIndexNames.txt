@@ -1,19 +1,17 @@
-INDEX VERSION 1.130+/home/student/unofficialguides/j2ee/workspace/.metadata/.plugins/org.eclipse.jdt.core
-2960037371.index
-2910308419.index
-1374540240.index
-611384071.index
-3653380813.index
-1383129452.index
-3789570540.index
-834211735.index
-4242031531.index
-1775147727.index
-2390144968.index
-3713924582.index
-1195848311.index
-3711551268.index
-402947279.index
+INDEX VERSION 1.130+/home/student/unofficialguides/JavaEE/workspace/.metadata/.plugins/org.eclipse.jdt.core
+298358537.index
 4184967006.index
-2307166802.index
-2724962808.index
+2138516880.index
+1775147727.index
+1277618052.index
+228813370.index
+2843449377.index
+1195848311.index
+2390144968.index
+3504909299.index
+302345901.index
+2846146239.index
+4004593197.index
+1135239539.index
+2085082959.index
+1912686025.index

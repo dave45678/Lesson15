@@ -9,6 +9,6 @@
 <booleanAttribute key="org.eclipse.jdt.launching.DEFAULT_CLASSPATH" value="false"/>
 <stringAttribute key="org.eclipse.jdt.launching.JRE_CONTAINER" value="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/java-8-openjdk-amd64"/>
 <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="start"/>
-<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dcatalina.base=&quot;/home/student/unofficialguides/j2ee/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp1&quot; -Dcatalina.home=&quot;/home/student/unofficialguides/j2ee/workspace&quot; -Dwtp.deploy=&quot;/home/student/unofficialguides/j2ee/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp1/wtpwebapps&quot; -Djava.endorsed.dirs=&quot;/home/student/unofficialguides/j2ee/workspace/endorsed&quot;"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Dcatalina.base=&quot;/home/student/unofficialguides/JavaEE/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp1&quot; -Dcatalina.home=&quot;/home/student/unofficialguides/j2ee/workspace&quot; -Dwtp.deploy=&quot;/home/student/unofficialguides/JavaEE/workspace/.metadata/.plugins/org.eclipse.wst.server.core/tmp1/wtpwebapps&quot; -Djava.endorsed.dirs=&quot;/home/student/unofficialguides/j2ee/workspace/endorsed&quot;"/>
 <stringAttribute key="server-id" value="Tomcat v7.0 Server at localhost"/>
 </launchConfiguration>
