@@ -22,6 +22,7 @@
 ```
 
     * Edit the AuthenticationManagerBuilder configure method to look like this:
+    
 ```java
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
