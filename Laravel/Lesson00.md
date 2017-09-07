@@ -10,7 +10,7 @@
 
 ### Mac OS Installation 
 
-### Windows Installation in 10 easy steps
+### Windows Installation in 9 easy steps
  
 1. Download WampServer and install it (http://www.wampserver.com/en/) 
 
