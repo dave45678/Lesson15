@@ -49,7 +49,7 @@ https://getcomposer.org/download/
 
 ## The Walkthrough
 
-##What's Going On 
+## What's Going On 
 Laravel is a framework for PHP - which means that 'scaffolds' or builds a number of features for you using commands, instead of making you type them out on your own. 
 Commands include creating an application, setting up and seeding (putting data into) databases, and setting up relationships between fields in tables. 
 In order to get your Laravel installation working, you need to have a number of helper applications installed. 
