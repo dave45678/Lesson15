@@ -1,6 +1,6 @@
  <!-- enter lesson number and title below separated by hyphen-->
 
-# Lesson 00 - Set up your database
+# Lesson 00 - Setting up 
 
 ## Learning Objectives
 
