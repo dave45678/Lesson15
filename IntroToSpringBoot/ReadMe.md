@@ -27,5 +27,4 @@
 26. [Deploying to Heroku](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson26.md)  - ![Walkthrough](img/i_list.png "Walkthrough")![Explanation](img/i_book.png "Explanation")
 27. Unit Tests
 28. Unit Tests II
-29. Showing Error details
-30. Email (Nuff said!)
+29. Email (Nuff said!)
