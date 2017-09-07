@@ -4,4 +4,7 @@
 <fullyQualifiedTypeName name="customTools.DbUtil"/>
 <fullyQualifiedTypeName name="model.Customer"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="model.DbCourse"/>
+<fullyQualifiedTypeName name="model.Course"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>
