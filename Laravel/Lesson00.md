@@ -22,12 +22,12 @@
 
 5. Make sure you have the following extensions installed: 
 
-    PHP >= 7.0.0
-    OpenSSL PHP Extension
-    PDO PHP Extension
-    Mbstring PHP Extension
-    Tokenizer PHP Extension
-    XML PHP Extension
+    * PHP >= 7.0.0
+    * OpenSSL PHP Extension
+    * PDO PHP Extension
+    * Mbstring PHP Extension
+    * Tokenizer PHP Extension
+    * XML PHP Extension
 
 6. Make sure to save the location of your Composer directory so you can add it to your path variables in Windows 
     C:/Users/aoa4eva/AppData/Roaming/Composer
