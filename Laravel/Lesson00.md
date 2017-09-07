@@ -1,4 +1,4 @@
-<!-- enter lesson number and title below separated by hyphen-->
+ <!-- enter lesson number and title below separated by hyphen-->
 
 # Lesson 00 - Set up your database
 
@@ -7,13 +7,13 @@
 
 
 
-##Install Laravel 
+## Install Laravel 
 
-###Linux Installation
+### Linux Installation
 
-###Mac OS Installation 
+### Mac OS Installation 
 
-###Windows Installation in 10 easy steps
+### Windows Installation in 10 easy steps
  
 1. Install Laravel on Windows http://www.wampserver.com/en/
 
@@ -45,7 +45,7 @@ https://getcomposer.org/download/
 
 10. Run your application. Congratulations! You now officially have your first Laravel application up and running! 
 
-###Virtual Machine installation 
+### Virtual Machine installation 
 
 ## The Walkthrough
 
