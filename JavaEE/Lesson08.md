@@ -182,6 +182,3 @@ Note: If Eclipse gives 404 error then move the Servlet to the default package by
 
 
 ## Questions
-
-
-[Github Repository](https://github.com/ajhenley/SpringBoot_01)
