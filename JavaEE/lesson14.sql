@@ -1,5 +1,7 @@
 use unofficialGuides;
 
+show tables;
+
 -- lesson 13
 drop table if exists movie;
 create table movie (movieId int auto_increment, title varchar(255) not null,`year` int, description varchar(255) not null,primary key(movieId));
@@ -12,16 +14,16 @@ create table actor (actorId int auto_increment, `name` varchar(255) not null, `r
 insert into actor (`name`,`realName`) values ("Sandra Bullock","Sandra Mae Bullowski");
 select * from actor;
 
-drop table if exists movie_actor;
+drop table if exists actor_movie;
 -- create table movie_actor(movieId int, actorId int, foreign key (movieId) references movie(movieId),foreign key (actorId) references actor(actorId));
-create table movie_actor(movieId int, actorId int);
-insert into movie_actor values (1,1);
-insert into movie_actor values (2,1);
+create table actor_movie(actorId int,movieId int);
+insert into actor_movie values (1,1);
+insert into actor_movie values (1,2);
 select * from actor
-inner join movie_actor 
-on actor.actorId = movie_actor.actorId
+inner join actor_movie 
+on actor.actorId = actor_movie.actorId
 inner join movie
-on movie_actor.movieId = movie.movieId;
+on actor_movie.movieId = movie.movieId;
 
 -- Lesson 14
 drop table if exists director;

@@ -7,9 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import model.Movie;
 import model.Actor;
-import model.DbMovie;
 import model.DbActor;
 
 @WebServlet("/ApplicationServlet")
@@ -18,8 +16,10 @@ public class ApplicationServlet extends HttpServlet {
        
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		ArrayList<Movie> movies = (ArrayList<Movie>)DbMovie.getAllMovies();
-		request.setAttribute("movies",movies);
+		ArrayList<Actor> actors = (ArrayList<Actor>)DbActor.getAllActors();
+		//ArrayList<Movie> movies = (ArrayList<Movie>)DbMovie.getAllMovies();
+		System.out.println(actors.get(0).getMovies().get(0).getTitle());
+		request.setAttribute("actors",actors);
 		request.getRequestDispatcher("/output.jsp").forward(request, response);
 	}
 
