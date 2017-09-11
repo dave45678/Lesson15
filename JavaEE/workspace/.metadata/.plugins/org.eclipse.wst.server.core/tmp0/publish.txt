@@ -1,3 +1,0 @@
-#Tomcat publish data
-#Wed Sep 06 17:04:38 EDT 2017
-org.eclipse.jst.jee.server\:Lesson10=/home/student/Downloads/sts-bundle/pivotal-tc-server-developer-3.2.4.SR1/base-instance/wtpwebapps/Lesson10

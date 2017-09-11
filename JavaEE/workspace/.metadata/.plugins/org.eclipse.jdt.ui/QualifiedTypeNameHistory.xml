@@ -7,4 +7,8 @@
 <fullyQualifiedTypeName name="model.DbCourse"/>
 <fullyQualifiedTypeName name="model.Course"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="model.Movie"/>
+<fullyQualifiedTypeName name="model.DbMovie"/>
+<fullyQualifiedTypeName name="model.Actor"/>
+<fullyQualifiedTypeName name="model.DbActor"/>
 </qualifiedTypeNameHistroy>
