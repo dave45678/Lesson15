@@ -1,7 +1,7 @@
 <!-- enter lesson number and title below separated by hyphen-->
 # Lesson 6 - Handling form values safely with JSTL
 ## Learning Objectives
-* Use the Java Standard Tag Library to display form values
+* Use the Java Standard Tag Library to safely display form values
 *
 
 ## The Walkthrough

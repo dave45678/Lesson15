@@ -1,5 +1,5 @@
 <!-- enter lesson number and title below separated by hyphen-->
-# Lesson 8 - Display Customer List
+# Lesson 8 - Display Customer List with JSTL
 
 use EL (Expression Language) and JSTL (Java Standard Tag Library)
 ## Learning Objectives
