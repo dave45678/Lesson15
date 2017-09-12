@@ -58,22 +58,22 @@ public class DbDirector {
 		EntityManager em = DbUtil.getEmFactory().createEntityManager();
 		String qString = "select d from Director d";
 		
-		ArrayList<Director> directors = new ArrayList<Director>();
-		try{
+		//ArrayList<Director> directors = new ArrayList<Director>();
+		//try{
 			TypedQuery<Director> query = em.createQuery(qString,Director.class);
 			
-			ArrayList<Director> results = (ArrayList<Director>) query.getResultList();
-			for (Director director : results) {
-				directors.add(director);
-			}
+			//directors = (ArrayList<Director>) query.getResultList();
+			//for (Director director : query.getResultList()) {
+			//	directors.add(director);
+			//}
 
-		}catch (Exception e){
-			e.printStackTrace();
-		}
-		finally{
-				em.close();
-			}
-		return directors;
+		//}catch (Exception e){
+		//	e.printStackTrace();
+		//}
+		//finally{
+		//		em.close();
+		//	}
+		return query.getResultList();
 	}
 	
 	

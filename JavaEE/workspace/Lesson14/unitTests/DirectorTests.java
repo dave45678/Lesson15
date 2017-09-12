@@ -25,7 +25,7 @@ public class DirectorTests {
 //	}
 	@Test
 	public void listDirectorsAndMovies(){
-		//System.out.println(DbDirector.getDirector(1).getName());
+
 		ArrayList<Director> directors = (ArrayList<Director>) DbDirector.getAllDirectors();
 		for (Director d:directors){
 			System.out.printf("%s %s",d.getName(),d.getMovies().get(0).getTitle());
