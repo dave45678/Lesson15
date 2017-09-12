@@ -1,0 +1,109 @@
+package model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Query;
+import model.Director;
+
+public class DbDirector {
+
+	public static Director getDirector(long directorId)
+	{
+		EntityManager em = DbUtil.getEmFactory().createEntityManager();
+		Director course = em.find(Director.class, directorId);
+		return course;		
+	}
+	
+	public static List<Director> getAllMovies(){
+		EntityManager em = DbUtil.getEmFactory().createEntityManager();
+		String qString = "select m from Movie m where m.directorId=:directorId";
+		
+		ArrayList<Director> movies = new ArrayList<Director>();
+		try{
+			Query query = em.createQuery(qString);
+			List<Director> results = query.getResultList();
+			for (Director item : results) {
+				movies.add(item);
+			}
+
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+		finally{
+				em.close();
+			}
+		return movies;
+	}
+	
+	/*
+	 * List<Object[]> rows = query.getResultList();
+	List<MyObject> result = new ArrayList<>(rows.size());
+	for (Object[] row : rows) {
+    result.add(new MyObject((String) row[0],
+                            (Long) row[1],
+                            ...));
+}
+
+	 */
+	
+	
+	public static List<Director> postBullhorn (){
+		EntityManager em = DbUtil.getEmFactory().createEntityManager();
+		String qString = "select b from Bullhorn b";
+		
+		List<Director> posts = null;
+		try{
+			Query query = em.createQuery(qString);
+			posts = query.getResultList();
+
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+		finally{
+				em.close();
+			}
+		return posts;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	public static void insert(Director director) {
+		EntityManager em = DbUtil.getEmFactory().createEntityManager();
+		EntityTransaction trans = em.getTransaction();
+		trans.begin();
+		try {
+			em.persist(director);
+			trans.commit();
+		} catch (Exception e) {
+			e.printStackTrace();
+			trans.rollback();
+		} finally {
+			em.close();
+		}
+	}
+
+	public static void update(Director director) {
+		EntityManager em = DbUtil.getEmFactory().createEntityManager();
+		EntityTransaction trans = em.getTransaction();
+		trans.begin();
+		try {
+			em.merge(director);
+			trans.commit();
+		} catch (Exception e) {
+			System.out.println(e);
+			trans.rollback();
+		} finally {
+			em.close();
+		}
+	}
+
+		
+}

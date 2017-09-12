@@ -4,9 +4,9 @@ show tables;
 
 -- lesson 13
 drop table if exists movie;
-create table movie (movieId int auto_increment, title varchar(255) not null,`year` int, description varchar(255) not null,primary key(movieId));
-insert into movie (title, `year`,description) values ("Emoji Movie", 2017, "About Emoji Movie ..."); 
-insert into movie (title, `year`,description) values ("DeathStar Ewoks", 2011, "About DeathStar Ewoks ..."); 
+create table movie (movieId int auto_increment, title varchar(255) not null,`year` int, description varchar(255) not null,directorId int, primary key(movieId));
+insert into movie (title, `year`,description,directorId) values ("Emoji Movie", 2017, "About Emoji Movie ...",1); 
+insert into movie (title, `year`,description,directorId) values ("DeathStar Ewoks", 2011, "About DeathStar Ewoks ...",1); 
 select * from movie;
 
 drop table if exists actor;
@@ -34,11 +34,10 @@ select * from director;
 drop table if exists movie_director;
 create table movie_director (movieId int, directorId int);
 insert into movie_director values(1,1);
+
 select  * from movie
-inner join movie_director
-on movie.movieId = movie_director.movieId
 inner join director
-on movie_director.directorId = director.directorId;
+on movie.directorId = director.directorId;
 
 CREATE TABLE department (id NOT NULL);
 CREATE TABLE employee (id NOT NULL, dept_id NOT NULL, FOREIGN KEY (dept_id) REFERENCES department(id));
