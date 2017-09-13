@@ -1,4 +1,3 @@
-
 # Learning Laravel by Coding
 1.[Hello World with Template – no variable]
 
@@ -56,4 +55,4 @@
 
 29.Email (Nuff said!)
 
-30. REST APIs with  Laravel
+30.REST APIs with  Laravel
