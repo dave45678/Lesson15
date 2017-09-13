@@ -1,12 +1,20 @@
 # Learning Laravel by Coding
 1.[Hello World with Template – no variable]
+
 2.[Hello World with Template with variable]
+
 3.[Handling form values – the hard way]
+
 5.[Handling form values – the easy way]
+
 6.[Form Validation]
+
 7.[Persisting to the Database]
+
 8.[Looping through list with Thymeleaf in Spring Boot]
+
 9.[Complete data life cycle – form, list, detail, delete]
+
 10.[Adding Twitter Bootstrap to Spring Boot - the Easy Way]
 11.[Uploading images to Spring Boot with Cloudinary]
 12.[Using Database Relationships with Spring Boot - ManyToMany]
