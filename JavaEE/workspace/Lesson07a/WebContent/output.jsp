@@ -8,7 +8,7 @@
 <title>Welcome to the site</title>
 </head>
 <body>
-<h1>${message}</h1>
+<h1><c:out value="${message}"></c:out></h1>
 <h2>You entered the following values:</h2>
 <p>Email: <c:out value="${email}"></c:out></p>
 <p>Password: <c:out value="${password}"></c:out></p>

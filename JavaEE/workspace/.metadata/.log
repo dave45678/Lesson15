@@ -2109,3 +2109,15 @@ java.lang.StackOverflowError
 	at org.eclipse.swt.widgets.Control.setBounds(Control.java:1100)
 	at org.eclipse.swt.widgets.Composite.setBounds(Composite.java:1527)
 	at org.eclipse.swt.widgets.ToolBar.setBounds(ToolBar.java:589)
+
+!ENTRY org.eclipse.jface.text 2 0 2017-09-13 16:22:21.485
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-09-13 16:22:21.487
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-09-13 16:25:08.254
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.number'
+
+!ENTRY org.eclipse.jface.text 2 0 2017-09-13 16:25:08.254
+!MESSAGE Duplicate template id: 'org.eclipse.wst.xslt.templates.xpath.round'

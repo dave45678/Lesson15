@@ -284,6 +284,3 @@ String message = "";
 
 
 ## Questions
-
-
-[Github Repository](https://github.com/ajhenley/SpringBoot_01)

@@ -39,43 +39,6 @@ public class DbCourse {
 		return courses;
 	}
 	
-	/*
-	 * List<Object[]> rows = query.getResultList();
-	List<MyObject> result = new ArrayList<>(rows.size());
-	for (Object[] row : rows) {
-    result.add(new MyObject((String) row[0],
-                            (Long) row[1],
-                            ...));
-}
-
-	 */
-	
-	
-	public static List<Course> postBullhorn (){
-		EntityManager em = DbUtil.getEmFactory().createEntityManager();
-		String qString = "select b from Bullhorn b";
-		
-		List<Course> posts = null;
-		try{
-			Query query = em.createQuery(qString);
-			posts = query.getResultList();
-
-		}catch (Exception e){
-			e.printStackTrace();
-		}
-		finally{
-				em.close();
-			}
-		return posts;
-	}
-	
-	
-	
-	
-	
-	
-	
-	
 	public static void insert(Course course) {
 		EntityManager em = DbUtil.getEmFactory().createEntityManager();
 		EntityTransaction trans = em.getTransaction();

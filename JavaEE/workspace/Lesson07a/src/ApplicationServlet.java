@@ -1,4 +1,7 @@
 import java.io.IOException;
+
+import javax.mail.internet.AddressException;
+import javax.mail.internet.InternetAddress;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -8,6 +11,7 @@ import javax.servlet.http.HttpSession;
 
 @WebServlet("/ProcessForm")
 public class ApplicationServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws	ServletException, IOException {
@@ -28,7 +32,7 @@ public class ApplicationServlet extends HttpServlet {
 		String nextPage = "/login.jsp";
 
 		//check for null values then check for empty (blank) values... check null first!
-		if(email!=null && !email.isEmpty()){
+		if(email!=null && !email.isEmpty() && isValidEmailAddress(email)){
 			//email contains data.... check the password
 			if(password!=null && !password.isEmpty()){
 				//check the database for the valid email and password
@@ -53,4 +57,14 @@ public class ApplicationServlet extends HttpServlet {
 		//Redirect to next page as indicated by the value of the nextPage variable
 		getServletContext().getRequestDispatcher(nextPage).forward(request,response);
 	}
+	public static boolean isValidEmailAddress(String email) {
+		   boolean result = true;
+		   try {
+		      InternetAddress emailAddr = new InternetAddress(email);
+		      emailAddr.validate();
+		   } catch (AddressException ex) {
+		      result = false;
+		   }
+		   return result;
+		}
 }

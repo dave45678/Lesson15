@@ -97,6 +97,7 @@ Run your application and open a browser, if you type in the URL http://localhost
 ## What is Going On
 
 <!-- try this:
+remove the c:out tags and enter the following value for the password.
 request.setAttribute("message", "<script>alert(\"You have been hacked!\");</script>");
 -->
 
