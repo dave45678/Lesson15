@@ -2,9 +2,6 @@
 ## The Walkthrough 
 
 1. Start with the application from the last lesson 
-	* Name it SpringBoot_01 
-	* Add the dependencies for the web and for thymeleaf 
-	* Hit next until you finish the wizard, and then wait until it's done.    
 
 2. Extend the Security User Object 
 	* Right click on com.example.demo and click New -> Class 
