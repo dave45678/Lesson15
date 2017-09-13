@@ -1,9 +1,4 @@
 # Lesson 20.5 - Storing user details when Authenticating 
-## Learning Objectives
-* Creating a Spring Boot Application
-* Creating a Controller
-* Creating a Thymeleaf Template
-
 ## The Walkthrough 
 
 1. Start with the application from the last lesson 
