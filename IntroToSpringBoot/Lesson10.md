@@ -1,85 +1,15 @@
-# Lesson 10 - Complete data life cycle – input, update, list, detail, delete
-## The Walkthrough
+# Lesson 10 - Complete data life cycle – input, update, list, detail, delete 
+## The Walkthrough 
 
-
-1. Create a Java Dynamic Web Application
-	* Name it Lesson10
+1. Create a Spring Boot Application 
+	* Name it SpringBoot_10 
+	* Add the dependencies for web, thymeleaf, jpa and h2 
 	* Hit next until you finish the wizard, and then wait until it's done.    
 
-2. Add the Java Archive Files (JARs) to your project
-   * JAR files contain code developed by third parties
-	 * JAR files contain classes which add functionality to your application
-	 * JAR files must be in your program's class path.
-	 >Place JAR files in the folder ```WebContent\WEB-INF\lib``` so your program will >locate the classes in the JAR files
-
-	 * We will be working with the following JAR files for accessing the data with JPA:
-	    * eclipselink.jar
-			* javax.persistence_2.1.0.v201304241213.jar
-			* mysql-connector-java-5.1.42-bin.jar			
-		* We will be working with the following JAR files for using JSTL (Java Standard Tag Library)
-			* taglibs-standard-impl-1.2.5.jar
-			* javax.servlet.jsp.jstl-api-1.2.1.jar
-
-
-> In computer programming, a third-party software component is a reusable software component developed to be either freely distributed or sold by an entity other than the original vendor of the development platform. (Source: Wikipedia, https://en.wikipedia.org/wiki/Third-party_software_component)
-
-2. Add the persistence.xml file
- * Create a folder under the Java src folder called META-INF
- * In the META-INF folder, add a new file called persistence.xml
- * Copy the XML code as shown below.
-
- ```java
- <?xml version="1.0" encoding="UTF-8"?>
- <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1"
-  xsi:schemaLocation=
-	"http://xmlns.jcp.org/xml/ns/persistence  http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
-
-  <persistence-unit name="PERSISTENCE_UNIT_NAME" transaction-type="TRANSACTION_TYPE">
-     <provider>PERSISTENCE_PROVIDER</provider>
-     <exclude-unlisted-classes>false</exclude-unlisted-classes>
-     <properties>
-         <property name="javax.persistence.jdbc.url" value="DATABASE_URL"/>
-         <property name="javax.persistence.jdbc.user" value="DATABASE_USER"/>
-         <property name="javax.persistence.jdbc.password" value="DATABASE_PASSWORD"/>
-         <property name="javax.persistence.jdbc.driver" value="DATABASE_DRIVER"/>
-     </properties>
-   </persistence-unit>
- </persistence>
- ```
-
-
- 3. Update the persistence.xml values with those for your project
- * The values are case-sensitive.
- * Replace the capitalized words with their respective values as shown in the list below
- * Remember: XML attribute values should be in quotes
-
-PERSISTENCE_UNIT_NAME = "Lesson10"
-TRANSACTION_TYPE = "RESOURCE_LOCAL"
-PERSISTENCE_PROVIDER = "org.eclipse.persistence.jpa.PersistenceProvider"
-DATABASE_URL = "jdbc:mysql://localhost:3306/Lesson10"
-DATABASE_USER = "root"
-DATABASE_PASSWORD = "password"
-DATABASE_DRIVER = "com.mysql.jdbc.Driver"
-
-4. Create the entities which are Java classes that represent your database tables
-* Right-click on your project and select New
-* Select JPA Entities from Tables
-* Select your connection, schema (database name) and tables
-* If your tables have relationships then you will be defining those releationships on the screens that follow.
-
-
-
-
-
-
-
-
-
-2. Create a Class
-	* Right click on com.example.demo and click New -> Class
-	* Name it Course.java
-	* Edit it to look like this:
+2. Create a Class 
+	* Right click on com.example.demo and click New -> Class 
+	* Name it Course.java 
+	* Edit it to look like this: 
 
 ```java
 import javax.persistence.Entity;
@@ -120,10 +50,10 @@ public class Course {
   	* Right-click on the word Course and select generate -> Getters and Setters
   	* Select all the fields list and click OK
 
-4. Create a Repository
-	* Right click on com.example.demo and click New -> Class
-	* Name it CourseRepository.java
-	* Edit it to look like this:
+4. Create a Repository 
+	* Right click on com.example.demo and click New -> Class 
+	* Name it CourseRepository.java 
+	* Edit it to look like this: 
 
 ```java
 import org.springframework.data.repository.CrudRepository;
@@ -132,10 +62,10 @@ public interface CourseRepository extends CrudRepository<Course, Long>{
 }
 ```
 
-5. Create a Controller
-	* Right click on com.example.demo and click New -> Class
-	* Name it HomeController.java
-	* Edit it to look like this:
+5. Create a Controller 
+	* Right click on com.example.demo and click New -> Class 
+	* Name it HomeController.java 
+	* Edit it to look like this: 
 
 ```java
 import org.springframework.beans.factory.annotation.Autowired;
@@ -198,9 +128,9 @@ public class HomeController {
 
 
 6. Create a Template for the form
-  	* Right click on templates and click New -> Html
-	* Name it courseform.html
-	* Edit it to look like this:
+  	* Right click on templates and click New -> Html 
+	* Name it courseform.html 
+	* Edit it to look like this: 
 
 ```html
 <!DOCTYPE html>
@@ -235,9 +165,9 @@ public class HomeController {
 ```
 
 6. Create a Template for the course listings
-  	* Right click on templates and click New -> Html
-	* Name it list.html
-	* Edit it to look like this:
+  	* Right click on templates and click New -> Html 
+	* Name it list.html 
+	* Edit it to look like this: 
 
 ```html
 <!DOCTYPE html>
@@ -271,9 +201,9 @@ public class HomeController {
 ```
 
 7. Create a template for course detail
-  	* Right click on templates and click New -> Html
-	* Name it show.html
-	* Edit it to look like this:
+  	* Right click on templates and click New -> Html 
+	* Name it show.html 
+	* Edit it to look like this: 
 
 ```html
 <!DOCTYPE html>
@@ -305,7 +235,7 @@ spring.h2.console.path=/h2-console
 spring.jpa.hibernate.ddl-auto=create
 ```
 
-9. Run your application and open a browser, if you type in the URL http://localhost:8080/add you should see this:
+9. Run your application and open a browser, if you type in the URL http://localhost:8080/add you should see this: 
 ![Adding a course](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/img/Lesson10b.png "Adding a course")
 
 10. If you enter values and submit the form, it will show you a list of all the jobs added so far. So, you should see a page that looks like this:  
@@ -314,67 +244,68 @@ spring.jpa.hibernate.ddl-auto=create
 
 ## What is Going On
 
-Congratulations on your first 'full' application! You can now add data to the database, as well as review, modify and delete it.
+Congratulations on your first 'full' application! You can now add data to the database, as well as review, modify and delete it. 
 
-### Model
-The @Entity annotation tells your application that a table should be created in your database that has fields named after the variables in the class. Depending on the database you are using, the data types may have slightly different names, but they will be the best types for the kind of data you are working with, so you don't have to think about how the data is stored and retrieved. Remember your getters and setters! They are used to tell the database which values go where.
+### Model 
+The @Entity annotation tells your application that a table should be created in your database that has fields named after the variables in the class. Depending on the database you are using, the data types may have slightly different names, but they will be the best types for the kind of data you are working with, so you don't have to think about how the data is stored and retrieved. Remember your getters and setters! They are used to tell the database which values go where. 
 
-The annotations for validation should be familiar - these are used to determine whether the information input by the user is what is expected by the applicaition. If so, the data can be stored. If not, the view will indicate to the user where the problems are (for details, see the 'View' section), so they can be corrected.
+The annotations for validation should be familiar - these are used to determine whether the information input by the user is what is expected by the applicaition. If so, the data can be stored. If not, the view will indicate to the user where the problems are (for details, see the 'View' section), so they can be corrected. 
 
-#### CrudRepository
-This acts as a pipeline to your database, automagically storing, modifying and retrieving data. Through the methods that CrudRepository makes available to you, you can instantly save, find one or all, and delete records by using very simple methods.
+#### CrudRepository 
+This acts as a pipeline to your database, automagically storing, modifying and retrieving data. Through the methods that CrudRepository makes available to you, you can instantly save, find one or all, and delete records by using very simple methods. 
 
 [CrudRepository Methods](https://docs.spring.io/spring-data/commons/docs/current/api/org/springframework/data/repository/CrudRepository.html)
 
-### The Controller
-This is where the action happens. Routes are mapped out for each action - Creating, Reading, Updating and Deleting data (CRUD).
+### The Controller 
+This is where the action happens. Routes are mapped out for each action - Creating, Reading, Updating and Deleting data (CRUD). 
 
-#### What does @Autowired do?
-When you create an instance of an object, you use the format ObjectClass someObject = new ObjectClass();
-This creates an instance of the object, and you can use it within the method where it is called.
-For CrudRepository, that would mean that you had to instantiate the object within each method, but that would be a pain.
+#### What does @Autowired do? 
+When you create an instance of an object, you use the format ObjectClass someObject = new ObjectClass(); 
+This creates an instance of the object, and you can use it within the method where it is called. 
+For CrudRepository, that would mean that you had to instantiate the object within each method, but that would be a pain. 
 
-@Autowired tells the compiler to instantiate the repository object when the application runs, so you don’t have to type out that line so many times!
+@Autowired tells the compiler to instantiate the repository object when the application runs, so you don’t have to type out that line so many times! 
 
-#### The routes
+#### The routes 
 
 ##### Default Route (“/”)
-When the user visits this route, the user will see a list of all the course entries that have been made.
-This is because the model contains the result of the .findAll() method, which pulls all the data for a selected model from the database. This data is made available to the view as a variable named ("courses").
+When the user visits this route, the user will see a list of all the course entries that have been made. 
+This is because the model contains the result of the .findAll() method, which pulls all the data for a selected model from the database. This data is made available to the view as a variable named ("courses"). 
 
 #### Add route ("/add")
-When a user visits this route, a new instance of the Courses class will be created and passed to the view. This will hold all values that the user enters into the form and return them to the controller at the route specified on the form by the POST method.
+When a user visits this route, a new instance of the Courses class will be created and passed to the view. This will hold all values that the user enters into the form and return them to the controller at the route specified on the form by the POST method. 
 
 #### Process route ("/process")
-This route validates the course for errors, saves it to the database (using the CourseRepository object created by the @Autowired annotation), and redirects the user to the default route.
+This route validates the course for errors, saves it to the database (using the CourseRepository object created by the @Autowired annotation), and redirects the user to the default route. 
 
 #### Update route ("/update/{id}")
-When a user wants to modify a record, that user can retrieve the details of that record by opening up http://localhost/8080/update, and adding the ID of the user whose record is being modified. The {id} parameter in this case is a primary key that exists in the database, because there should be only one record that matches this criterion.
+When a user wants to modify a record, that user can retrieve the details of that record by opening up http://localhost/8080/update, and adding the ID of the user whose record is being modified. The {id} parameter in this case is a primary key that exists in the database, because there should be only one record that matches this criterion. 
 
-The .findOne() method is used to pull up that record, and it is passed to the view as an object named "course".
+The .findOne() method is used to pull up that record, and it is passed to the view as an object named "course". 
 
 
-#### Delete
-The delete route follows the same pattern, but instead of showing the record, it is immediately deleted from the database. When the user is re-directed to the default route, this will show in the list that is displayed, as that record will not be shown in the list.
+#### Delete 
+The delete route follows the same pattern, but instead of showing the record, it is immediately deleted from the database. When the user is re-directed to the default route, this will show in the list that is displayed, as that record will not be shown in the list. 
 
-### The View
+### The View 
 
-This is an introduction to parameterised thymeleaf URLs. Sometimes you want to pass additional information to a URL so that you can perform operations on data. This option allows you to add paraemters to a route, so that the values that are passed can be used in your controller. You determine what these values are, and how they are processed.
+This is an introduction to parameterised thymeleaf URLs. Sometimes you want to pass additional information to a URL so that you can perform operations on data. This option allows you to add paraemters to a route, so that the values that are passed can be used in your controller. You determine what these values are, and how they are processed. 
 
-For more information about how to use parameters in URLs with Thymeleaf, see this page:
+For more information about how to use parameters in URLs with Thymeleaf, see this page: 
 [Parameters in URLS with Thymeleaf](http://www.thymeleaf.org/doc/articles/standardurlsyntax.html#adding-parameters)
 
 #### courseform.html
-This is the form that allows users to add new courses. It is tied to the course model (th:object="${course}"), and has validation that uses the default error messaging for the fields that have been annotated in the model (e.g. title and instructor).
-
+This is the form that allows users to add new courses. It is tied to the course model (th:object="${course}"), and has validation that uses the default error messaging for the fields that have been annotated in the model (e.g. title and instructor). 
+ 
 #### list.html
 This form uses a thymeleaf loop (th:each) to show the details of each course that is passed in the courses object (a collection of course items) from the default route.
 
-It also includes links for updating, showing details of, and deleting listed courses using __URL PARAMETERS__ - so you have the potential to acces all your CRUD (Create Read Update Delete) operations in one form. The user will be re-directed to different routes when he/she clicks each link. Each one will allow the user to carry out the selected CRUD operation.
+It also includes links for updating, showing details of, and deleting listed courses using __URL PARAMETERS__ - so you have the potential to acces all your CRUD (Create Read Update Delete) operations in one form. The user will be re-directed to different routes when he/she clicks each link. Each one will allow the user to carry out the selected CRUD operation. 
 
 It also allows users to add a new course by clicking the appopriate link towards the top of the page.
 
 Note that there is no thymeleaf action on this form - because the __anchor tag__ used has a thymeleaf attribute for the relevant route in your application. There is therefore no need to post the data with a button - you call a particular route instead.  
 
 #### show.html  
-This shows information for a single course, and has an option to delete the course, using its id as a __PARAMETER__ in the route to delete the item.
+This shows information for a single course, and has an option to delete the course, using its id as a __PARAMETER__ in the route to delete the item. 
+
