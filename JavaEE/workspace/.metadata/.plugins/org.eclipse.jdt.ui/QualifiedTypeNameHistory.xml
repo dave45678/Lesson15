@@ -14,4 +14,7 @@
 <fullyQualifiedTypeName name="model.Movie"/>
 <fullyQualifiedTypeName name="model.Director"/>
 <fullyQualifiedTypeName name="javax.persistence.TypedQuery"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="java.io.OutputStream"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
 </qualifiedTypeNameHistroy>

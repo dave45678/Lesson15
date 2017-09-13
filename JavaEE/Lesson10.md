@@ -1,7 +1,7 @@
 <!-- enter lesson number and title below separated by hyphen-->
 # Lesson 10 -  Complete data life cycle (form, list, detail, delete)
 ## Learning Objectives
-*
+* 
 *
 
 ## The Walkthrough
