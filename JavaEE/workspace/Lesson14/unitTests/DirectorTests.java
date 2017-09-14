@@ -7,7 +7,6 @@ import org.junit.Test;
 
 import model.DbDirector;
 import model.Director;
-import model.Movie;
 
 public class DirectorTests {
 
@@ -29,9 +28,12 @@ public class DirectorTests {
 		ArrayList<Director> directors = (ArrayList<Director>) DbDirector.getAllDirectors();
 		for (Director d:directors){
 			System.out.printf("%s %s",d.getName(),d.getMovies().get(0).getTitle());
+			//System.out.println(d.getName());
 		}
 		
 		assertTrue(directors.get(0).getMovies().get(0).getTitle().length()>0);
 	}
+	
+
 
 }

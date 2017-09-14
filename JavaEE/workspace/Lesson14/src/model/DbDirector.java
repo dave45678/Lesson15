@@ -19,7 +19,7 @@ public class DbDirector {
 		return course;		
 	}
 	
-	public static List<Movie> getAllMoviesByDirector(long directorId){
+	public static ArrayList<Movie> getAllMoviesByDirector(long directorId){
 		EntityManager em = DbUtil.getEmFactory().createEntityManager();
 		String qString = "select m from Movie m where m.director.directorId=:directorId";
 		
@@ -42,47 +42,29 @@ public class DbDirector {
 		return movies;
 	}
 	
-	/*
-	 * List<Object[]> rows = query.getResultList();
-	List<MyObject> result = new ArrayList<>(rows.size());
-	for (Object[] row : rows) {
-    result.add(new MyObject((String) row[0],
-                            (Long) row[1],
-                            ...));
-}
-
-	 */
 	
-	
-	public static List<Director> getAllDirectors (){
+	public static ArrayList<Director> getAllDirectors (){
 		EntityManager em = DbUtil.getEmFactory().createEntityManager();
 		String qString = "select d from Director d";
 		
-		//ArrayList<Director> directors = new ArrayList<Director>();
-		//try{
+		ArrayList<Director> directors = new ArrayList<Director>();
+		try{
 			TypedQuery<Director> query = em.createQuery(qString,Director.class);
 			
-			//directors = (ArrayList<Director>) query.getResultList();
-			//for (Director director : query.getResultList()) {
-			//	directors.add(director);
-			//}
+			for (Director director : query.getResultList()) {
+				System.out.println(director.getName());
+				directors.add(director);
+			}
 
-		//}catch (Exception e){
-		//	e.printStackTrace();
-		//}
-		//finally{
-		//		em.close();
-		//	}
-		return query.getResultList();
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+		finally{
+			em.close();
+		}
+		return directors;
 	}
-	
-	
-	
-	
-	
-	
-	
-	
+
 	public static void insert(Director director) {
 		EntityManager em = DbUtil.getEmFactory().createEntityManager();
 		EntityTransaction trans = em.getTransaction();

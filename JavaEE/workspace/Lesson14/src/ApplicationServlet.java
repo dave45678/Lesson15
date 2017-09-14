@@ -19,11 +19,9 @@ public class ApplicationServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
 		
-		ArrayList<Movie> movies = (ArrayList<Movie>)DbDirector.getAllMoviesByDirector(1);
+		ArrayList<Director> directors = (ArrayList<Director>)DbDirector.getAllDirectors();
 		
-		System.out.println(movies.get(0).getTitle());
-		
-		request.setAttribute("movies",movies);
+		request.setAttribute("director",directors);
 		request.getRequestDispatcher("/output.jsp").forward(request, response);
 	}
 

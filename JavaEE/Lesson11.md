@@ -1,8 +1,9 @@
 <!-- enter lesson number and title below separated by hyphen-->
 # Lesson 11 - Hello World with Twitter Bootstrap
 ## Learning Objectives
-*
-*
+* Create a dynamic web application
+* Understand the Twitter Bootstrap CDN
+* Add Twitter Bootstrap Jumbotron to the application
 
 ## The Walkthrough
 
@@ -10,7 +11,29 @@
 	* Edit it to look like this:
 
 ```java
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
+@WebServlet("/HomeServlet")
+public class HomeServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String message = "Hello Twitter Bootstrap!";
+		request.setAttribute("message",message);
+		request.getRequestDispatcher("/index.jsp").forward(request, response);
+	}
+
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
+
+}
 ```
 
 3. Create a Template
@@ -18,19 +41,19 @@
 	* Name it index.html
 	* Edit it to look like this:
 ```html
-<!DOCTYPE html>
-<html lang="en">
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap 101 Template</title>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Bootstrap 101 Template</title>
+<!--add bootstrap CDN links just above the closing head tag -->
 </head>
 <body>
-    <div class="container">
+ <div class="container">
         <div class="jumbotron">
-            <h1>Hello, world!</h1>
+            <h1>${message}</h1>
             <p>...</p>
             <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
         </div>
@@ -44,32 +67,21 @@
   * Paste that code right above the  &lt;/head> tag
   * Note that this code is not HTML5 compliant. To make it compliant add the closing tags for the </link> element.
 
-4. Run your application and open a browser, if you type in the URL http://localhost:8080 you should see this:
-![](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/img/Lesson11.png)
+4. Run your application and open a browser, if you type in the URL http://localhost:8080.
 
 
 ## What is Going On
 
-Congratulations! You have created your first styled HTML page. This is a page that includes the Bootstrap libary, which is a number of CSS and JavaScript files that you can use to style your pages. To find out more about how to style your pages, go to the [Twitter Boostsrap website](http://getbootstrap.com/components).
+Congratulations! You have created your first styled HTML page. This is a page that includes the Bootstrap library. Bootstrap contains CSS and JavaScript files that you can use to style your pages. To find out more about how to style your pages, go to the [Twitter Boostsrap website](http://getbootstrap.com/components).
 
-### The Controller
-Here, the default route maps to index.html. The Thymeleaf dependency tells your application that any views from the page will be rendered in HTML, and so the application looks in the templates folder by default, and assumes that the file extension is .html. This is why you do not need to add '.html' to the file name when you display the page.
+### Your JSP page
+The JSP page displays a page that looks a bit better than the others we have seen so far. This is because of Bootstrap.
 
-Your application will display the text of the HTML file in your browser, which will interpret the HTML tags and render (display) them appropriately.
+The CDN (Content Delivery Network) links make sure that the CSS classes are available to the page, so that your application can 'dress up' the JSP file according to the rules laid out. These files are online, and should be easy for your application to access if it is on a sever with access to the internet.
 
-It is particularly important to add the  <meta name="viewport" content="width=device-width, initial-scale=1" /> line to make sure that your website is RESPONSIVE, and styles the page according to the dimensions of the device you are using to browse the website.
-
-### The View
-The HTML page displays a page that looks a bit better than the others we have seen so far. This is because of Bootstrap.
-
-The CDN (Content Delivery Network) links make sure that the CSS classes are available to the page, so that your application can 'dress up' the HTML file according to the rules laid out. These files are online, and should be easy for your application to access if it is on a sever with access to the internet.
-
-The HTML file interprets these rules using the 'class=' attribute, which indicate what fonts, background styles and images, font size(s), and alignment, among other things, will be used on the page.
-
-
+#### Attributes and classes are important
+The JSP file interprets these rules using the ```'class='``` attribute, which indicate what fonts, background styles and images, font size(s), and alignment, among other things, will be used on the page.
 
 
 ## Questions
-
-
-[Github Repository](https://github.com/ajhenley/SpringBoot_01)
+* Will this work on an HTML page? Try it and see.
