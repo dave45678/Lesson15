@@ -1,0 +1,45 @@
+package model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+import javax.persistence.Query;
+import model.Actor;
+
+public class DbEmployee {
+
+	public static Employee getActor(long employeeId)
+	{
+		EntityManager em = DbUtil.getEmFactory().createEntityManager();
+		Employee course = em.find(Employee.class, employeeId);
+		return course;		
+	}
+	
+	public static List<Employee> getAllEmployees(){
+		EntityManager em = DbUtil.getEmFactory().createEntityManager();
+		String qString = "select e from Employee e";
+		
+		ArrayList<Employee> actors = new ArrayList<Employee>();
+		try{
+			Query query = em.createQuery(qString);
+			List<Employee> results = query.getResultList();
+			for (Employee item : results) {
+				actors.add(item);
+			}
+
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+		finally{
+				em.close();
+			}
+		return actors;
+	}
+	
+
+	
+
+		
+}

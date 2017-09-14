@@ -4,11 +4,6 @@ import java.io.Serializable;
 import javax.persistence.*;
 import java.util.List;
 
-
-/**
- * The persistent class for the director database table.
- * 
- */
 @Entity
 @Table(name="director")
 @NamedQuery(name="Director.findAll", query="SELECT d FROM Director d")
