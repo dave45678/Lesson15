@@ -1,12 +1,20 @@
 <!-- enter lesson number and title below separated by hyphen-->
 # Lesson 6 - Handling form values safely with JSTL
 ## Learning Objectives
+* Create an HTML form on a web page
+* Capture the form values in the servlet
+* Adding the form values to the Session
+* Redirect to output page from the servlet
+* Display form values on the output page
 * Use the Java Standard Tag Library to safely display form values
-*
 
 ## The Walkthrough
 
-1. Create a Servlet
+1. Create a Java Dynamic Web Application
+	* Name it Lesson06
+	* Hit next until you finish the wizard, and then wait until it's done.    
+
+2. Create a Servlet
 	* Right click on com.example.demo and click New -> Class
 	* Name it ProcessServlet.java
 	* Edit it to look like this:
@@ -44,7 +52,7 @@ public class ProcessForm extends HttpServlet {
 }
 ```
 
-2. Create the Login JSP
+3. Create the Login JSP
   * Create a new Java Server Page (JSP)
 	* Name it login.jsp
 	* Edit it to look like this:
@@ -70,7 +78,7 @@ public class ProcessForm extends HttpServlet {
 </html>
 ```
 
-3. Create the Output JSP
+4. Create the Output JSP
 * Create a new Java Server Page (JSP)
 * Name it output.jsp
 * Edit it to look like this:
@@ -96,10 +104,19 @@ Run your application and open a browser, if you type in the URL http://localhost
 
 ## What is Going On
 
-<!-- try this:
-remove the c:out tags and enter the following value for the password.
-request.setAttribute("message", "<script>alert(\"You have been hacked!\");</script>");
--->
-
+The JSTL out tag protects your site from text entered by the user that could possibly execute a script.
 
 ## Questions
+* How does the JSTL out tag protect you from XSS attacks?
+It escapes the HTML code input by the user and replaces it with safe character entities.
+* What is a character entity?
+HTML Code consists of certain characters such as less than (<) or greater than (>) signs that indicate the start or end of a tag.
+* Try this:
+Add the following code to your output.jsp page and run your application again:
+```<script>alert('You have been hacked!');</script>">```
+
+Now modify the code above to include JSTL out tags and run your application again:
+```<c:out value="<script>alert('You have been hacked!');</script>"></c:out>```
+
+* How much damage can one do with JavaScript?
+* Could a user enter

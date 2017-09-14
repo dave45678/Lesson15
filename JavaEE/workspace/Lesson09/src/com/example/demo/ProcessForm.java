@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.persistence.EntityManager;
 import javax.servlet.ServletException;
@@ -11,6 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import customTools.DbUtil;
+import model.Customer;
+import model.DbCustomer;
 
 
 @WebServlet("/ProcessForm")
@@ -23,15 +26,9 @@ public class ProcessForm extends HttpServlet {
 		HttpSession session = request.getSession();
 		
 		EntityManager em = DbUtil.getEmFactory().createEntityManager();
-		try {
-			model.Customer cust = em.find(model.Customer.class, (long)2);
-			message = cust.getName();
-		} catch (Exception e){
-			message = "something went wrong!";
-		} finally {
-			em.close();
-		}
-		session.setAttribute("message",message);
+		ArrayList<Customer> customers = new ArrayList<Customer>();
+		customers = (ArrayList<Customer>) DbCustomer.getAllCustomers();
+		session.setAttribute("customers",customers);
 		request.getRequestDispatcher("/output.jsp").forward(request, response);
 	}
 

@@ -1,12 +1,19 @@
 <!-- enter lesson number and title below separated by hyphen-->
 # Lesson 9 - Looping through a table from the database using JPA
+
 ## Learning Objectives
+* create a dynamic web application with a servlet and output page
 * connect to the mySQL database using JPA
-* display all the records in one page
+* retrieve the data as an ArrayList in the servlet
+* use JSTL to loop through and display all the records
 
 ## The Walkthrough
 
-1. Create a Servlet
+1. Create a Java Dynamic Web Application
+	* Name it Lesson09
+	* Hit next until you finish the wizard, and then wait until it's done.    
+
+2. Create a Servlet
 	* Right click on com.example.demo and click New -> Class
 	* Name it HomeController.java
 	* Edit it to look like this:
@@ -38,24 +45,24 @@ public class ProcessForm extends HttpServlet {
 }
 ```
 
-2. Copy your JAR files to the WEB-INF\lib folder of your project
+3. Copy your JAR files to the WEB-INF\lib folder of your project
   * eclipselink.jar
 	* javax.persistence_2.1.0.v201304241213.jar
 	* mysql-connector-java-5.1.42-bin.jar
 
 	Place these files in the WEB-INF\lib folder. Any other location may not be found by your program.
 
-3. Create a JSP page called output.jsp
+4. Create a JSP page called output.jsp
 Right-click on the web content directory and select the option to add a new JSP file. Call it output.jsp.
 
-4. Add the tag library directives at the top of your JSP
+5. Add the tag library directives at the top of your JSP
 Open your output.jsp file and add the following code below the @Page directive
 
 ```html
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 ```
-5. Connect to the database using JPA
+6. Connect to the database using JPA
 There are a lot of steps to follow for JPA and you must follow them in order.
 * Right-click on your project name and select Properties
 * Select Project Facets
@@ -80,7 +87,7 @@ On the next screen:
  * Click OK
  On the next screen: Click Apply & OK
 
-6.  Look in the JPA Content container inside your project and double­click the persistence.xml file
+7.  Look in the JPA Content container inside your project and double­click the persistence.xml file
 * This is the dialog box for configuring your persistence.xml file
 * If you click the General tab, you will see the raw xml of the persistence file. It doesn’t look like much yet but as we set our configuration more tags will be added.
 * On the General tab, set the Persistence Provider to
@@ -113,7 +120,7 @@ On the next screen:
 
 * Save the file changes (click the icon in Eclipse to save) and you are done
 
-7. Create a Java class called DbUtil and modify it to look like this:
+8. Create a Java class called DbUtil and modify it to look like this:
 
 ```java
 package customTools;
@@ -133,7 +140,7 @@ public class DBUtil {
 
 }
 ```
-8. Next we generate the classes (entities) which map to the tables in the database. With JPA our program will interact only with the entities and JPL will interact with the database. That way we can change the database without changing our code.
+9. Next we generate the classes (entities) which map to the tables in the database. With JPA our program will interact only with the entities and JPL will interact with the database. That way we can change the database without changing our code.
 * Right-click on the project name and select *New JPA Entities from Tables*
 * On the dialog box select your connection
 * Your schema should be unofficalGuides
@@ -218,7 +225,7 @@ public class Customer implements Serializable {
 	}
 }
 ```
-9. Create a new class named DbUtil. Place it in the customTools package.
+10. Create a new class named DbUtil. Place it in the customTools package.
 Modify the class to make it look like this:
 
 ```java
@@ -238,7 +245,7 @@ public class DbUtil {
 }
 ```
 
-10. You're ready to pull data from the customer table.
+11. You're ready to pull data from the customer table.
 In your servlet add the following cod inside the doGet() method:
 
 ```java
@@ -258,7 +265,7 @@ String message = "";
 	session.setAttribute("message",message);
 	request.getRequestDispatcher("/output.jsp").forward(request, response);
 	```
-11. Create the following page to display your customer information. Call it output.jsp and place it in the Web Content directory.
+12. Create the following page to display your customer information. Call it output.jsp and place it in the Web Content directory.
 
 ```html
 <%@ page language="java" contentType="text/html; charset=UTF-8"

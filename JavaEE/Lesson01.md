@@ -7,10 +7,15 @@
 
 ## The Walkthrough
 
-1. Create a Servlet
-	* Right click on com.example.demo and click New -> Servlet
-	* Name it HelloWorld.java
-	* Edit it to look like this:
+1. Create a Java Dynamic Web Application
+	* Name it Lesson01
+	* Hit next until you finish the wizard, and then wait until it's done.    
+
+2. Create a Servlet
+	* Right click on the src folder under JavaResources
+	* Select New -> Servlet
+	* Name it ProcessForm.java
+	* Edit it to match the code shown below
 
 ```java
 package com.example.demo;
@@ -43,7 +48,7 @@ public class Lesson01 extends HttpServlet {
 
 ```
 
-2. Create an HTML Page
+3. Create an HTML Page
   * Right click on templates and click New -> Html
 	* Name it output.html
 	* Edit it to look like this:
@@ -66,6 +71,11 @@ Run your application and open a browser, if you type in the URL http://localhost
 
 ## What is Going On
 We notice two methods in this class: <code>doGet()</code> and <code>doPost()</code>. The first one anwsers by HTTP to the reception of a GET request. The second to the reception of a POST request. As we want that in the both cases the servlet processes the request, <code>doPost()</code> forwards to <code>doGet()</code>. When we browse to the servlet url then the doGet() method is called. DoPost would only be called by a web form. We'll work with that later.
+
+The ```@WebServlet``` attribute. It contains the url for the serlvet
+```@WebServlet("/ProcessForm")```
+can be executed by right-click on the servlet and select Run As.
+You servlet url will be ```http://localhost:8080/Lesson09/ProcessForm```
 
 #### Call the servlet from the browser
 http://localhost:8080/Lesson01/HelloWorld

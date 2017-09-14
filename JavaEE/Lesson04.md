@@ -1,12 +1,19 @@
 <!-- enter lesson number and title below separated by hyphen-->
 # Lesson 4 - Handling Form Values the hard way
 ## Learning Objectives
-* Capturing form values in the Servlet
-*
+* Create an HTML form on a web page
+* Capture the form values in the servlet
+* Adding the form values to the Session
+* Redirect to output page from the servlet
+* Display form values on the output page
 
 ## The Walkthrough
 
-1. Create a Servlet
+1. Create a Java Dynamic Web Application
+	* Name it Lesson04
+	* Hit next until you finish the wizard, and then wait until it's done.    
+
+2. Create a Servlet
 	* Right click on com.example.demo and click New -> Class
 	* Name it ProcessServlet.java
 	* Edit it to look like this:
@@ -44,7 +51,7 @@ public class ProcessForm extends HttpServlet {
 }
 ```
 
-2. Create the Login JSP
+3. Create the Login JSP
   * Create a new Java Server Page (JSP)
 	* Name it login.jsp
 	* Edit it to look like this:
@@ -70,7 +77,7 @@ public class ProcessForm extends HttpServlet {
 </html>
 ```
 
-3. Create the Output JSP
+4. Create the Output JSP
 * Create a new Java Server Page (JSP)
 * Name it output.jsp
 * Edit it to look like this:

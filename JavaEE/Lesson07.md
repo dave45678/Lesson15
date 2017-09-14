@@ -1,12 +1,19 @@
 <!-- enter lesson number and title below separated by hyphen-->
 # Lesson 7 - Validating form data
+
 ## Learning Objectives
+* Create a website that contains an HTML form
+* Validate the values received by the servlet
+* Redirect user back to form if invalid data is entered
 * Use the Java Standard Tag Library to display form values
-*
 
 ## The Walkthrough
 
-1. Create a Servlet
+1. Create a Java Dynamic Web Application
+	* Name it Lesson07
+	* Hit next until you finish the wizard, and then wait until it's done.    
+
+2. Create a Servlet
 	* Right click on com.example.demo and click New -> Class
 	* Name it ProcessServlet.java
 	* Edit it to look like this:
@@ -59,13 +66,16 @@ public class ApplicationServlet extends HttpServlet {
 					session.setAttribute("email",email);
 					session.setAttribute("password",password);
 					nextPage = "/output.jsp";
-				}
-				else
-				{
+				}else{
+					message += "Email or Password is invalid. Try again!<br/>";
 					session.invalidate();
 					nextPage = "/login.jsp";
 				}
+			}else{
+				message += "Null or blank values are not permitted!<br/>";
 			}
+		}else{
+			message += "Null or blank values are not permitted!<br/>";
 		}
 
 		//Redirect to next page as indicated by the value of the nextPage variable
@@ -84,7 +94,7 @@ public class ApplicationServlet extends HttpServlet {
 }
 ```
 
-2. Create the Login JSP
+3. Create the Login JSP
   * Create a new Java Server Page (JSP)
 	* Name it login.jsp
 	* Edit it to look like this:
@@ -111,7 +121,7 @@ public class ApplicationServlet extends HttpServlet {
 </html>
 ```
 
-3. Create the Output JSP
+4. Create the Output JSP
 * Create a new Java Server Page (JSP)
 * Name it output.jsp
 * Edit it to look like this:
@@ -138,10 +148,9 @@ public class ApplicationServlet extends HttpServlet {
 Run your application and open a browser, if you type in the URL http://localhost:8080/login.jsp
 
 ## What is Going On
+JavaMail is a Java API build into Java EE used to send and receive email. Java Mail is distributed via GitHub:
+```https://javaee.github.io/javamail/#Download_JavaMail_Release```
 
 
 
 ## Questions
-
-Java Mail is now on GitHub:
-https://javaee.github.io/javamail/#Download_JavaMail_Release

@@ -45,13 +45,16 @@ public class ApplicationServlet extends HttpServlet {
 					session.setAttribute("email",email);
 					session.setAttribute("password",password);
 					nextPage = "/output.jsp";
-				}
-				else
-				{
+				}else{
+					message += "Email or Password is invalid. Try again!<br/>";
 					session.invalidate();
 					nextPage = "/login.jsp";
 				}
+			}else{
+				message += "Null or blank values are not permitted!<br/>";
 			}
+		}else{
+			message += "Null or blank values are not permitted!<br/>";
 		}
 
 		//Redirect to next page as indicated by the value of the nextPage variable
