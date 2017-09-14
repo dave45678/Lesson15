@@ -1,4 +1,5 @@
 # Learning Spring Boot by Coding 
+0. Setting up your environment
 1. [Hello World with Template – no variable](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson01.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Explanation](img/i_book.png "Explanation") ![Code](img/i_code.png "Github Code")
 2. [Hello World with Template with variable](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson02.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Explanation](img/i_book.png "Explanation") ![Code](img/i_code.png "Github Code")
 3. [Hello World with External Variables](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson03.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Explanation](img/i_book.png "Explanation") ![Code](img/i_code.png "Github Code")  
