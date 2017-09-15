@@ -7,7 +7,7 @@
 ## The Walkthrough
 
 1. Create a Java Dynamic Web Application
-	* Name it Lesson02
+	* Name it Lesson24
 	* Hit next until you finish the wizard, and then wait until it's done.    
 
 1. Create a Servlet

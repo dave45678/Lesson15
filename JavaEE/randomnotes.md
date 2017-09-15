@@ -1,3 +1,13 @@
+http://www.avajava.com/tutorials/lessons/how-do-i-use-a-jdbc-realm-with-tomcat-and-mysql.html?page=1
+
+http://www.deroneriksson.com/tutorials/apache/tomcat/how-do-i-use-a-jdbc-realm-with-tomcat-and-mysql
+
+added the mysql JAR to /home/student/unofficialguides/JavaEE/servers/lib
+
+
+
+
+
 Persistence refers to the ability to store objects in a database and use those objects with transactional integrity. In a J2EE application, data is typically stored and persisted in the data tier, in a relational database.
 
 Entity beans are enterprise beans that contain persistent data and that can be saved in various persistent data stores. The entity beans represent data from a database; each entity bean carries its own identity. Entity beans can be deployed using application-managed persistence or container-managed persistence.
@@ -62,5 +72,3 @@ Then put something like the following in your error_java.jsp :
 <p>Message: ${pageContext.exception.message}</p>
 
 As an added touch, you can route your exceptions to a servlet, leave the last 3 lines out of the output message and instead post that detailed information to a log or email it to an admin. That way there is a simple easy-to-understand message for the user and complete information for the developers for debugging purposes.
-
- 
