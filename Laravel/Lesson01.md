@@ -31,7 +31,7 @@ php artisan serve
 4. Run your application and open a browser, if you type in the URL http://localhost:8000 you should see this:
 
 
-![Running your first Spring Boot Application](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/img/hello.png "Running your first Spring Boot Application")
+![Running your first Laravel Application](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/img/hello.png "Running your first Laravel Application")
 
 
 5. Modify the text. Locate the /resources/views folder, and open up welcome.blade.php

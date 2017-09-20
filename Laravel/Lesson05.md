@@ -62,7 +62,8 @@ class Person extends Model
 ```
 Use the guidelines from http://laravel.com/docs/5.5/migrations#creating-tables to decide what fields to use, and their lengths.
 
-There is an error 'baked' into laravel which will occur when you run the users table migration.
+There is an error 'baked' into Laravel which will occur when you run the users table migration.
+
 To fix it, do the following:
 
 As outlined in the Migrations guide to fix this all you have to do is edit your AppServiceProvider.php (app\Providers) file and inside the boot method set a default string length:
@@ -71,20 +72,23 @@ use Illuminate\Support\Facades\Schema;
 
 public function boot()
 {
-    Schema::defaultStringLength(255);
+    Schema::defaultStringLength(150);
 }
 
 4. php artisan migrate
 
 This sets up your database with all of the tables that need to be created.
+You should see a result that is similar to the image below:
 
-Check that your table has been created by going to your command line.
+![Migration result](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/img/hello.png "Running your first Laravel Migration")
+
+
 
 Type php artisan migrate:status.
 
 You should see the following text:
 
-Then go to your MySQL console.
+Check that your table has been created. Go to your MySQL console.
 
 Type:
 ```
@@ -98,8 +102,7 @@ mysql
 show tables;
 ```
 
-
-You should see your customers table in the list.
+You should see your people table in the list.
 
 Next, type:
 ```
