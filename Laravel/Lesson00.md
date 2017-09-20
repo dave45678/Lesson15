@@ -57,7 +57,9 @@ php artisan serve
 
 ## What's Going On
 
-You are downloading a WAMP server. It is a machine on ***W***indows with ***A***pache, ***M***ySQPL and ***P***HP. This is your local version of a web server that allows you to see the pages that you develop in a browser.
+You are downloading a WAMP server. It is a machine on **W***indows with **A**pache, **M**ySQPL and **P**HP.
+
+This is your local version of a web server that allows you to see the pages that you develop in a browser.
 
 When you run your laravel application, you should be able to see it in your browser, the same way you would if you put it on a server in the cloud, so that other people could use your website.
 
