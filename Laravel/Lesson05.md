@@ -94,6 +94,7 @@ This sets up your database with all of the tables that need to be created.
 You should see a result that is similar to the image below:
 
 ![Migration result](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/img/create_migration.png "Running your first Laravel Migration")
+
 Type php artisan migrate:status.
 
 You should see the following text:
