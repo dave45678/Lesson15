@@ -1,5 +1,5 @@
 <!-- enter lesson number and title below separated by hyphen-->
-# Lesson-02
+# Lesson-02 Passing data to views 
 ## Learning Objectives
 * Using Blade to render variables
 
