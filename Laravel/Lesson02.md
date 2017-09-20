@@ -35,7 +35,7 @@ Edit it to look like this:
 
 Change the function which returns the view to look like this:
 
-```
+``` php
 Route::get('/', function () {
     return view('welcome')->with('message','Say hello to the people');
 });
