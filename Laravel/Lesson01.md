@@ -31,7 +31,7 @@ php artisan serve
 4. Run your application and open a browser, if you type in the URL http://localhost:8000 you should see this:
 
 
-![Running your first Laravel Application](img/hello.png "Running your first Laravel application")
+(img/hello.png "Running your first Laravel application")
 
 
 5. Modify the text. Locate the /resources/views folder, and open up welcome.blade.php
