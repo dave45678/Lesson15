@@ -1,5 +1,5 @@
 <!-- enter lesson number and title below separated by hyphen-->
-# Lesson-03
+# Lesson-03 Handling Form Values
 ## Learning Objectives
 * Capturing form values in the Controller
 
