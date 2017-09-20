@@ -1,6 +1,8 @@
 # Learning Laravel by Coding
 
-1.[Hello World with Template – no variable]
+0. [Setting up your environment](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson00.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Explanation](img/i_book.png "Explanation")
+
+1. [Hello World with Template – no variable](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson01.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Explanation](img/i_book.png "Explanation") ![Code](img/i_code.png "Github Code")
 
 2.[Hello World with Template with variable]
 
@@ -54,6 +56,6 @@
 
 28.Showing Error details
 
-29.Email 
+29.Email
 
 30.REST APIs with  Laravel
