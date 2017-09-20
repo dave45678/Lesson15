@@ -55,6 +55,8 @@ php artisan serve
  http://localhost:8000
  ```
 
+ Note: **YOU MUST RUN PHP ARTISAN FROM YOUR ROOT FOLDER FOR IT TO WORK PROPERLY**
+
 ## What's Going On
 
 You are downloading a WAMP server. It is a machine on **W**indows with **A**pache, **M**ySQPL and **P**HP.
