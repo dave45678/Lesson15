@@ -44,7 +44,7 @@ Route::get('/', function () {
 
 
 Run your application and open a browser, if you type in the URL http://localhost:8000 you should see this:
-![Running your first Spring Boot Application](img/Lesson02.png)
+![Running Laravel Lesson02](img/Lesson02.png)
 
 ## What is Going On
 
