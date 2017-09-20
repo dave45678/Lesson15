@@ -1,5 +1,5 @@
 <!-- enter lesson number and title below separated by hyphen-->
-# Lesson
+# Lesson-01
 ## Learning Objectives
 
 You are going to create a "Hello World" application in Laravel.
@@ -36,7 +36,7 @@ php artisan serve
 
 5. Modify the text. Locate the /resources/views folder, and open up welcome.blade.php
 
-Edit the ***body*** of the message to contain only this:
+Edit the **body** of the message to contain only this:
 
 ```
 <body>
@@ -48,7 +48,6 @@ Edit the ***body*** of the message to contain only this:
 
 
 ## What is Going On
+Your application is being 'scaffolded' when you type 'laravel new [application_name]'. That means that all of the basic classes that you will need to use are being added to your laravel project, and it is being set up for you. The 'bare-bones' application you download is like a template, and has most of the classes you will need to develop a functional application. You will use composer for dependency management, so if you want to use a class that is not available as part of the basic bundle, you will need to use composer to install it.
 
-
-
-## Questions
+Your application uses a template engine called Blade to render php objects in HTML. By default, blade templates are stored in the ***resources/views*** folder, and are named **[Your_File_Name].blade.php**. This way, your application can recognise blade statements and variables. Blade renders into PHP. The blade template looks like HTML5, but it uses Blade's curly braces {{}} to render objects, and @ to render statements.
