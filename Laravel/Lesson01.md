@@ -2,46 +2,36 @@
 # Lesson
 ## Learning Objectives
 
+You are going to create a "Hello World" application in Laravel.
+
 ## The Walkthrough
 
-1. Create a Controller
-	* Right click on com.example.demo and click New -> Class
-	* Name it HomeController.java
-	* Edit it to look like this:
+1. Create a new application by typing 'laravel new [application_name]'
 
-```java
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
+In this case, you will type:
 
-@Controller
-public class HomeController {
-
-    @RequestMapping("/")
-    public String homePage(){
-        return "index";
-    }
-}
+```
+laravel new Lesson01
 ```
 
-2. Create a Template
-  * Right click on templates and click New -> Html
-	* Name it index.html
-	* Edit it to look like this:
-```html
-<!DOCTYPE html>
-<html lang="en" xmlns:th="www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8" />
-    <title>Title</title>
-</head>
-<body>
-    <h2>Hello World!</h2>
-</body>
-</html>
+A new application will be created for you.
+
+2. Generate your application key, by typing:
+
+```
+php artisan key:generate
 ```
 
-Run your application and open a browser, if you type in the URL http://localhost:8080 you should see this:
-![Running your first Spring Boot Application](img/Lesson01.png "Running your first Spring Boot Application")
+3. Run your application:
+
+```
+php artisan serve
+```
+
+4. Run your application and open a browser, if you type in the URL http://localhost:8000 you should see this:
+
+
+![Running your first Laravel Application](img/Lesson01.png "Running your first Laravel")
 
 ## What is Going On
 
