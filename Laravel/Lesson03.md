@@ -24,6 +24,7 @@ In this lesson you will learn how to receive input from the user (from forms), a
     <form action="/processform" method="post">
         First Name: <input type="text" name="firstname" />
         <input type="submit" value="Submit" />
+        {{ csrf_field() }}
     </form>
     </body>
     </html>
@@ -42,11 +43,19 @@ In this lesson you will learn how to receive input from the user (from forms), a
     </head>
     <body>
         <p>Hello, {{$nameval}}!</p>
+
     </body>
     </html>
     ```
 
-4. Create a route for displaying the input form:
+4. Add the Request class to web.php:
+Open the web.php file in the /routes folder, and add this line in the first line outside the comment (line 14)
+```
+use Illuminate\Http\Request;
+```
+
+5. Create a route for displaying the input form:
+    * Edit the function for the default route in web.php to look like this:
 
 ``` php
 Route::get('/', function () {
@@ -54,7 +63,7 @@ Route::get('/', function () {
 });
 ```
 
-5. Create a route for displaying the input form:
+6. Create a route for displaying the input form:
 
 ``` php
 Route::post('/processform', function (Request $request) {
@@ -62,8 +71,11 @@ Route::post('/processform', function (Request $request) {
     return view('confirm')->with('nameval',$request->firstname);
 });
 ```
-    5. Run your application and open a browser, if you type in the URL http://localhost:8000/loadform you should see this:
-    ![Creating a form](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/img/Lesson04a.png "Creating a form")
 
-    6. Once you enter a value and click submit, you should see a page that looks like this:  
-    ![Processing the form](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/img/Lesson04b.png "Processing the form")
+
+
+7. Run your application and open a browser, if you type in the URL http://localhost:8000/loadform you should see this:
+![Creating a form](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/img/Lesson04a.png "Creating a form")
+
+8. Once you enter a value and click submit, you should see a page that looks like this:  
+![Processing the form](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/img/Lesson04b.png "Processing the form")
