@@ -21,12 +21,12 @@ DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=forge
-DB_USERNAME=root
+DB_USERNAME=
 DB_PASSWORD=
 ```
-If you have changed your username and password, make sure these values are updated.
+Your username and password should be the credentials you use to log in to MySQL.
 
-5. Look in  **config/database.php**
+4. Look in  **config/database.php**
 Update the MySQL details with the appropriate values for
 DB_DATABASE, DB_USERNAME, and DB_PASSWORD
 Make sure your password is whatever password you use for your MySQL configuration.
@@ -38,7 +38,7 @@ php artisan make:model Person -m
 ```
 
 You should see the following text:
-Created Migration: 2017_09_18_175912_create_persons_table
+Created Migration: 2017_09_18_175912_create_people_table
 
 Look in the **/app** directory for your file.
 It should be called what you decided to name it.
