@@ -47,6 +47,20 @@ Go to the database file in the config folder in your project, and add fields to 
 
 For this example, make your file look like this:
 
+```
+php
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Person extends Model
+{
+    //
+}
+
+```
 Use the guidelines from http://laravel.com/docs/5.5/migrations#creating-tables to decide what fields to use, and their lengths.
 
 There is an error 'baked' into laravel which will occur when you run ther users table migration.
