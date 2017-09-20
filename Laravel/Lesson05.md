@@ -85,6 +85,8 @@ To do this:
 
 ![Edit migration](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/create_person_migration.png "Editing your first Laravel Migration")
 
+![Edit migration](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/img/create_person_migration.png "Running your first Laravel Migration")
+
 5. Run your migration statements to update your table structures by typing:
 ```
 php artisan migrate
