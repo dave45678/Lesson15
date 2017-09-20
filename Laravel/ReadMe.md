@@ -10,11 +10,7 @@
 
 4. [Using databases with Laravel](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson04.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
-5. [Persisting to the Database]
-
-6. [Looping through list with Blade in Laravel]
-
-4. [Form Validation]
+5. [Form Validation]
 
 8. [Adding Twitter Bootstrap to Laravel - using the CDN]
 
