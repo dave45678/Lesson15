@@ -52,6 +52,3 @@ Edit the ***body*** of the message to contain only this:
 
 
 ## Questions
-
-
-[Github Repository](https://github.com/ajhenley/SpringBoot_01)
