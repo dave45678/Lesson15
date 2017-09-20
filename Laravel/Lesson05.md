@@ -14,16 +14,16 @@ mysql
 create database forge;
 ```
 
-4. Look in your .env file in the root directory of your project.
+3. Look in your .env file in the root directory of your project.
 Change the MySQL settings to look like this:
-
+```
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
 DB_DATABASE=forge
 DB_USERNAME=root
 DB_PASSWORD=
-
+```
 If you have changed your username and password, make sure these values are updated.
 
 5. Look in  **config/database.php**
