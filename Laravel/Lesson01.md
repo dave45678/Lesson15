@@ -1,5 +1,5 @@
 <!-- enter lesson number and title below separated by hyphen-->
-# Lesson-01
+# Lesson-01 Hello World!
 ## Learning Objectives
 
 You are going to create a "Hello World" application in Laravel.
