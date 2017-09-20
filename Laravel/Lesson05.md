@@ -75,18 +75,28 @@ public function boot()
     Schema::defaultStringLength(150);
 }
 
-4. php artisan migrate
+
+4. Update your migrations to reflect the columns you want to see in your tables.
+To do this:
+* Go to the migrations folder.
+* Open up create_people_table.php, and edit it to look like this:
+
+![Edit migration](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/create_person_migration.png "Editing" your first Laravel Migration")
+
+5. Run your migration statements to update your table structures by typing:
+```
+php artisan migrate
+```
 
 This sets up your database with all of the tables that need to be created.
 You should see a result that is similar to the image below:
 
 ![Migration result](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/img/hello.png "Running your first Laravel Migration")
 
-
-
 Type php artisan migrate:status.
 
 You should see the following text:
+![Migration ran](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/img/migrationran.png "Checking your first Laravel Migration")
 
 Check that your table has been created. Go to your MySQL console.
 
@@ -109,7 +119,7 @@ Next, type:
 mysql
 describe persons;
 ```
-You should see the name column that you created, with the size limit you specified.
+You should see the columns that you created, with the size limits you specified.
 
 Congratulations! You've created your tables.
 
