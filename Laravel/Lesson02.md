@@ -1,6 +1,8 @@
 <!-- enter lesson number and title below separated by hyphen-->
 # Lesson-02
 ## Learning Objectives
+* Using Blade to render variables
+
 In this lesson you will learn how to pass data to views. This will be useful when you want to pass messages to pages and would like them to display.
 
 ## The Walkthrough
