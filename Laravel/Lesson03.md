@@ -34,7 +34,7 @@ In this lesson you will learn how to receive input from the user (from forms), a
     * Create a new file called confirm.blade.php in the ***resources/views*** folder
     * Edit it to look like this:
 
-    ``` html
+``` html
     <!DOCTYPE html>
     <html lang="{{app()->getLocale()}}">
     <head>
@@ -46,7 +46,7 @@ In this lesson you will learn how to receive input from the user (from forms), a
 
     </body>
     </html>
-    ```
+```
 
 4. Add the Request class to web.php:
 Open the web.php file in the /routes folder, and add this line in the first line outside the comment (line 14)
