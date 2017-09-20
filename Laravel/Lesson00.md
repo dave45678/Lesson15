@@ -32,9 +32,10 @@ This guide takes you through the process of setting up your machine for various 
     * Tokenizer PHP Extension
     * XML PHP Extension
 
-6. Make sure to save the location of your Composer directory so you can add it to your path variables in Windows
+6. Make sure to save the location of your Composer directory so you can add it to your PATH variables in Windows:
+```
     C:/Users/[Your_User_Name]/AppData/Roaming/Composer
-
+```
 7. Generate your application key, otherwise you will see "Whoops, something went wrong". To do this, type the text bellow in your command prompt:
 
 ```
