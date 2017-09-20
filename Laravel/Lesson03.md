@@ -67,12 +67,9 @@ Route::get('/', function () {
 
 ``` php
 Route::post('/processform', function (Request $request) {
-
     return view('confirm')->with('nameval',$request->firstname);
 });
 ```
-
-
 
 7. Run your application and open a browser, if you type in the URL http://localhost:8000/loadform you should see this:
 ![Creating a form](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/img/Lesson04a.png "Creating a form")
