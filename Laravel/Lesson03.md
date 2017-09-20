@@ -13,7 +13,7 @@ In this lesson you will learn how to receive input from the user (from forms), a
     * Create a new file called hometemplate.blade.php in the ***resources/views*** folder
     * Edit it to look like this:
 
-    ``` html
+    ```html
     <!DOCTYPE html>
     <html lang="{{app()->getLocale()}}">
     <head>
@@ -33,7 +33,7 @@ In this lesson you will learn how to receive input from the user (from forms), a
     * Create a new file called confirm.blade.php in the ***resources/views*** folder
     * Edit it to look like this:
 
-    ```html
+    ``` html
     <!DOCTYPE html>
     <html lang="{{app()->getLocale()}}">
     <head>
