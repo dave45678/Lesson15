@@ -67,13 +67,15 @@ There is an error 'baked' into Laravel which will occur when you run the users t
 To fix it, do the following:
 
 As outlined in the Migrations guide to fix this all you have to do is edit your AppServiceProvider.php (app\Providers) file and inside the boot method set a default string length:
-
+```
+php
 use Illuminate\Support\Facades\Schema;
 
 public function boot()
 {
     Schema::defaultStringLength(150);
 }
+```
 
 
 4. Update your migrations to reflect the columns you want to see in your tables.
