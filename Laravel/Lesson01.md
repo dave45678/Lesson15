@@ -1,8 +1,6 @@
 <!-- enter lesson number and title below separated by hyphen-->
 # Lesson
 ## Learning Objectives
-*
-*
 
 ## The Walkthrough
 
@@ -25,7 +23,7 @@ public class HomeController {
 }
 ```
 
-2. Create a Template 
+2. Create a Template
   * Right click on templates and click New -> Html
 	* Name it index.html
 	* Edit it to look like this:
