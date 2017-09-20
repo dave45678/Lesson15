@@ -4,7 +4,7 @@
 * Setting up the database connection
 * Creating models and table migrations
 
-1. Create a new Laravel application. Don't forget to generate your application key!
+1. Create a new Laravel application. Don't forget to generate your application key if it does not already exist!
 
 2. Create a database that you can connect to in MySQL
 using  'create database DB_NAME', where DB_NAME is the name that your database will use. In our case, we will create a database called forge:
@@ -31,7 +31,7 @@ Update the MySQL details with the appropriate values for
 DB_DATABASE, DB_USERNAME, and DB_PASSWORD
 Make sure your password is whatever password you use for your MySQL configuration.
 
-2. Create a Model called Person, with its associated migrations by typing this into your shell:
+6. Create a Model called Person, with its associated migrations by typing this into your shell:
 
 ```
 php artisan make:model Person -m
@@ -42,8 +42,6 @@ Created Migration: 2017_09_18_175912_create_persons_table
 
 Look in the **/app** directory for your file.
 It should be called what you decided to name it.
-
-
 
 Go to the database file in the config folder in your project, and add fields to your tables as required.
 
