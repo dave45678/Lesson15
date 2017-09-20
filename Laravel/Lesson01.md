@@ -48,7 +48,6 @@ Edit the ***body*** of the message to contain only this:
 
 
 ## What is Going On
+Your application is being 'scaffolded' when you type 'laravel new [application_name]'. That means that all of the basic classes that you will need to use are being added to your laravel project, and it is being set up for you. The 'bare-bones' application you download is like a template, and has most of the classes you will need to develop a functional application. You will use composer for dependency management, so if you want to use a class that is not available as part of the basic bundle, you will need to use composer to install it.
 
-
-
-## Questions
+Your application uses a template engine called Blade to render php objects in HTML. By default, blade templates are stored in the ***resources/views*** folder, and are named ***[Your_File_Name].blade.php ***. This way, your application can recognise blade variables (PHP objects, blade conditions, and PHP statements). Blade renders into PHP.
