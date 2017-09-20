@@ -62,7 +62,7 @@ class Person extends Model
 ```
 Use the guidelines from http://laravel.com/docs/5.5/migrations#creating-tables to decide what fields to use, and their lengths.
 
-There is an error 'baked' into laravel which will occur when you run ther users table migration.
+There is an error 'baked' into laravel which will occur when you run the users table migration.
 To fix it, do the following:
 
 As outlined in the Migrations guide to fix this all you have to do is edit your AppServiceProvider.php (app\Providers) file and inside the boot method set a default string length:
