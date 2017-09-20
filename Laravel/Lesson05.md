@@ -47,8 +47,7 @@ Go to the database file in the config folder in your project, and add fields to 
 
 For this example, make your file look like this:
 
-```
-php
+```php
 <?php
 
 namespace App;
