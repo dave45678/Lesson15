@@ -57,7 +57,7 @@ php artisan serve
 
 ## What's Going On
 
-You are downloading a WAMP server. It is a machine on **W***indows with **A**pache, **M**ySQPL and **P**HP.
+You are downloading a WAMP server. It is a machine on **W**indows with **A**pache, **M**ySQPL and **P**HP.
 
 This is your local version of a web server that allows you to see the pages that you develop in a browser.
 
