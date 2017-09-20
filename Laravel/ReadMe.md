@@ -4,7 +4,7 @@
 
 1. [Hello World with Template – no variable](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson01.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Explanation](img/i_book.png "Explanation") ![Code](img/i_code.png "Github Code")
 
-2.[Hello World with Template with variable]
+2.[Hello World with Template with variable](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson01.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
 3.[Handling form values – the hard way]
 
