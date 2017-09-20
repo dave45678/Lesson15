@@ -1,5 +1,5 @@
 <!-- enter lesson number and title below separated by hyphen-->
-# Lesson
+# Lesson-02
 ## Learning Objectives
 In this lesson you will learn how to pass data to views. This will be useful when you want to pass messages to pages and would like them to display.
 
