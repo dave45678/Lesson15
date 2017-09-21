@@ -87,8 +87,7 @@
 
 7. Modify web.php to look like this: 
 
-``` 
-php 
+``` php 
 <?php
 
 /*
