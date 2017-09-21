@@ -72,7 +72,8 @@
 
 	namespace App;
 
-	use Illuminate\Database\Eloquent\Model;
+
+use Illuminate\Database\Eloquent\Model;
 
 	class Person extends Model
 	{
@@ -114,19 +115,12 @@ Route::post('/processform',function(Request $request){
 	  $request->validate($rules);
 	  $persval = new Person($request->all());
 	  $persval->save();
-	  return view('list')->with('people',Person::findall()); 		
-});
-
-
-Route::get('/confirm/{id}',function($id){
-
-	$persval = Person::find($id);
-	return view('confirm')->with('persval',$persval);
-
-});
-
-Route::get('/showall',function(){
-	  return view('list')->with('people',Person::all()); 			
 });
 
 ```
+
+9. Run your application. Enter information into the form leaving out one or both required fields to see the validation messages. 
+
+10. Enter information in both fields. 
+
+11. Check the database to see the information entered. 
