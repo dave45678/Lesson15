@@ -4,7 +4,7 @@
 * Linking form input to models
 * Validate form input
 
-
+## The Walkthrough
 1. Create a new Laravel application.
 
 2. We will use the database connection from Lesson04, so make sure you have that set up.
@@ -24,7 +24,7 @@
     <title>Title</title>
 </head>
 <body>
-<form action="/processform" method="post">	
+<form action="/processform" method="post">
 .
     {{$message or ''}}
 	@if($errors->has('firstname'))
@@ -66,7 +66,7 @@
     </html>
 ```
 
-6. Modify the Person model so that you can automatically populate items from the form: 
+6. Modify the Person model so that you can automatically populate items from the form:
 ```php
 <?php
 
@@ -77,7 +77,7 @@ use Illuminate\Database\Eloquent\Model;
 
 	class Person extends Model
 	{
-	    // This allow us to use the model's ->all() function to populate fields. 
+	    // This allow us to use the model's ->all() function to populate fields.
 
 //It fills the fields indicated if the request variables used for input have the same name
 
@@ -86,9 +86,9 @@ use Illuminate\Database\Eloquent\Model;
 
 ```
 
-7. Modify web.php to look like this: 
+7. Modify web.php to look like this:
 
-``` php 
+``` php
 <?php
 
 /*
@@ -111,7 +111,7 @@ Route::get('/', function () {
 
 Route::post('/processform',function(Request $request){
 	 $rules = array('firstname'=>'required','lastname'=>'required');
-	  
+
 	  $request->validate($rules);
 	  $persval = new Person($request->all());
 	  $persval->save();
@@ -119,8 +119,8 @@ Route::post('/processform',function(Request $request){
 
 ```
 
-9. Run your application. Enter information into the form leaving out one or both required fields to see the validation messages. 
+9. Run your application. Enter information into the form leaving out one or both required fields to see the validation messages.
 
-10. Enter information in both fields. 
+10. Enter information in both fields.
 
-11. Check the database to see the information entered. 
+11. Check the database to see the information entered.
