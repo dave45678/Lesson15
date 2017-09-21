@@ -10,7 +10,8 @@
 
 4. [Using databases with Laravel](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson04.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
-5. [Form Validation]
+5. [Form Validation](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson05.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
+
 
 8. [Adding Twitter Bootstrap to Laravel - using the CDN]
 
