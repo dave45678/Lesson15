@@ -70,6 +70,7 @@ To fix it, do the following:
 As outlined in the Migrations guide to fix this all you have to do is edit your AppServiceProvider.php (app\Providers) file and inside the boot method set a default string length:
 ```
 php
+use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Schema;
 
 public function boot()

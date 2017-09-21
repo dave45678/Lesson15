@@ -12,8 +12,9 @@
 
 5. [Form Validation](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson05.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
+6. [Looping through items with Blade](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson06.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
-8. [Adding Twitter Bootstrap to Laravel - using the CDN]
+7. [Adding Twitter Bootstrap to Laravel - using the CDN]
 
 7. [Complete data life cycle – form, list, detail, delete]
 
