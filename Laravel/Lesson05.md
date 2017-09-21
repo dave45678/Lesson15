@@ -24,11 +24,24 @@
     <title>Title</title>
 </head>
 <body>
-<form action="/processform" method="post">
+<form action="/processform" method="post">	
+
+    {{$message or ''}}
+	@if($errors->has('firstname'))
+	<span>You must enter a first name</span>
+	@endif
+
     First Name: <input type="text" name="firstname" />
+
+	@if($errors->has('lastname'))
+	<span>You must enter a last name</span>
+	@endif
+
     Last Name: <input type="text" name="lastname" />
+
     <input type="submit" value="Submit" />
-    {{ csrf_field() }}
+
+    {{csrf_field()}}
 </form>
 </body>
 </html>
