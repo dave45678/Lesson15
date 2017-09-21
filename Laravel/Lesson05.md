@@ -25,7 +25,7 @@
 </head>
 <body>
 <form action="/processform" method="post">	
-
+.
     {{$message or ''}}
 	@if($errors->has('firstname'))
 	<span>You must enter a first name</span>
@@ -35,7 +35,7 @@
 
 	@if($errors->has('lastname'))
 	<span>You must enter a last name</span>
-	@endif
+ 	@endif
 
     Last Name: <input type="text" name="lastname" />
 
@@ -64,4 +64,70 @@
 
     </body>
     </html>
+```
+
+6. Modify the Person model so that you can automatically populate items from the form: 
+```php
+<?php
+
+	namespace App;
+
+	use Illuminate\Database\Eloquent\Model;
+
+	class Person extends Model
+	{
+	    // This allow us to use the model's ->all() function to populate fields. 
+
+//It fills the fields indicated if the request variables used for input have the same name
+
+		protected $fillable= array('firstname','lastname');
+	}
+
+```
+
+7. Modify web.php to look like this: 
+
+``` 
+php 
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+use Illuminate\Http\Request;
+use App\Person;
+
+Route::get('/', function () {
+    return view('hometemplate');
+});
+
+Route::post('/processform',function(Request $request){
+	 $rules = array('firstname'=>'required','lastname'=>'required');
+	  
+	  $request->validate($rules);
+	  $persval = new Person($request->all());
+	  $persval->save();
+	  return view('list')->with('people',Person::findall()); 		
+});
+
+
+Route::get('/confirm/{id}',function($id){
+
+	$persval = Person::find($id);
+	return view('confirm')->with('persval',$persval);
+
+});
+
+Route::get('/showall',function(){
+	  return view('list')->with('people',Person::all()); 			
+});
+
 ```
