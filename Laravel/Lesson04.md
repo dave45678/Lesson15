@@ -4,6 +4,7 @@
 * Setting up the database connection
 * Creating models and table migrations
 
+## The Walkthrough
 1. Create a new Laravel application. Don't forget to generate your application key if it does not already exist!
 
 2. Create a database that you can connect to in MySQL

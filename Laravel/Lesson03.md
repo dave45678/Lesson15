@@ -5,6 +5,7 @@
 
 In this lesson you will learn how to receive input from the user (from forms), and pass that information to other views.
 
+## The Walkthrough
 1. Create a Laravel application
     * Name it Laravel03
     * Generate your key
