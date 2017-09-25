@@ -30,3 +30,15 @@
 	* Run the installer application (accept the defaults for any questions)
 
 5. Just to be on the safe side, reboot your machine
+
+## What's Going On
+The software you are downloading are the things you will need to write, compile and deploy java applications from your own machine.
+
+### Writing your code
+The software that is used to write Java programs and especially Spring Boot programs is an IDE or Integrated Development Environment. The leading IDE for Java is Eclipse (which is available at www.eclipse.org). But the best IDE for Java, in my opinion, is IntelliJ IDEA (which is available at www.jetbrains.com/idea). If you are a student, you can get IntelliJ IDEA for a year for free, but if not, you can work through the exercises in this book by using the 14-day demo version. 
+
+### Compiling your code
+In order to compile Java programs on your machine, you will need to download the JDK or Java Development Kit. This software is available on the Oracle website at www.oracle.com. You will need to install the proper JDK for your machine and reboot it before you will be able to get any of the lessons to work. 
+
+## Deploying your code
+To save your code and move completed programs to our hosting company, Heroku.com, you need to install the Heroku CLI and git. These will make it possible submit your code to source control and to transmit that code to Heroku. 
