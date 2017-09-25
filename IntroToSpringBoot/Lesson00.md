@@ -9,12 +9,12 @@
 
 1. Installing Git 
 	* Open https://git-scm.com in your browser
-  * Download the installer for your machine 
-  * Run the installer application (accept the defaults for any questions)   
+  	* Download the installer for your machine 
+  	* Run the installer application (accept the defaults for any questions)   
 
 2. Installing the Heroku CLI 
 	* Open https://devcenter.heroku.com/articles/heroku-cli in your browser 
-  * Download the installer for your machine 
+  	* Download the installer for your machine 
 	* Run the installer application (accept the defaults for any questions)
   
 3. Installing the JDK
