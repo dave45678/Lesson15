@@ -23,11 +23,18 @@
   	* Download the JDK installer for your machine
   	* Run the installer application (accept the defaults for any questions)
   
-4. Installing Intellij
-  	* Open https://www.jetbrains.com/idea/ in your browser
-  	* Download the installer for your machine
-  	* If you are a student in a college or university, go to https://www.jetbrains.com/student/ and using your campus email, register to get a one year free license
-	* Run the installer application (accept the defaults for any questions)
+4. Installing IDE
+	* If you wish to use Intellij IDEA:
+  		* Open https://www.jetbrains.com/idea/ in your browser
+  		* Download the installer for your machine
+  		* If you are a student in a college or university, go to https://www.jetbrains.com/student/ and using your campus email, register to get a one year free license
+		* Run the installer application (accept the defaults for any questions)
+	* If you wish to use Eclipse:
+		* Open http://www.eclipse.org/ in your browser
+		* Click the Download button and run the installer on your machine
+		* Select the Eclipse IDE for Java EE Developers
+		* Once the software is installed, run Eclipse and install 
+		* Click Help -> Eclipse Marketplace and install Spring Tools
 
 5. Just to be on the safe side, reboot your machine
 
