@@ -33,7 +33,7 @@
 		* Open http://www.eclipse.org/ in your browser
 		* Click the Download button and run the installer on your machine
 		* Select the Eclipse IDE for Java EE Developers
-		* Once the software is installed, run Eclipse and install 
+		* Once the software is installed, run Eclipse  
 		* Click Help -> Eclipse Marketplace and install Spring Tools
 
 5. Just to be on the safe side, reboot your machine
