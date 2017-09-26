@@ -1,10 +1,15 @@
-# Introduction to Flask
+# Lesson 1 - Introduction to Flask - Hello World with variable
 
-In this exercise, you will see how to use how to create a basic flask application.
+In this exercise, you will see how to use how to create a basic flask application with a variable.
 
 ## What you should do
 
-1. Create a new Flask application called and a hello_world.py file, that looks like this:
+## The Walkthrough
+1. Create a Flask Application
+	* Name it FlaskApp_01
+
+2. Edit the main python file (FlaskApp_01.py)
+	* Make it look like the following
 
 ```python
 from flask import Flask
@@ -13,7 +18,8 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return "Hello world!"
+    name = "Jon Snow"
+    return "Hello world! My name is " + name
 
 if __name__ == '__main__':
     app.run()
