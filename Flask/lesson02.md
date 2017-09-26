@@ -2,7 +2,6 @@
 
 In this exercise, you will see how to use how to create a basic flask application with a variable.
 
-## What you should do
 
 ## The Walkthrough
 1. Create a Flask Application
