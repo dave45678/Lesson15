@@ -38,7 +38,7 @@ if __name__ == '__main__':
 	* In the template folder, create an index.html file
 	* Make it look like the following
 
-```html5
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,7 +55,7 @@ if __name__ == '__main__':
 	* In the template folder, create an login.html file
 	* Make it look like the following
 
-```html5
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
