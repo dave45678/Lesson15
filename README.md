@@ -7,7 +7,7 @@ This will include:
 2. [Learning JavaEE by Coding](https://github.com/ajhenley/unofficialguides/tree/master/j2ee)
 3. [Learning Laravel by Coding](https://github.com/ajhenley/unofficialguides/tree/master/Laravel)
 4. [Learning Ruby on Rails by Coding](https://github.com/ajhenley/unofficialguides/tree/master/RubyOnRails)
-5. Learning .Net by Coding
-6. Learning Flask by Coding
+5. [Learning Flask by Coding](https://github.com/ajhenley/unofficialguides/tree/master/Flask)
+6. Learning .Net by Coding
 7. Learning Swift by Coding
   
