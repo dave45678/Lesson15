@@ -41,7 +41,7 @@ def show(id):
 @app.route('/edit/<int:id>')
 def edit(id):
     person = Person.query.get(id)
-    return render_template("form.html", person=person)
+    return render_template("form.html", person = person)
 
 
 @app.route('/delete/<int:id>')

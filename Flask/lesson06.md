@@ -1,4 +1,4 @@
-# Lesson 6 - Create database object through a form
+# Lesson 6 - Creating a database object in the view
 
 ## Learning Objectives
 * Connect to a sqlite database
