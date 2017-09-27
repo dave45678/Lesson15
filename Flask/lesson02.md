@@ -1,7 +1,7 @@
 # Lesson 2 - Hello world with template
 
-In this exercise, you will see how to use how to create a basic flask application with a variable.
-
+## Learning Objectives
+* Learn how to use html templates with Flask
 
 ## The Walkthrough
 1. Create a Flask Application

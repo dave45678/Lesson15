@@ -1,8 +1,7 @@
 # Lesson 1 - Introduction to Flask - Hello World with variable
 
-In this exercise, you will see how to use how to create a basic flask application with a variable.
-
-
+## Learning Objectives
+* Create basic Flask application
 
 ## The Walkthrough
 1. Create a Flask Application
