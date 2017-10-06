@@ -149,4 +149,4 @@ public String loadFormPage(Model model){
 	* th:text="${jazzy.song.name}"
 	* th:text="${jazzy.name}"
 
-[Github Repository](https://github.com/ajhenley/SpringBoot_06)
+[Github Repository](https://github.com/learnbycoding/SpringBoot_06)
