@@ -1,4 +1,9 @@
 # Lesson 8 - Using databases with Spring Boot
+## Learning Objectives   
+* Adding database support in Spring Boot  
+* Using database annotations - @Id, @GeneratedValue, and @Entity  
+* Configuring your application to use H2 Console  
+
 ## The Walkthrough
 
 1. Create a Spring Boot Application
