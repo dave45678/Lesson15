@@ -84,9 +84,9 @@ public class HomeController {
 
 
 ## What is Going On
-The “/loadform” route displays the template formtemplate to the user.  
+The “/loadform” path displays the template formtemplate to the user.  
 
-The “/processform” route processes both get and post requests in the same way, so if you type http://localhost:8080/processform?login=Randomusername, you should see the same value as if you enter Randomusername in the login box displayed when you visit the ”loadform” route.  
+The “/processform” path processes both get and post requests in the same way, so if you type http://localhost:8080/processform?login=Randomusername, you should see the same value as if you enter Randomusername in the login box displayed when you visit the ”loadform” route.  
 
 **@RequestParam** means that the loadFromPage method expects a parameter (either in the URL as a GET request, or posted to the form via a POST request) that is called login, and passes the value of that parameter to the model as “loginval”. The html templates can now access the value of the login string as “loginval”.  
 
