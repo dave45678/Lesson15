@@ -1,4 +1,7 @@
 # Lesson 5 - Creating a Java Bean
+## Learning Objectives
+* Creating a Java Bean
+
 ## The Walkthrough
 
 1. Create a Spring Boot Application
