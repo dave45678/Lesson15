@@ -70,9 +70,9 @@ http://www.thymeleaf.org/doc/articles/standarddialect5minutes.html
 
 ## Question
 If you have an entry in your messages.properties that looks like:  myval.name=Alton, which of the following would work on the template?
-	* <div th:text="#{myval}"></div>
-	* <div th:text="#myval.name"></div>
-	* <div> th:text="#{myval}"</div>
-	* <div th:text="#{myval.name}"></div>
+	* &lt;div th:text="#{myval}">&lt;/div>
+	* &lt;div th:text="#myval.name">&lt;/div>
+	* &lt;div> th:text="#{myval}"&lt;/div>
+	* &lt;div th:text="#{myval.name}">&lt;/div>
 
 [Github Repository](https://github.com/ajhenley/SpringBoot_03)
