@@ -69,10 +69,10 @@ For more information about Thymeleaf expressions, see the “Thymeleaf Expressio
 http://www.thymeleaf.org/doc/articles/standarddialect5minutes.html
 
 ## Question
-If you have an entry in your messages.properties that looks like:  myval.name=Alton, which of the following would work on the template?
-	* &lt;div th:text="#{myval}">&lt;/div>
-	* &lt;div th:text="#myval.name">&lt;/div>
-	* &lt;div> th:text="#{myval}"&lt;/div>
-	* &lt;div th:text="#{myval.name}">&lt;/div>
+If you have an entry in your messages.properties that looks like:  myval.name=Alton, which of the following would work on the template?  
+	* &lt;div th:text="#{myval}">&lt;/div> . 
+	* &lt;div th:text="#myval.name">&lt;/div> . 
+	* &lt;div> th:text="#{myval}"&lt;/div> . 
+	* &lt;div th:text="#{myval.name}">&lt;/div> . 
 
 [Github Repository](https://github.com/ajhenley/SpringBoot_03)
