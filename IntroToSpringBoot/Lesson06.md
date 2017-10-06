@@ -1,4 +1,7 @@
 # Lesson 6 - Handling Form Values -- the easy way
+## Learning Objectives
+* Retrieving values from a form using @ModelAttribute
+
 ## The Walkthrough
 
 1. Create a Spring Boot Application
