@@ -35,10 +35,10 @@ php artisan migrate
 
 9. Create a view to display the list.
 
-#What's going on:
+# What's going on:
 
-Creating a job and model:
+## Creating a job and model:
 These can be done at the same time by typing the text above.
 
-Creating a resourceful JobController
+## Creating a resourceful JobController
 This is for job related actions. We are going to make a resource controller so that http verbs (GET, PUT, POST, DELETE) can automatically be called.
