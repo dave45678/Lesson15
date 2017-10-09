@@ -1,37 +1,20 @@
 <!-- enter lesson number and title below separated by hyphen-->
 # Lesson
 ## Learning Objectives
-*
-*
 
 ## The Walkthrough
-
-1. Create a Controller
-	* Right click on com.example.demo and click New -> Class
-	* Name it HomeController.java
-	* Edit it to look like this:
-
-```java
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-
-@Controller
-public class HomeController {
-
-    @RequestMapping("/")
-    public String homePage(){
-        return "index";
-    }
-}
-```
+1. Create a new laravel application by typing "laravel new Lesson01" in the command prompt 
 
 2. Create a Template 
-  * Right click on templates and click New -> Html
-	* Name it index.html
-	* Edit it to look like this:
-```html
+
+Laravel already has pages set up, so you can modify these. Later on, you will also see how to create your own files and serve them. 
+
+* Open welcome.blade.php. You will find it in the resources/views folder. 
+Edt it to look like this: 
+
+``` html
 <!DOCTYPE html>
-<html lang="en" xmlns:th="www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <title>Title</title>
@@ -42,14 +25,10 @@ public class HomeController {
 </html>
 ```
 
-Run your application and open a browser, if you type in the URL http://localhost:8080 you should see this:
-![Running your first Spring Boot Application](img/Lesson01.png "Running your first Spring Boot Application")
+Run your application and open a browser, if you type in the URL http://localhost:8000 you should see this:
+![Running your first Spring Boot Application](img/image.jpg)
 
 ## What is Going On
 
-
-
 ## Questions
 
-
-[Github Repository](https://github.com/ajhenley/SpringBoot_01)
