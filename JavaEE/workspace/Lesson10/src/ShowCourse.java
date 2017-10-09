@@ -23,7 +23,6 @@ public class ShowCourse extends HttpServlet {
 		Long courseId = Long.parseLong(request.getParameter("courseid"));
 
 		Course course = DbCourse.getCourse(courseId);
-		System.out.println(course.getInstructor());
 		session.setAttribute("course",course);
 		request.getRequestDispatcher("/show.jsp").forward(request, response);
 	}

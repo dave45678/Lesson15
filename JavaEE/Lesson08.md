@@ -1,34 +1,44 @@
 <!-- enter lesson number and title below separated by hyphen-->
-# Lesson 8 - Display Customer List
+# Lesson 8 - Display Customer List with the Java Standard Tag Library (JSTL)
 
-use EL (Expression Language) and JSTL (Java Standard Tag Library)
 ## Learning Objectives
-*
-*
+* Create an HTML form on a web page
+* Capture the form values in the servlet
+* Adding the form values to the Session
+* Redirect to output page from the servlet
+* Display form values on the output page
+* Use the Java Standard Tag Library to safely display form values
 
+## Overview
 The JSTL (JSP Standard Tag Library provides tags to simplify common JSP tasks.
 
 EL (Expression Language) makes it easy to use beans. EL has a compact syntax and allows you to access nested properties. EL can handle null values.
 
-A primary feature of JSP is support for expression language (EL). This makes it easy to access data stored in JavaBeans. EL allows you to access a bean using syntax such as ${name} for a simple variable or ${name.foo.bar} for a nested property.
+A primary feature of JSP is support for expression language (EL). This makes it easy to access data stored in JavaBeans.
+EL allows you to access a bean using syntax such as ```${name}``` for for a private member variable that is accessible via a getter method, ```getName()```.
 
-Before you can use JSTL tags in your page you need to import two jar files and include the taglib directive. Both go in the WEB-INF/lib folder of a dynamic web application.  You'll find the jar files on your desktop in the JAR Files folder.
+Before you can use JSTL tags in your page you need to import two jar files and include the taglib directive.
+Both go in the ```WebContent/WEB-INF/lib``` folder of a dynamic web application.  
+You'll find the jar files on your desktop in the JAR Files folder. Or you can search for them online.
 
-javax.servlet.jsp.jstl-api-1.2.1.jar
-taglibs-standard-impl-1.2.5
+### JAR (Java Archive) Files required for JSTL (Java Standard Tag Library)
+* ```javax.servlet.jsp.jstl-api-1.2.1.jar```
+* ```taglibs-standard-impl-1.2.5```
 
-
-Add a taglib directive to the top of your JSP page (usuallly just above the opening html tag)
+You will need to add a taglib directive to the top of your JSP page (usuallly just above the opening html tag)
 
 ```html
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 ```
 
-
 ## The Walkthrough
 
-1. Create a Servlet
+1. Create a Java Dynamic Web Application
+	* Name it Lesson08
+	* Hit next until you finish the wizard, and then wait until it's done.    
+
+2. Create a Servlet
 	* Right click on com.example.demo and click New -> Class
 	* Name it ProcessForm.java
 	* Edit it to look like this:
@@ -78,8 +88,7 @@ public class ProcessForm extends HttpServlet {
 
 ```
 
-
-2. Create a customer class
+3. Create a customer class
 
 ```java
 package com.example.demo;
@@ -139,8 +148,7 @@ public class Customer {
 }
 
 
-
-3. Create a JSP. Make it look like this:
+4. Create a JSP. Make it look like this:
 ```html
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -182,6 +190,3 @@ Note: If Eclipse gives 404 error then move the Servlet to the default package by
 
 
 ## Questions
-
-
-[Github Repository](https://github.com/ajhenley/SpringBoot_01)

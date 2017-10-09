@@ -1,9 +1,5 @@
 INDEX VERSION 1.3+/home/student/unofficialguides/JavaEE/workspace/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
-1775147727.index
-1066965976.index
-1195848311.index
-800150245.index
-2390144968.index
-4184967006.index
-4004593197.index
-4285690236.index
+273667228.index
+2259353803.index
+131242776.index
+1922020610.index

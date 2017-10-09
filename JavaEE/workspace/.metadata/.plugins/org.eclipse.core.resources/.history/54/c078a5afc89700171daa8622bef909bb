@@ -1,0 +1,26 @@
+import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import model.DbDirector;
+import model.Movie;
+
+public class DirectorTests {
+
+	@Before
+	public void setUp() throws Exception {
+		
+	}
+
+	@Test
+	public void test() {
+		ArrayList<Movie> movies = (ArrayList<Movie>)DbDirector.getAllMoviesByDirector(1);
+		
+		System.out.println(movies.get(0).getTitle());
+		assertTrue(movies.get(0).getTitle().length()>0);
+	}
+
+}

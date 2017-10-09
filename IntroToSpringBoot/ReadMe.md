@@ -1,4 +1,5 @@
 # Learning Spring Boot by Coding 
+0. Setting up your environment
 1. [Hello World with Template – no variable](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson01.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Explanation](img/i_book.png "Explanation") ![Code](img/i_code.png "Github Code")
 2. [Hello World with Template with variable](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson02.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Explanation](img/i_book.png "Explanation") ![Code](img/i_code.png "Github Code")
 3. [Hello World with External Variables](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson03.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Explanation](img/i_book.png "Explanation") ![Code](img/i_code.png "Github Code")  
@@ -18,7 +19,8 @@
 17. [Security - Basic Security](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson17.md) - ![Walkthrough](img/i_list.png "Walkthrough")![Explanation](img/i_book.png "Explanation") ![Code](img/i_code.png "Github Code")
 18. [Security - Adding a Custom Login Page](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson18.md)  - ![Walkthrough](img/i_list.png "Walkthrough") ![Explanation](img/i_book.png "Explanation") ![Code](img/i_code.png "Github Code")
 19. [Security - Specific Permissions](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson19.md) - ![Walkthrough](img/i_list.png "Walkthrough")
-20. [Security - Using Database based Authentication](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson20.md) - ![Walkthrough](img/i_list.png "Walkthrough")
+20. [Security - Using Database based Authentication](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson20.md) - ![Walkthrough](img/i_list.png "Walkthrough")  
+20 1/2. Security - Persisting current user information  
 21. [Security - Adding User Registration](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson21.md) - ![Walkthrough](img/i_list.png "Walkthrough")  
 22. [Security - Controllers and Templates](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson22.md) -   
 23. [Automatically adding records to database when the Application Loads](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson23.md) - ![Walkthrough](img/i_list.png "Walkthrough")  
@@ -27,5 +29,4 @@
 26. [Deploying to Heroku](https://github.com/ajhenley/unofficialguides/blob/master/IntroToSpringBoot/Lesson26.md)  - ![Walkthrough](img/i_list.png "Walkthrough")![Explanation](img/i_book.png "Explanation")
 27. Unit Tests
 28. Unit Tests II
-29. Showing Error details
-30. Email (Nuff said!)
+29. Email (Nuff said!)

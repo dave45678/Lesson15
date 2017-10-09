@@ -1,21 +1,17 @@
 # Lesson 26 - Deploying Your Application to Heroku 
 ## The Walkthrough 
 
-### 1.  Start with any application you from any previous lesson 
+1.  Start with any application you from any previous lesson 
 
-### 2.  Create a Heroku Account
+2.  Create a Heroku Account
     If you don't already have one, go to Heroku.com and create an account
 
-### 3.  Download the Heroku CLI 
+3.  Download the Heroku CLI 
     * Find the right download for your platform and install it:
-      * Mac: https://devcenter.heroku.com/toolbelt-downloads/osx
-      * Win32: https://devcenter.heroku.com/toolbelt-downloads/windows32
-      * Win64: https://devcenter.heroku.com/toolbelt-downloads/windows64
-      * Debian/Ubuntu: https://devcenter.heroku.com/toolbelt-downloads/debian
+    * https://devcenter.heroku.com/articles/heroku-cli
     
-### 4. Log in to the Heroku CLI
-
-Open a Terminal
+4. Log in to the Heroku CLI
+    * Open a Terminal
 
 ```ShellSession
 $ heroku login
@@ -27,25 +23,18 @@ Would you like to generate one? [Yn]
 Generating new SSH public key.
 Uploading ssh public key /Users/java/.ssh/id_rsa.pub
 ```
-
-### 5. Provision a new Heroku App:
-1. Navigate to the directory your application is in
-
-2. Run the following:
-
+5. Provision a new Heroku App:
+	* Navigate to the directory your application is in
+	* Run the following:
 ```ShellSession
 $ heroku create
 Creating nameless-lake-8055 in organization heroku... done, stack is cedar-14
 http://nameless-lake-8055.herokuapp.com/ | git@heroku.com:nameless-lake-8055.git
 Git remote heroku added
 ```
-
-### 6. Connect to a database
-
-1. Create the hobby database for your application
+6. Connect to a database
+	* Create the hobby database for your application
 	* Run the following:
-	
-
 ```ShellSession
 $ heroku addons:create heroku-postgresql:hobby-dev
 Creating heroku-postgresql:hobby-dev on ajspringboot24... free
@@ -56,9 +45,7 @@ Created postgresql-sinuous-90403 as HEROKU_POSTGRESQL_BRONZE_URL
 Use heroku addons:docs heroku-postgresql to view documentation
 ```
 
-2. Use Postgresql
 	* If you aren't already using postgres in your application add this to your dependencies:
-
  ```xml
 <dependency>
   <groupId>org.postgresql</groupId>
@@ -67,7 +54,6 @@ Use heroku addons:docs heroku-postgresql to view documentation
 </dependency>
 ```
 
-3. Add postgres settings to your properties
 	* Add this to your application.properties (and comment out your local database properties)
 
 ```
@@ -80,9 +66,8 @@ spring.jpa.hibernate.ddl-auto=update
 ```
 
 	
-### 7. Deploy your code
-1. Run the following:
-	
+7. Deploy your code
+	* Run the following:
 ```ShellSession
 $ git push heroku master
 Initializing repository, done.
@@ -108,14 +93,13 @@ Total 110 (delta 30), reused 0 (delta 0)
        Procfile declares types -> web
 ```
 	
-2. Open your application	
+8. Open your application	
 
 ```ShellSession
 $ heroku open
 ```	
-
-### 8. Push new changes to Heroku
-1. Update the code in your local repository and push to heroku
+9. Push new changes to Heroku
+	* Update the code in your local repository and push to heroku
 
 ```
 $ git add .
@@ -123,7 +107,7 @@ $ git commit -m "Database Changes for Heroku"
 $ git push heroku master
 ```
 
-2. Run your application and open a browser
+	* Run your application and open a browser
 
 
 # What's Going On 
@@ -147,3 +131,4 @@ Once everything is configured, you can push to your remote URL like you're used 
 heroku open
 ``` 
 
+stuff

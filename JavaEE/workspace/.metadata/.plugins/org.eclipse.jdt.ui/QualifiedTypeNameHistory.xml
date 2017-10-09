@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
-<fullyQualifiedTypeName name="customTools.DbUtil"/>
-<fullyQualifiedTypeName name="model.Customer"/>
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
+<fullyQualifiedTypeName name="model.DbCourse"/>
+<fullyQualifiedTypeName name="model.Course"/>
+<fullyQualifiedTypeName name="model.Actor"/>
+<fullyQualifiedTypeName name="model.DbActor"/>
+<fullyQualifiedTypeName name="model.DbMovie"/>
+<fullyQualifiedTypeName name="model.DbUtil"/>
+<fullyQualifiedTypeName name="model.Movie"/>
+<fullyQualifiedTypeName name="model.Director"/>
+<fullyQualifiedTypeName name="javax.persistence.TypedQuery"/>
+<fullyQualifiedTypeName name="java.util.Properties"/>
+<fullyQualifiedTypeName name="java.io.OutputStream"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+<fullyQualifiedTypeName name="javax.mail.internet.InternetAddress"/>
+<fullyQualifiedTypeName name="javax.mail.internet.AddressException"/>
+<fullyQualifiedTypeName name="customTools.DbUtil"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="model.Customer"/>
+<fullyQualifiedTypeName name="model.DbCustomer"/>
+<fullyQualifiedTypeName name="model.Employee"/>
+<fullyQualifiedTypeName name="model.DbEmployee"/>
 </qualifiedTypeNameHistroy>

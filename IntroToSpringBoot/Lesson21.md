@@ -48,12 +48,12 @@ public class UserService {
         return userRepository.findByUsername(username);
     }
     public void saveUser(User user) {
-        user.setRoles(Arrays.asList(roleRepository.findByRole("USER")));
+        user.setRoles(Arrays.asList(roleRepository.findByRole("ROLE_USER")));
         user.setEnabled(true);
         userRepository.save(user);
     }
     public void saveAdmin(User user) {
-        user.setRoles(Arrays.asList(roleRepository.findByRole("ADMIN")));
+        user.setRoles(Arrays.asList(roleRepository.findByRole("ROLE_ADMIN")));
         user.setEnabled(true);
         userRepository.save(user);
     }

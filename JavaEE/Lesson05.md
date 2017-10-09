@@ -9,7 +9,11 @@
 
 ## The Walkthrough
 
-1. Create a Servlet
+1. Create a Java Dynamic Web Application
+	* Name it Lesson05
+	* Hit next until you finish the wizard, and then wait until it's done.    
+
+2. Create a Servlet
 	* Right click on com.example.demo and click New -> Class
 	* Name it ProcessServlet.java
 	* Edit it to look like this:
@@ -47,7 +51,7 @@ public class ProcessForm extends HttpServlet {
 }
 ```
 
-2. Create the Login JSP
+3. Create the Login JSP
   * Create a new Java Server Page (JSP)
 	* Name it login.jsp
 	* Edit it to look like this:
@@ -73,7 +77,7 @@ public class ProcessForm extends HttpServlet {
 </html>
 ```
 
-3. Create the Output JSP
+4. Create the Output JSP
 * Create a new Java Server Page (JSP)
 * Name it output.jsp
 * Edit it to look like this:
@@ -95,7 +99,7 @@ public class ProcessForm extends HttpServlet {
 </body>
 </html>
 ```
-4. Create a Java Bean
+5. Create a Java Bean
 * Create a new class
 * Name it User
 * Modify your User class to look like this:

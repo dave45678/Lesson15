@@ -311,8 +311,8 @@ If you click on the Connect button at the bottom, you should see this:
 
 And you can post this sql script in the window on the right:
 ```sql
-INSERT INTO ROLE VALUES(1, 'USER');
-INSERT INTO ROLE VALUES(2, 'ADMIN');
+INSERT INTO ROLE VALUES(1, 'ROLE_USER');
+INSERT INTO ROLE VALUES(2, 'ROLE_ADMIN');
 INSERT INTO USER_DATA VALUES (1, 'jim@jim.com', TRUE, 'Jim', 'Jimmerson', 'password', 'jim');
 INSERT INTO USER_DATA VALUES (2, 'bob@bob.com', TRUE, 'Bob', 'Bobberson', 'password', 'bob');
 INSERT INTO USER_DATA VALUES (3, 'admin@admin.com', TRUE, 'Admin', 'User', 'password', 'admin');

@@ -1,27 +1,65 @@
 # Lesson 22 - Security - Controllers and Thymeleaf 
 ## The Walkthrough 
 
-1. Start with the code from the previous lesson
+1. Add the dependency for thymeleaf security
+    * Open the pom.xml file
+    * Add the following right before the line </ dependencies>:
+    
+    ```xml
+    		<dependency>
+			<groupId>org.thymeleaf.extras</groupId>
+			<artifactId>thymeleaf-extras-springsecurity4</artifactId>
+		</dependency>
+    ```
 
-2. Edit the UserRepository
-    * Add these lines to your repository
+2. Edit the Homecontroller
+    * Open the HomeController.java file
+    * Replace the existing secure method with the following:
 ```java
-    User findByUsername(String username);
-
-    User findByEmail(String email);
-
-    Long countByEmail(String email);
-
-    Long countByUsername(String username);
+    @RequestMapping("/secure")
+    public String secure(HttpServletRequest request, Authentication authentication, Principal principal){
+        Boolean isAdmin =  request.isUserInRole("ADMIN");
+        Boolean isUser =  request.isUserInRole("USER");
+        UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+        String username = principal.getName();
+        return "secure";
+    }
 ```
     
-3. Edit the RoleRepository
+3. Edit the index template
     * Add this line to your repository
-```java
-    Role findByRole(String role);
+```html
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org" xmlns:sec="www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+    <h2>Insecure Page</h2>
+    <div sec:authorize="isAuthenticated()">
+        This content is only shown to authenticated users.<br />
+
+        <div sec:authorize="hasAuthority('ROLE_ADMIN')" >
+            This content is only shown to administrators.
+        </div>
+        <div sec:authorize="hasAuthority('ROLE_USER')" >
+            This content is only shown to users.
+        </div>
+        Logged user: <span sec:authentication="name">The value of the "name" property of the authentication object should appear here.</span><br />
+        Roles: <span sec:authentication="principal.authorities">[ROLE_USER, ROLE_ADMIN]</span><br /><br />
+    </div>
+    <div sec:authorize="isAnonymous()">
+        This content is only shown to anonymous users.
+    </div>
+    <a href="/login">Login</a> -
+    <a href="/logout">Logout</a> -
+    <a href="/secure">Secure Page</a>
+</body>
+</html>
 ```    
     
-4. Create a UserService Class
+4. Run the application in debug mode:
     * Right click on com.example.demo and click New -> Class
     * Name it UserService.java
     * Edit it to look like this:    

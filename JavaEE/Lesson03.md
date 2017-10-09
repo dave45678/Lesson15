@@ -1,4 +1,6 @@
 <!-- enter lesson number and title below separated by hyphen-->
+<!-- todo this is not implemented -->
+
 # Lesson 3 - Hello World with Servlet and external variables
 ## Learning Objectives
 * Create dynamic web application
@@ -8,7 +10,11 @@
 
 ## The Walkthrough
 
-1. Create a Servlet
+1. Create a Java Dynamic Web Application
+	* Name it Lesson03
+	* Hit next until you finish the wizard, and then wait until it's done.    
+
+2. Create a Servlet
 	* Right click on com.example.demo and click New -> Servlet
 	* Name it HelloWorld.java
 	* Edit it to look like this:
@@ -24,7 +30,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet("/Lesson01")
+@WebServlet("/Lesson03")
 public class Lesson01 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -44,7 +50,7 @@ public class Lesson01 extends HttpServlet {
 
 ```
 
-2. Create an HTML Page
+3. Create an HTML Page
   * Right click on templates and click New -> Html
 	* Name it output.html
 	* Edit it to look like this:
@@ -62,8 +68,8 @@ public class Lesson01 extends HttpServlet {
 </html>
 ```
 
-Run your application and open a browser, if you type in the URL http://localhost:8080 you should see this:
-![Running your first Java EE Application](img/Lesson01.png "Running your first Spring Boot Application")
+Run your application and open a browser. Type in the URL http://localhost:8080.
+
 
 ## What is Going On
 We notice two methods in this class: <code>doGet()</code> and <code>doPost()</code>. The first one anwsers by HTTP to the reception of a GET request. The second to the reception of a POST request. As we want that in the both cases the servlet processes the request, <code>doPost()</code> forwards to <code>doGet()</code>. When we browse to the servlet url then the doGet() method is called. DoPost would only be called by a web form. We'll work with that later.

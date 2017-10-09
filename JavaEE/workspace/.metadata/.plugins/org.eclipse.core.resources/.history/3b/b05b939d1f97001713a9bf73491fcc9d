@@ -1,0 +1,66 @@
+package model;
+
+import java.io.Serializable;
+import javax.persistence.*;
+import java.util.List;
+
+
+/**
+ * The persistent class for the actor database table.
+ * 
+ */
+@Entity
+@Table(name="actor")
+@NamedQuery(name="Actor.findAll", query="SELECT a FROM Actor a")
+public class Actor implements Serializable {
+	private static final long serialVersionUID = 1L;
+
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private int actorId;
+
+	private String name;
+
+	private String realName;
+
+	//bi-directional many-to-many association to Movie
+	@ManyToMany(mappedBy="actors")
+	@JoinColumn(name="actorId")
+	private List<Movie> movies;
+
+	public Actor() {
+	}
+
+	public int getActorId() {
+		return this.actorId;
+	}
+
+	public void setActorId(int actorId) {
+		this.actorId = actorId;
+	}
+
+	public String getName() {
+		return this.name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getRealName() {
+		return this.realName;
+	}
+
+	public void setRealName(String realName) {
+		this.realName = realName;
+	}
+
+	public List<Movie> getMovies() {
+		return this.movies;
+	}
+
+	public void setMovies(List<Movie> movies) {
+		this.movies = movies;
+	}
+
+}
