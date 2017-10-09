@@ -11,7 +11,7 @@ You are going to create a "Hello World" application in Laravel.
 Laravel already has pages set up, so you can modify these. Later on, you will also see how to create your own files and serve them.
 
 * Open welcome.blade.php. You will find it in the resources/views folder.
-Edt it to look like this:
+Edit it to look like this:
 
 ``` html
 <!DOCTYPE html>
