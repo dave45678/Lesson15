@@ -5,9 +5,8 @@
 * Creating models and table migrations
 
 ## The Walkthrough
-1. Create a new Laravel application. Don't forget to generate your application key if it does not already exist!
 
-2. Create a database that you can connect to in MySQL
+1. Create a database that you can connect to in MySQL
 using  'create database DB_NAME', where DB_NAME is the name that your database will use. In our case, we will create a database called forge:
 
 ```
