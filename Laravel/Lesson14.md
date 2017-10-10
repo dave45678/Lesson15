@@ -26,6 +26,7 @@ php artisan make:auth
 ```
 
 4. You should see the following message:
+
 ![Authentiation feature added](img/createdauth.png)
 
 5. Before you run your application, you have to set up a database connection, so that your users can be stored and authenticated against stored information.
