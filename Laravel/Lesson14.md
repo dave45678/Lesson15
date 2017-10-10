@@ -26,7 +26,7 @@ php artisan make:auth
 ```
 
 4. You should see the following message:
-![Authentiation feature added](/img/createdauth.jpg)
+![Authentiation feature added](img/createdauth.jpg)
 
 5. Before you run your application, you have to set up a database connection, so that your users can be stored and authenticated against stored information.
 
@@ -41,7 +41,7 @@ and going to port 8000 on localhost in your browser.
 
 You should see the following:
 
-![Authentiation feature added](/img/laravelauthed.jpg)
+![Authentiation feature added](img/laravelauthed.jpg)
 
 
 7. You can now use the register link (http://localhost:8000/register) to register users with your application!
@@ -50,6 +50,6 @@ You should see the following:
 
 ***Note:***  The functionality to check e-mail addresses that have already been registered is included:
 
-![Authentiation feature added](/img/alreadyregistered.jpg)
+![Authentiation feature added](img/alreadyregistered.jpg)
 
 ## What is Going On
