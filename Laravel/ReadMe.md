@@ -16,7 +16,7 @@
 
 7. [Adding Twitter Bootstrap to Laravel - using the CDN]
 
-7. [Complete data life cycle – form, list, detail, delete]
+8. [Complete data life cycle – form, list, detail, delete]
 
 9. [Using Database Relationships with Laravel - ManyToMany]
 
