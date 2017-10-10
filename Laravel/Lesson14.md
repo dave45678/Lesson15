@@ -10,18 +10,18 @@ In this lesson, you will learn how to create an application that allows users to
 
 ## The Walkthrough
 
-
 1. Make sure your MySQL server is running. This means that you should have WampServer, Laragon or whatever application runs your web and SQL servers running.
 
 
 2. Create a new Laravel project. Don't forget to generate your application key if it does not already exist!
 
-```
+``` shell
 laravel new Lesson14
 ```
+
 3. Type:
 
-```
+``` shell
 php artisan make:auth
 ```
 
@@ -34,7 +34,7 @@ To do this, see [Using databases with Laravel], and use the appropriate names fo
 
 6. Run your laravel application by typing
 
-```
+``` shell
 php artisan serve
 ```
 and going to port 8000 on localhost in your browser.
