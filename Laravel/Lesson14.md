@@ -18,7 +18,7 @@ In this lesson, you will learn how to create an application that allows users to
 
 ```
 laravel new Lesson14
-
+```
 3. Type:
 
 ```
@@ -33,6 +33,7 @@ php artisan make:auth
 To do this, see [Using databases with Laravel], and use the appropriate names for your project.
 
 6. Run your laravel application by typing
+
 ```
 php artisan serve
 ```
