@@ -19,8 +19,8 @@
 php artisan make:model Job -m
 ```
 You should now have the following files in your project:
-**create_jobs_table.php** in the /database/migrations folder
-**Job.php** in the app folder  
+* **create_jobs_table.php** in the /database/migrations folder
+* **Job.php** in the app folder  
 
 5. Edit the Job.php file in the app folder to look like this: 
 
@@ -195,7 +195,7 @@ Create a file called resources\views\jobs\create.blade.php, and edit it to look 
 ```
 
 
-12. Modify the ** store ** function JobController to make it save new entries:
+12. Modify the **store** function JobController to make it save new entries:
 
 ``` php 
 public function store(Request $request)
