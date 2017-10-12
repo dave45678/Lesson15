@@ -195,7 +195,7 @@ Create a file called resources\views\jobs\create.blade.php, and edit it to look 
 ```
 
 
-12. Modify the **store ** function JobController to make it save new entries:
+12. Modify the ** store ** function JobController to make it save new entries:
 
 ``` php 
 public function store(Request $request)
@@ -221,7 +221,7 @@ public function store(Request $request)
 
 13. Run your application and ope a browser. 
 If you type in the url http://localhost:8080/jobs, you should see this: 
-![Looping through a list with Blade] ](img/joblist.png)
+![Looping through a list with Blade](img/joblist.png)
 
 
 # What's going on:
