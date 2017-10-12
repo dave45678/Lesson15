@@ -22,9 +22,28 @@ You should now have the following files in your project:
 ** create_jobs_table.php ** in the /database/migrations folder
 ** Job.php ** in the app folder  
 
+5. Edit the Job.php file in the app folder to look like this: 
+
+``` php
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Job extends Model
+{
+    // This indicates which fields in the jobs table will be filled by the data being received. 
+
+    protected $fillable=['title','employer','description']
+}
+
+```
+
 5. Create a JobController
 ```
 php artisan make:controller JobController --resource --model=Job
+
 ```
 6. Create the fields that will be used in the jobs table:
 
@@ -73,9 +92,9 @@ php artisan migrate
 ```
 
 
-7. Open the JobController.php file, which will be found in app\Http\Controllers
+7. Open the JobController.php file,located in app\Http\Controllers
 
-Make sure you have an index function in the JobControlller file that looks like this:
+Make sure you have an index function in the JobController file that looks like this:
 
 ``` php
 public function index()
@@ -89,21 +108,120 @@ public function index()
 * Open the web.php file, and include the following route:
 Route::resource('jobs','JobController');
 
-9. Create a route in the controller that shows the form that saves new job entries:
+9. Create a route in the JobController that allows the user to input job details:
 * Open app\Http\Controllers\JobController.php
 * Edit it to look like this:
 ``` php
 public function create()
     {
         //
-        return view(jobs.create);
+        return view('jobs.create');
     }
 ```
 
-9. Create a view to display the input form:
-Open up resources\views\jobs\create.blade.php, and edit it to look like this:
+10. Create a view to display the input form:
+Create a file called resources\views\jobs\create.blade.php, and edit it to look like this:
+
+``` html
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset ="UTF8">
+            <title>Job Input</title>
+          <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+
+</head>
+<body>
+    <div class="container">
+        <div class="col-md-10">
+            <form action="/jobs" method="post">
+                Title:<input class="form-control" type="text" name="title">
+                Employer:<input class="form-control" type="text" name="employer">
+                Description:<input class="form-control" type="textarea" name="description">
+                {{csrf_field()}}
+                <br/>
+                <input class="btn btn-success"type="submit" value="Submit"></a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+```
+
+11. Create a file called resources\views\jobs\index.blade.php, and edit it to look like this:
+
+``` html
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>List Jobs</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+</head>
+<body>
+<div class="container">
+        <table class="table table-striped">
+            <thead>
+                @if(count($jobs))
+                 <h4><a class="pull-right" href="/jobs/create">Add a job </a> </h4>
+                @endif
+                    <tr>
+                        <th>Title</th>
+                        <th>Employer</th>
+                        <th>Description</th>
+                        </tr>
+            </thead>
+            <tbody>
+
+                @forelse($jobs as $job)
+                    <tr>
+                        <td>{{$job->title}}</td>
+                        <td>{{$job->employer}}</td>
+                        <td>{{$job->description}}</td>
+                    </tr>
+                @empty
+                    <h4> This is a list of jobs. No jobs are available right now, please <a href="/jobs/create">Add one </a> </h4>
+                @endforelse
+            </tbody>
+</table>
+</div>
+</body>
+</html>
 
 
+```
+
+
+12. Modify the **store ** function JobController to make it save new entries:
+
+``` php 
+public function store(Request $request)
+    {
+        //Stores details about job using protected fillable field 
+
+        //The allocation has to be done manually 
+        // As you saw before ->all() doesn't really work. 
+        $j = new Job;
+        $j->employer = $request->employer;
+        $j->title=$request->title;
+        $j->description=$request->description;
+        $j->save();
+
+        //Get the number of records in the table and pass it to the view  
+
+        return view('jobs.index')->with(['jobs'=>Job::all()]);
+
+    }
+
+```
+
+
+13. Run your application and ope a browser. 
+If you type in the url http://localhost:8080/jobs, you should see this: 
+![Looping through a list with Blade] ](img/joblist.png)
 
 
 # What's going on:
