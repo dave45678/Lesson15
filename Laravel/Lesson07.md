@@ -1,6 +1,6 @@
 <!-- enter lesson number and title below separated by hyphen-->
 # Lesson-07 Adding Twitter Bootstrap to Laravel
-# (The easy way)
+#### (The easy way)
 
 ## Learning Objectives
 You will learn how to include a bootstrap (or any link that can be included with a URL) in your template.
