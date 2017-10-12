@@ -1,5 +1,6 @@
 <!-- enter lesson number and title below separated by hyphen-->
-# Lesson-07 Adding Twitter Bootstrap to Laravel (The easy way)
+# Lesson-07 Adding Twitter Bootstrap to Laravel
+# (The easy way)
 
 ## Learning Objectives
 You will learn how to include a bootstrap (or any link that can be included with a URL) in your template.
@@ -58,6 +59,6 @@ Edit it to look like this:
  4. Navigate to http://localhost:8000/new in your browser.
 You should see this:
 
-![Code](img/hellobootstrap.png" Hello World with Twitter Bootstrap")
+![Hello World with Twitter Bootstrap (Easy) ](img/hellobootstrap.png)
 
-## What's Going On 
+## What's Going On
