@@ -19,7 +19,7 @@
 php artisan make:model Job -m
 ```
 You should now have the following files in your project:
-** create_jobs_table.php ** in the /database/migrations folder
+''' create_jobs_table.php ''' in the /database/migrations folder
 ** Job.php ** in the app folder  
 
 5. Edit the Job.php file in the app folder to look like this: 
