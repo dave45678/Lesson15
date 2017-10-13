@@ -30,7 +30,7 @@ php artisan make:controller JobController --resource --model=Job
 6. Create the fields that will be used in the jobs table:
 
 * Edit the create_jobs_table.php file in \daabase\migrations to look like this:
-```
+``` php 
 <?php
 
 use Illuminate\Support\Facades\Schema;
@@ -87,9 +87,13 @@ public function index()
 
 8. Create a route to get a list of jobs and pass that list to a view:
 * Open the web.php file, and include the following route:
+
+``` php 
 Route::resource('jobs','JobController');
 
-9. Create a route in the JobController that allows the user to input job details:
+```
+
+9. Create a function in the JobController that allows the user to input job details:
 * Open app\Http\Controllers\JobController.php
 * Edit it to look like this:
 ``` php
@@ -187,13 +191,12 @@ Create a file called resources\views\jobs\create.blade.php, and edit it to look 
 ```
 
 
-12. Modify the **store** function JobController to make it save new entries:
+12. Modify the **store** function in JobController to make it save new entries:
 
 ``` php 
  public function store(Request $request)
     {
 
-        //The assignment has to be done manually 
 
          $rules = array('title'=>'required|min:4',
          'employer'=>'required|min:3','description'=>'min:4');
@@ -213,7 +216,7 @@ Create a file called resources\views\jobs\create.blade.php, and edit it to look 
 ```
 
 
-13. Run your application and ope a browser. 
+13. Run your application and open a browser. 
 If you type in the url http://localhost:8080/jobs, you should see this: 
 ![Looping through a list with Blade](img/joblist.png)
 
