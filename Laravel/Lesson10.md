@@ -256,7 +256,7 @@ Use the 'Add one' link to place an actor in a movie.
 Browse to http://localhost:8000
 
 The application should look like this: 
-![Actors and Movies](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/img/listactorsandmovies.png "Creating a many to many relationship")
+![Actors and Movies](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/img/listmoviesandactors.png "Creating a many to many relationship")
 
 9. Examine the database 
 
