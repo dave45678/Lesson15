@@ -136,6 +136,17 @@ Create a file called resources\views\jobs\create.blade.php, and edit it to look 
     <div class="container">
         <div class="col-md-10">
             <form action="/jobs" method="post">
+
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+                
                 Title:<input class="form-control" type="text" name="title">
                 Employer:<input class="form-control" type="text" name="employer">
                 Description:<input class="form-control" type="textarea" name="description">
@@ -198,12 +209,16 @@ Create a file called resources\views\jobs\create.blade.php, and edit it to look 
 12. Modify the **store** function JobController to make it save new entries:
 
 ``` php 
-public function store(Request $request)
+ public function store(Request $request)
     {
         //Stores details about job using protected fillable field 
 
         //The allocation has to be done manually 
-        // As you saw before ->all() doesn't really work. 
+        
+
+         $rules = array('title'=>'required|min:4',
+         'employer'=>'required|min:3','description'=>'min:4');
+         $request->validate($rules);
         $j = new Job;
         $j->employer = $request->employer;
         $j->title=$request->title;
