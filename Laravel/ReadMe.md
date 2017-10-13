@@ -18,7 +18,7 @@
 
 8. [Adding Twitter Bootstrap to Spring Boot - the Complete Way]
 
-9. [Complete data life cycle – form, list, detail, delete](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson09.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
+9. [Complete data life cycle – form, list, detail, delete](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson08.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
 10. [Using Database Relationships with Laravel - ManyToMany]
 
