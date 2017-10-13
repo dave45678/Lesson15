@@ -14,7 +14,7 @@
 
 6. [Looping through items with Blade](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson06.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
-7. [Adding Twitter Bootstrap to Laravel - using the CDN](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson06.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
+7. [Adding Twitter Bootstrap to Laravel - using the CDN](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson07.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
 8. [Adding Twitter Bootstrap to Spring Boot - the Complete Way]
 
