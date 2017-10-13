@@ -26,7 +26,7 @@
 
 12. [Using sub-views with Blade]
 
-13. [Security - Basic Security]
+13. [Security - Basic Security](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson13.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
 14. [Security - Adding a Custom Login Page]
 
