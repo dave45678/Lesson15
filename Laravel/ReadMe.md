@@ -20,40 +20,40 @@
 
 9. [Using Database Relationships with Laravel - ManyToMany]
 
-11. [Using Database Relationships with Laravel - OneToMany]
+10. [Using Database Relationships with Laravel - OneToMany]
 
-12. [Using Database Relationships with Laravel - OneToOne]
+11. [Using Database Relationships with Laravel - OneToOne]
 
-13. [Using sub-views with Blade]
+12. [Using sub-views with Blade]
 
-14. [Security - Basic Security]
+13. [Security - Basic Security]
 
-15. [Security - Adding a Custom Login Page]
+14. [Security - Adding a Custom Login Page]
 
-17. [Security - Using Database based Authentication]
+15. [Security - Using Database based Authentication]
 
-18. [Security - Adding User Registration]
+16. [Security - Adding User Registration]
 
-19. [Security - Controllers and Templates]
+17. [Security - Controllers and Templates]
 
-20. [Seeding (Automatically adding records to database when the Application Loads)]
+18. [Seeding (Automatically adding records to database when the Application Loads)]
 
-21. [Custom Error Pages]
+19. [Custom Error Pages]
 
-22. [Adding Twitter Bootstrap to Spring Boot - the Complete Way]
+20. [Adding Twitter Bootstrap to Spring Boot - the Complete Way]
 
-16. [Security - Role-Based Access]
+21. [Security - Role-Based Access]
 
-23. [Deploying to Heroku]
+22. [Deploying to Heroku]
 
-24. Unit Tests
+23. Unit Tests
 
-25. Unit Tests II
+24. Unit Tests II
 
-26. Showing Error details
+25. Showing Error details
 
-27. Email
+26. Email
 
-28. [Uploading images to Laravel with Cloudinary]
+27. [Uploading images to Laravel with Cloudinary]
 
-29. REST APIs with  Laravel
+28. REST APIs with  Laravel
