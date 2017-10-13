@@ -193,7 +193,6 @@ Create a file called resources\views\jobs\create.blade.php, and edit it to look 
 ``` php 
  public function store(Request $request)
     {
-        //Stores details about job using protected fillable field 
 
         //The allocation has to be done manually 
         
