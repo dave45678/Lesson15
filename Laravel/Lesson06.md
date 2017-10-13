@@ -15,21 +15,23 @@
 4. Create a job model and a migration to create the jobs table.
 (ALWAYS make sure you have your database running in the background!)
 
-```
+``` shell
 php artisan make:model Job -m
 ```
 You should now have the following files in your project:
 * **create_jobs_table.php** in the /database/migrations folder
 * **Job.php** in the app folder  
 
-5. Create a JobController
-```
+5. Create a Job resource controller
+``` shell
 php artisan make:controller JobController --resource --model=Job
 
 ```
 6. Create the fields that will be used in the jobs table:
 
-* Edit the create_jobs_table.php file in \daabase\migrations to look like this:
+
+
+* Edit the create_jobs_table.php file in \database\migrations to look like this:
 ``` php 
 <?php
 

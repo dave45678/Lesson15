@@ -74,7 +74,7 @@ use Illuminate\Support\Facades\Schema;
 
 public function boot()
 {
-    Schema::defaultStringLength(255);
+    Schema::defaultStringLength(191);
 }
 ```
 
