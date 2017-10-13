@@ -48,10 +48,8 @@
 
 23. Unit Tests II
 
-24. Showing Error details
+24. Email
 
-25. Email
+25. [Uploading images to Laravel with Cloudinary]
 
-26. [Uploading images to Laravel with Cloudinary]
-
-27. REST APIs with  Laravel
+26. REST APIs with  Laravel
