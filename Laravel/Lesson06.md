@@ -81,7 +81,6 @@ Make sure you have an index function in the JobController file that looks like t
 ``` php
 public function index()
    {
-       //
        return view('jobs.index',['jobs'=>Job::all()]);
    }
 ```
@@ -194,8 +193,7 @@ Create a file called resources\views\jobs\create.blade.php, and edit it to look 
  public function store(Request $request)
     {
 
-        //The allocation has to be done manually 
-        
+        //The assignment has to be done manually 
 
          $rules = array('title'=>'required|min:4',
          'employer'=>'required|min:3','description'=>'min:4');
