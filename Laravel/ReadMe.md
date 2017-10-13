@@ -16,44 +16,42 @@
 
 7. [Adding Twitter Bootstrap to Laravel - using the CDN](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson06.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
-8. [Complete data life cycle – form, list, detail, delete](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson06.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
+8. [Adding Twitter Bootstrap to Spring Boot - the Complete Way]
 
-9. [Using Database Relationships with Laravel - ManyToMany]
+9. [Complete data life cycle – form, list, detail, delete](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson06.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
-10. [Using Database Relationships with Laravel - OneToMany]
+10. [Using Database Relationships with Laravel - ManyToMany]
 
-11. [Using Database Relationships with Laravel - OneToOne]
+11. [Using Database Relationships with Laravel - OneToMany]
 
-12. [Using sub-views with Blade]
+12. [Using Database Relationships with Laravel - OneToOne]
 
-13. [Security - Basic Security](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson13.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
+13. [Using sub-views with Blade]
 
-14. [Security - Adding a Custom Login Page]
+14. [Security - Basic Security](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson14.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
-15. [Security - Using Database based Authentication]
+15. [Security - Adding a Custom Login Page]
 
-16. [Security - Adding User Registration]
+16. [Security - Using Database based Authentication]
 
-17. [Security - Controllers and Templates]
+17. [Security - Adding User Registration]
 
-18. [Seeding (Automatically adding records to database when the Application Loads)]
+18. [Security - Role-Based Access]
 
-19. [Custom Error Pages]
+19. [Seeding (Automatically adding records to database when the Application Loads)]
 
-20. [Adding Twitter Bootstrap to Spring Boot - the Complete Way]
+20. [Custom Error Pages]
 
-21. [Security - Role-Based Access]
+21. [Deploying to Heroku]
 
-22. [Deploying to Heroku]
+22. Unit Tests
 
-23. Unit Tests
+23. Unit Tests II
 
-24. Unit Tests II
+24. Showing Error details
 
-25. Showing Error details
+25. Email
 
-26. Email
+26. [Uploading images to Laravel with Cloudinary]
 
-27. [Uploading images to Laravel with Cloudinary]
-
-28. REST APIs with  Laravel
+27. REST APIs with  Laravel
