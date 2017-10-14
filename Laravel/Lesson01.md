@@ -4,9 +4,23 @@
 You are going to create a "Hello World" application in Laravel.
 
 ## The Walkthrough
-1. Create a new laravel application by typing "laravel new Lesson01" in the command prompt
+1. Create a new application:
 
-2. Create a Template
+In this case, you will type the following in your terminal, shell or command prompt:
+
+``` shell 
+laravel new Lesson01
+```
+
+A new application will be created for you.
+
+2. Generate your application key, by typing:
+
+``` shell
+php artisan key:generate
+```
+
+3. Create a Template:
 
 Laravel already has pages set up, so you can modify these. Later on, you will also see how to create your own files and serve them.
 
@@ -26,51 +40,17 @@ Edit it to look like this:
 </html>
 ```
 
-Run your application and open a browser, if you type in the URL http://localhost:8000 you should see this:
-![Running your first Spring Boot Application](img/image.jpg)
-=======
-1. Create a new application by typing 'laravel new [application_name]'
-
-In this case, you will type:
-
-```
-laravel new Lesson01
-```
-
-A new application will be created for you.
-
-2. Generate your application key, by typing:
-
-## Questions
-
-=======
-```
-php artisan key:generate
-```
-
 3. Run your application:
 
 ```
 php artisan serve
 ```
 
-4. Run your application and open a browser, if you type in the URL http://localhost:8000 you should see this:
+4. Open a browser.
+If you type in the URL http://localhost:8000 you should see this:
+![Running your first Spring Boot Application](img/image.jpg)
 
-
-![Running your first Laravel Application](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/img/hello.png "Running your first Laravel Application")
-
-
-5. Modify the text. Locate the /resources/views folder, and open up welcome.blade.php
-
-Edit the **body** of the message to contain only this:
-
-```
-<body>
-    <h1>Hello World!</h1>
-</body>
-```
-
-6. Run your application and open a browser, if you type in the URL http://localhost:8000 you should see this:
+5. Run your application and open a browser, if you type in the URL http://localhost:8000 you should see this:
 
 
 ## What is Going On

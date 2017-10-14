@@ -24,22 +24,20 @@
 
 11. [Using Database Relationships with Laravel - OneToMany](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson11.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
-12. [Using Database Relationships with Laravel - OneToOne]
+12. [Using Database Relationships with Laravel - OneToOne](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson12.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
 13. [Using sub-views with Blade]
 
 14. [Security - Basic Security](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson14.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
-15. [Security - Role-Based Access]
+15. [Seeding (Loading data into your application before it runs)]
 
-16. [Seeding (Loading data into your application before it runs)]
+16. [Custom Error Pages]
 
-17. [Custom Error Pages]
+17. [Deploying to Heroku]
 
-18. [Deploying to Heroku]
+18. Email
 
-19. Email
+19. [Uploading images to Laravel with Cloudinary]
 
-20. [Uploading images to Laravel with Cloudinary]
-
-26. REST APIs with  Laravel
+20. REST APIs with  Laravel

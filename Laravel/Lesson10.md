@@ -130,10 +130,55 @@ class CreateActorsTable extends Migration
     }
 }
 
+```
+
+7. Create a table that keeps track of the relationship between actors and movies, named actor_movie: 
+``` shell 
+php artisan make:migration create_actor_movie  --create=actor_movie
+```
+
+8. Modify the table to include the actor and movie details by editing the create_actors migration to look like this: 
+
+``php
+
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class ActorMovie extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('actor_movie', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('actor_id');
+            $table->integer('movie_id');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('actor_movie');
+    }
+}
 
 ```
 
-6. Create a landing page to display a list of movies and actors. 
+6. Create a landing page to display a list of movies and actors: 
+
 Create a file called movieindex.blade.php in the resources\views folder and edit it to look like this: 
 ``` html 
 <!DOCTYPE html>
@@ -149,28 +194,19 @@ Create a file called movieindex.blade.php in the resources\views folder and edit
 <div class="container">
 		<table class="table table-striped">
 			<thead>
-				@if(count($movies))
-				 <h4><a class="pull-right" href="/movies/create">Add a movie </a> </h4>
-				@endif
 					<tr>
 						<th>Title</th>
-						<th>Employer</th>
 						<th>Description</th>
+						<th>Year</th>
 						</tr>
 			</thead>
 			<tbody
-"
+
 				@forelse($movies as $movie)
 					<tr>
 						<td>{{$movie->title}}</td>
-						<td>{{$movie->employer}}</td>
 						<td>{{$movie->description}}</td>
-						<td><a class="btn btn-default" href="{{action('MovieController@edit', $movie['id'])}}" >Update</a></td>
-						<td>
-						<form method="post" action="{{action('MovieController@destroy', $movie->id)}}">
-						<input type="submit" class="btn btn-danger" value="Delete">
-						{{csrf_field()}}
-						{{ method_field('DELETE') }}
+                        <td>{{$movie->year}}</td>
 						</form>
 						</td>
 					</tr>
@@ -184,80 +220,6 @@ Create a file called movieindex.blade.php in the resources\views folder and edit
 </html>
 
 ```
-
-
-7. Add routes for the controllers you have created to the web.php file in the routes folder, so that it can identify each route, and its assiociated action. 
-
-``` php 
-Route::resource('movies','MovieController');
-
-Route::resource('actors','ActorController');
-
-``` 
-
-7. Modify your MovieController: 
-
-* Edit the index function to show the welcome page 
-
-* Edit the create function to show the create page
-
-* Edit thestore function to save the information entered and go back to the main list page. 
-
-
-6. Create an input form for Movies 
-Create a file called newmovie.blade.php in the resources\views folder and edit it to look like this: 
-
-
-
-7. Create an input form for Actors
-Create a file called newactor.blade.php in the resources\views folder and edit it to look like this: 
-
-
-8. Generate a table to keep track of the relationships between models: 
-
-``` shell
-
-php artisan make:migration movie_actors --create=actor_movie
-
-```
-8. Create a form called addtomovies.blade for placing actors in movies
-Edit it to look like this: 
-``` html 
-<!DOCTYPE html>
-
-<html lang="en" xmlns:th="www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8" />
-    <title>List Movies</title>
-
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-</head>
-<body>
-<form method="post" action="{{action('ActorController@addmovie',$movie->id)}}">
-@if(count($movies))
-	<div class="container">
-		<select>
-			@foreach($movies as $movie)
-				<option value={{$movie->id}}>{{$movie->title}}</option>
-			@endforeach
-
-		</select>
-@else
-	<h4>No movies are available. <a href="/movies/create"> Add one</a></h4>
-@endif 
-<input class="btn btn-default" type="submit" value="Add!">
-</div>
-</form>
-</body>
-</html>
-```
-
-
-Create movies and actors. 
-Use the 'Add one' link to place an actor in a movie. 
-
-
-Browse to http://localhost:8000
 
 The application should look like this: 
 ![Actors and Movies](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/img/listmoviesandactors.png "Creating a many to many relationship")
