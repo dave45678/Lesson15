@@ -48,7 +48,7 @@ php artisan serve
 
 4. Open a browser.
 If you type in the URL http://localhost:8000 you should see this:
-![Running your first Spring Boot Application](img/image.jpg)
+![Running your first Spring Boot Application](img/hello.png)
 
 5. Run your application and open a browser, if you type in the URL http://localhost:8000 you should see this:
 
