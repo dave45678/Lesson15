@@ -183,7 +183,7 @@ You should see this:
 
 Once the data is loaded, you should see this:
 
-![Employee Assets with data](img/employeeassets.png)
+![Employee Assets with data](img/employeeasset.png)
 
 
 8. Examine the database. 
