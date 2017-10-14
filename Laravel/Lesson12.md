@@ -138,7 +138,7 @@ class Laptop extends Model
     	return $this->belongsTo('App\Employee');
     }
 }
-
+```
 
 6. Create a route for creating and saving the data: 
 
