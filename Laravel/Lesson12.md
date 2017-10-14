@@ -123,7 +123,8 @@ class Employee extends Model
 ```
 
 
-6. Modify the Laptop model so that it reflects the one to one relationship where the laptop is owned by a single employee:
+6. Modify the Laptop model so that it reflects the one to one relationship where the laptop is owned by a single employee
+
 ``` php 
 <?php
 
