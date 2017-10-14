@@ -191,6 +191,7 @@ Once the data is loaded, you should see this:
 Show all the data from the employees table: 
 ``` shell 
 select * from employees; 
+```
 
 Show all the data from the laptops table:
 ``` shell 
