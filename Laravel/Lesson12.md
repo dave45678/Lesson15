@@ -144,34 +144,34 @@ class Laptop extends Model
 
 7. Create a page named index.blade.php in the resources/views folder to view the data. Edit it to look like this:
 
-``` php 
+```php 
 
-<!DOCTYPE html>
+	<!DOCTYPE html>
 
-<html lang="en" xmlns:th="www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8" />
-    <title>List Assets</title>
+	<html lang="en" xmlns:th="www.thymeleaf.org">
+	<head>
+	    <meta charset="UTF-8" />
+	    <title>List Assets</title>
 
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-</head>
-<body>
-<div class="container">
+	    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+	</head>
+	<body>
+	<div class="container">
 
-<h3>Employee Assets</h3>
-<hr/>
+	<h3>Employee Assets</h3>
+	<hr/>
 
-@forelse($employees as $employee)
-	<h4>{{$employee->name}}</h4>
-	<h5>identified by {{$employee->ssn}}</h5>
-	<h5>has been assigned a {{$employee->laptops->brand}} {{$employee->laptops->model}}</h5>
-@empty 
+	@forelse($employees as $employee)
+		<h4>{{$employee->name}}</h4>
+		<h5>identified by {{$employee->ssn}}</h5>
+		<h5>has been assigned a {{$employee->laptops->brand}} {{$employee->laptops->model}}</h5>
+	@empty 
 
-<h4>There are no employees or laptops. Please <a href="/load">load</a> them. </h4>
-@endforelse 
-</div>
-</body>
-</html>
+	<h4>There are no employees or laptops. Please <a href="/load">load</a> them. </h4>
+	@endforelse 
+	</div>
+	</body>
+	</html>
 ```
 
 7. Run your application and navigate to port 8000 in the browser. 
