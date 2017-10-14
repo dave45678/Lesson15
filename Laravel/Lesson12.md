@@ -179,11 +179,11 @@ class Laptop extends Model
 
 You should see this:
 
-![Employee Assets - no data ](img/noemployeeassets.png)
+![Employee Assets without data ](img/noemployeeassets.png)
 
 Once the data is loaded, you should see this:
 
-![Employee Assets - Data](img/employeeassets.png)
+![Employee Assets with data](img/employeeassets.png)
 
 
 8. Examine the database. 
@@ -200,6 +200,6 @@ select * from laptops;
 
 Your data should look like this:
 
-![Employee Data](img/employeeassets.png)
+![Employee Data](img/onetoonedb.png)
 
 ## What is Going On
