@@ -1,6 +1,5 @@
 <!-- enter lesson number and title below separated by hyphen-->
-# Lesson-Using Database Relationships 
-#### One to One Relationships 
+# Lesson-12: Using Database Relationships: One to One  
 
 ## Learning Objectives
 

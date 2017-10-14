@@ -32,7 +32,7 @@
 
 15. [Security - Role-Based Access]
 
-16. [Seeding (Automatically adding records to database when the Application Loads)]
+16. [Seeding (Loading data into your application before it runs)]
 
 17. [Custom Error Pages]
 

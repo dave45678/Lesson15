@@ -1,6 +1,5 @@
 <!-- enter lesson number and title below separated by hyphen-->
-# Lesson-Using Database Relationships 
-#### Many to Many Relationships 
+# Lesson-10 Using Database Relationships: Many to Many 
 
 ## Learning Objectives
 This lesson will take you through: 
