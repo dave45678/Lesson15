@@ -3,12 +3,17 @@
 #### Many to Many Relationships 
 
 ## Learning Objectives
+This lesson will take you through: 
+- Creating two models - Actors and Movies - that have a many to many relationship 
+- Creating the table that will record details of the relationship 
+- Creating a function to establish the many to many relationship between data that is being entered into the application. 
+- Creating a form to show that the relationship has successfully been created
 
 ## The Walkthrough
 
 1. Create a new Laravel application named Lesson11 
 
-2. Create a database called jobdb 
+2. Create a database called actorsandmovies
 
 3.Use Lesson 04 to set up your database configuration in your new project.  
 

@@ -30,26 +30,16 @@
 
 14. [Security - Basic Security](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson14.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
-15. [Security - Adding a Custom Login Page]
+15. [Security - Role-Based Access]
 
-16. [Security - Using Database based Authentication]
+16. [Seeding (Automatically adding records to database when the Application Loads)]
 
-17. [Security - Adding User Registration]
+17. [Custom Error Pages]
 
-18. [Security - Role-Based Access]
+18. [Deploying to Heroku]
 
-19. [Seeding (Automatically adding records to database when the Application Loads)]
+19. Email
 
-20. [Custom Error Pages]
-
-21. [Deploying to Heroku]
-
-22. Unit Tests
-
-23. Unit Tests II
-
-24. Email
-
-25. [Uploading images to Laravel with Cloudinary]
+20. [Uploading images to Laravel with Cloudinary]
 
 26. REST APIs with  Laravel
