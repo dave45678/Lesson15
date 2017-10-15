@@ -1,7 +1,7 @@
 <!-- enter lesson number and title below separated by hyphen-->
 # Lesson-01 Hello World!
 ## Learning Objectives
-You are going to create a "Hello World" application in Laravel.
+- Create a "Hello World" application in Laravel.
 
 ## The Walkthrough
 1. Create a new application:

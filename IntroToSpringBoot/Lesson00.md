@@ -1,4 +1,6 @@
 # Lesson 0 - Setting up your environment 
+
+
 ## Things you will need to have on your machine
 * Git
 * Heroku CLI
