@@ -4,8 +4,11 @@
 
 ## Learning Objectives
 
-- Setting up your Laravel development environment on Linux (Ubuntu), Windows, and Mac
-- 
+- Set up your Laravel development environment on:
+	- Linux (Ubuntu)
+	- Windows, and 
+	- Mac
+
 
 
 ## Install Laravel
