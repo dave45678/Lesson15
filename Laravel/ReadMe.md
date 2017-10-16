@@ -41,3 +41,4 @@
 19. [Uploading images to Laravel with Cloudinary]
 
 20. REST APIs with  Laravel
+
