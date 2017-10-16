@@ -11,14 +11,17 @@
 	* Make it look like the following
 
 ```python
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    name = "Jon Snow"
-    return render_template("index.html, name=name) 
+    favorite_character = "Jon Snow"
+    others = ["Danny", "The hound", "Arya", "Night King"]
+    return render_template("index.html",
+                           favorite_character = favorite_character,
+                           others = others)
 
 if __name__ == '__main__':
     app.run()
@@ -36,7 +39,14 @@ if __name__ == '__main__':
     <title>Title</title>
 </head>
 <body>
-    <strong>Hello, my name is {{ name }}</b></strong>
+    <p>My favorite character is <b>{{ favorite_character }}</b>.</p>
+    I also like:
+    <ul>
+        {% for character in others %}
+            <li>{{ character }} </li>
+        {% endfor %}
+    </ul>
+
 </body>
 </html>
 ```
