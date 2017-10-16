@@ -30,7 +30,7 @@
 
 14. [Security - Basic Security](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson14.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
-15. [Seeding (Loading data into your application before it runs)]
+15. [Seeding (Loading data into your application before it runs)](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson15.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
 16. [Custom Error Pages]
 
