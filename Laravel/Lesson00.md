@@ -31,7 +31,8 @@
 
 3. Installing XAMPP Server
   	
-  	* Open https://www.apachefriends.org/download.html in your browser
+  	* Open https://www.apachefriends.org/download.html in your browser. 
+  	* You will need a minimum of PHP 7, so choose the appropriate installer 
   	* Download installer for your machine
   	* Run the installer application (accept the defaults for any questions)
   
