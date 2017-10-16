@@ -1,4 +1,4 @@
-# Lesson 9 - Using Database Relationships with Flask/SQLalchemy - One to One
+# Lesson 10 - Using Database Relationships with Flask/SQLalchemy - One to Many
 
 ## Learning Objectives
 * Create one to many relationships using SQLalchemy

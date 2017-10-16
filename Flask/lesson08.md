@@ -140,10 +140,14 @@ if __name__ == '__main__':
 </body>
 </html>
 ```
-If it is done properly, when you run your application, you will be able to navigate to localhost:5000 and see this:
+If it is done properly, when you run your application, you will be able to navigate to localhost:5000/add and see this:
+
+![Uploading Images to Spring Boot with Cloudinary](img/lesson08b.png)
+
+Once you submit your form, you will be redirected to your image on the main page.
 
 ![Uploading Images to Spring Boot with Cloudinary](img/lesson08a.png)
 
-![Uploading Images to Spring Boot with Cloudinary](img/lesson08b.png)
+
 
 ## What is Going On
