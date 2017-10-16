@@ -140,3 +140,7 @@ if __name__ == '__main__':
 </body>
 </html>
 ```
+If it is done properly, when you run your application, you will be able to navigate to localhost:5000 and see this:
+![Running your first Flask Application](img/lesson08.png)
+
+## What is Going On

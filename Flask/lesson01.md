@@ -1,7 +1,7 @@
 # Lesson 1 - Introduction to Flask - Hello World with variable
 
 ## Learning Objectives
-* Create basic Flask application
+* Create a basic Flask application
 
 ## The Walkthrough
 1. Create a Flask Application
@@ -24,3 +24,6 @@ if __name__ == '__main__':
     app.run()
 ```
 If it is done properly, when you run your application, you will be able to navigate to localhost:5000 and see this:
+![Running your first Flask Application](img/lesson01.png)
+
+## What is Going On
