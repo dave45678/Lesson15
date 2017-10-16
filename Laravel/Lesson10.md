@@ -4,9 +4,8 @@
 ## Learning Objectives
 This lesson will take you through: 
 - Creating two models - Actors and Movies - that have a many to many relationship 
-- Creating the table that will record details of the relationship 
-- Creating a function to establish the many to many relationship between data that is being entered into the application. 
-- Creating a form to show that the relationship has successfully been created
+- Creating relationships between Actors and Movies that are generated within the applicaiton
+- Creating the table that will display details of the relationship 
 
 ## The Walkthrough
 
@@ -14,7 +13,7 @@ This lesson will take you through:
 
 2. Create a database called actorsandmovies
 
-3.Use Lesson 04 to set up your database configuration in your new project.  
+3. Use Lesson 04 to set up your database configuration in your new project.  
 
 4. Create a Movie model and a migration to create the movies table
 
@@ -177,10 +176,56 @@ class ActorMovie extends Migration
 
 ```
 
-6. Create a landing page to display a list of movies and actors: 
+6. Modify the model for Actor to define its relationship to Directors:
+* Edit the Actor model to look like this:
+``` php 
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Actor extends Model
+{
+    //
+
+
+    public function movies()
+    {
+        return $this->belongsToMany('App\Movie'); 
+    }
+}
+```
+
+7. Modify the model for Movie to define its relationship to Actors: 
+* Edit the Movie Model to look like this: 
+``` php 
+
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Movie extends Model
+{
+    //
+
+  public function actors()
+  {
+            return $this->hasMany('App\Actor'); 
+
+  }
+
+}
+
+```
+
+
+8. Create a landing page to display a list of movies and actors: 
 
 Create a file called movieindex.blade.php in the resources\views folder and edit it to look like this: 
-``` html 
+``` php
 <!DOCTYPE html>
 
 <html lang="en" xmlns:th="www.thymeleaf.org">
@@ -192,39 +237,134 @@ Create a file called movieindex.blade.php in the resources\views folder and edit
 </head>
 <body>
 <div class="container">
-		<table class="table table-striped">
-			<thead>
-					<tr>
-						<th>Title</th>
-						<th>Description</th>
-						<th>Year</th>
-						</tr>
-			</thead>
-			<tbody
-
-				@forelse($movies as $movie)
-					<tr>
-						<td>{{$movie->title}}</td>
-						<td>{{$movie->description}}</td>
+        <table class="table table-striped">
+            <thead>
+                @if(count($movies))
+                 <h4><a class="pull-right" href="/movies/create">Add a movie </a> </h4>
+                @endif
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Year</th>
+                        </tr>
+            </thead>
+            <tbody
+"
+                @forelse($movies as $movie)
+                    <tr>
+                        <td>{{$movie->title}}</td>
+                        <td>{{$movie->description}}</td>
                         <td>{{$movie->year}}</td>
-						</form>
-						</td>
-					</tr>
-				@empty
-					<h4> This is a list of movies. No movies are available right now, please <a href="/movies/create">Add one </a> </h4>
-				@endforelse
-			</tbody>
+                        </form>
+                        </td>
+                    </tr>
+                @empty
+                    <h4> This is a list of movies. No movies are available right now. <a href="/load">You can load the data</a></h4>
+                @endforelse
+            </tbody>
 </table>
+<table class="table table-striped">
+            <thead>
+                @if(count($actors))
+                 <h4><a class="pull-right" href="/actors/create">Add an actor </a> </h4>
+                @endif
+                    <tr>
+                        <th>Name</th>
+                        <th>Real Name</th>
+                        <th>Movie Count</th>
+                        </tr>
+            </thead>
+            <tbody>
+                @forelse($actors as $actor)
+                    <tr>
+                        <td>{{$actor->name}}</td>
+                        <td>{{$actor->realname}}</td>
+                        @if($actor->movies->count())
+                            <td>{{$actor->movies->count()}}</td>
+                        @else
+                            <td>No movies for this actor
+                            <br> 
+                            </td>
+                        @endif
+                        </td>
+                    </tr>
+                @empty
+                    <h4> This is a list of actors. No actors are available right now, please <a href="/load">load data </a> </h4>
+                @endforelse
+        </tbody>
+</table>
+
 </div>
 </body>
 </html>
-
 ```
+
+9. Edit the web.php file in the routes foler to look like this:
+
+``` php 
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| contains the "web" middleware group. Now create something great!
+|
+*/
+
+use App\Movie;
+use App\Actor;
+
+Route::get('/',function() {
+    return view('movieindex')
+   ->with('movies',App\Movie::all())
+   ->with('actors',App\Actor::all());
+});
+
+Route::get('/load',function(){
+
+       $actor = new App\Actor; 
+       $actor->name="Sandra Bullock";
+       $actor->realname="Sandra Mae Bullowski"; 
+       $actor->save(); 
+
+       $movie = new App\Movie; 
+       $movie->title="Emoji Movie";
+       $movie->year=2017; 
+       $movie->description="About Emojis..."; 
+       $actor->movies()->save($movie);
+
+       $movie = new App\Movie; 
+       $movie->title="Speed";
+       $movie->year=1994; 
+       $movie->description="About Speed";
+       $actor->movies()->save($movie);
+
+       $movie = new App\Movie; 
+       $movie->title="Gravity";
+       $movie->year=2013; 
+       $movie->description="About Gravity..."; 
+
+       $actor->movies()->save($movie);
+
+        return view('movieindex')
+       ->with('movies',App\Movie::all())
+       ->with('actors',App\Actor::all());
+});
+
+Route::resource('actors','ActorController');
+Route::resource('movies','MovieController');
+```
+
+10. Open up your browser and navigate to http://localhost:8000/ 
 
 The application should look like this: 
 ![Actors and Movies](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/img/listmoviesandactors.png "Creating a many to many relationship")
 
-9. Examine the database 
+10. Examine the database 
 
 
 ## What is Going On
