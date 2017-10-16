@@ -36,7 +36,7 @@
 
 17. [Deploying to Heroku]
 
-18. Email
+18. [Email](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson18.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
 19. [Uploading images to Laravel with Cloudinary]
 
