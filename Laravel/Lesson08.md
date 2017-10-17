@@ -145,4 +145,16 @@ Route::get('/3',function(){
 
 ``` 
 
+7. Open a browser window and navigate to ![http://localhost:8000] 
+
+* You should see this: 
+![Welcomepage](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/img/bladetemplateindex.png "Creating blade template subviews")
+
+* When you click on page 2 you should see this: 
+![Page Two](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/img/bladetemplateindex.png "Blade Page 2")
+
+* When you click on page 3 you should see this:
+![Page Three](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/img/bladetemplateindex.png "Blade Page Three")
+
+
 ## What is Going On
