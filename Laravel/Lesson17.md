@@ -104,17 +104,20 @@ $ git push heroku master
 	
 13. Open your application	
 
-```ShellSession
+``` shell
 $ heroku open
 ```	
 
 ### Pushing  new changes to Heroku
 	* Update the code in your local repository and push to heroku
 
-```
+``` shell
 $ git add .
 $ git commit -m "Database Changes for Heroku"
 $ git push heroku master
 ```
 
 	* Run your application and open a browser
+``` shell
+heroku open 
+```
