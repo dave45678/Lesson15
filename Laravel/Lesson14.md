@@ -1,56 +1,77 @@
 <!-- enter lesson number and title below separated by hyphen-->
-# Lesson-14 Basic Security
-
+# Lesson-15 Seeding: Loading data into your application before it runs
 ## Learning Objectives
-In this lesson, you will learn how to create an application that allows users to:
-
-* Register, and
-
-* Log in with details created during the registration process
 
 ## The Walkthrough
+1. Create a new Laravel project 
 
-1. Make sure your MySQL server is running. This means that you should have WampServer, Laragon or whatever application runs your web and SQL servers running.
-
-
-2. Create a new Laravel project. Don't forget to generate your application key if it does not already exist!
-
-``` shell
-laravel new Lesson14
+2. Create a seeder file - one that will allow you to feed values into your database: 
+``` 
+php artisan make:seeder UsersTableSeeder 
 ```
 
-3. Type:
+3. Use the faker class to create values for the seeder:
+* Open UsersTableSeeder.php in the database/seeds folder.
+* Edit it to look like this:
 
-``` shell
-php artisan make:auth
+``` php 
+<?php
+
+namespace App\Providers;
+
+use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema;
+
+class AppServiceProvider extends ServiceProvider
+{
+    /**
+     * Bootstrap any application services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+         Schema::defaultStringLength(191);
+    }
+
+    /**
+     * Register any application services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        //
+    }
+}
+
 ```
 
-4. You should see the following message:
+4. Set up your database connection so that the seeder is able store values into your table. Refer to Lesson04 if necessary.
 
-![Authentiation feature added](img/createdauth.png)
 
-5. Before you run your application, you have to set up a database connection, so that your users can be stored and authenticated against stored information.
-
-To do this, see [Using databases with Laravel], and use the appropriate names for your project.
-
-6. Run your laravel application by typing
-
-``` shell
-php artisan serve
+5. Run your migrations to make sure that the users table exists: 
+``` 
+php artisan migrate
 ```
-and going to port 8000 on localhost in your browser.
-
-You should see the following:
-
-![Authentiation feature added](img/laravelauthed.png)
 
 
-7. You can now use the register link (http://localhost:8000/register) to register users with your application!
+6. Run the seeder 
+``` 
+php artisan db:seed --class=UserssTableSeeder
 
-8. Once you have registered, you can log in with the e-mail and password used.
+```
+7. Check your database 
+```
+	use faker; 
+	select * from faker; 
+```
 
-***Note:***  The functionality to check e-mail addresses that have already been registered is included:
+## What's Going On 
+You created a seeder class to provide values to your fields. When you call the seeder class, it populates the selected table.
 
-![Authentiation feature added](img/alreadyregistered.png)
+You should see 50 records with realistic looking values. 
 
-## What is Going On
+Congratulations! You have faked your users.
+
+You can now use Lesson [] to see if they can log in using the e-mail addresses provided, and the password "password".

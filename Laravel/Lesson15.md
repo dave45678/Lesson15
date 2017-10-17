@@ -1,77 +1,34 @@
 <!-- enter lesson number and title below separated by hyphen-->
-# Lesson-15 Seeding: Loading data into your application before it runs
+# Lesson-17 Custom Error Messages
 ## Learning Objectives
+- Creating error pages that match your site 
 
 ## The Walkthrough
-1. Create a new Laravel project 
 
-2. Create a seeder file - one that will allow you to feed values into your database: 
-``` 
-php artisan make:seeder UsersTableSeeder 
+1. Create a template for the error message you want to display (e.g. 404.blade.php).
+Save it in the /resources/views/errors folder.
+
+2. Edit it to look like this: 
+``` html
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>List Courses</title>
+
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+</head>
+<body>
+</h3>
+    <div class="col-md-12">
+         <h1 class="text-danger text-center">Yaaaah...no. Couldn't find your page.</h1>
+    </div>
+</body>
+</html>
 ```
 
-3. Use the faker class to create values for the seeder:
-* Open UsersTableSeeder.php in the database/seeds folder.
-* Edit it to look like this:
-
-``` php 
-<?php
-
-namespace App\Providers;
-
-use Illuminate\Support\ServiceProvider;
-use Illuminate\Support\Facades\Schema;
-
-class AppServiceProvider extends ServiceProvider
-{
-    /**
-     * Bootstrap any application services.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-         Schema::defaultStringLength(191);
-    }
-
-    /**
-     * Register any application services.
-     *
-     * @return void
-     */
-    public function register()
-    {
-        //
-    }
-}
-
-```
-
-4. Set up your database connection so that the seeder is able store values into your table. Refer to Lesson04 if necessary.
+3. Open your browser and navigate to http://localhost:8000/unavailablepage 
+You should see the page you designed. 
 
 
-5. Run your migrations to make sure that the users table exists: 
-``` 
-php artisan migrate
-```
-
-
-6. Run the seeder 
-``` 
-php artisan db:seed --class=UserssTableSeeder
-
-```
-7. Check your database 
-```
-	use faker; 
-	select * from faker; 
-```
-
-## What's Going On 
-You created a seeder class to provide values to your fields. When you call the seeder class, it populates the selected table.
-
-You should see 50 records with realistic looking values. 
-
-Congratulations! You have faked your users.
-
-You can now use Lesson [] to see if they can log in using the e-mail addresses provided, and the password "password".
+## What is Going On

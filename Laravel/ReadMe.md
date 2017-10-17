@@ -26,19 +26,17 @@
 
 12. [Using Database Relationships with Laravel - OneToOne](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson12.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
-13. [Using sub-views with Blade]
+13. [Security - Basic Security](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson14.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
-14. [Security - Basic Security](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson14.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
+14. [Seeding (Loading data into your application before it runs)](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson14.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
-15. [Seeding (Loading data into your application before it runs)](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson15.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
+15. [Custom Error Pages](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson15.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
-16. [Custom Error Pages](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson16.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
+16. [Deploying to Heroku](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson16.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
-17. [Deploying to Heroku](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson17.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
+17. [Email](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson17.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
-18. [Email](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson18.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
+18. [Uploading images to Laravel with Cloudinary]
 
-19. [Uploading images to Laravel with Cloudinary]
-
-20. REST APIs with  Laravel
+19. REST APIs with  Laravel
 
