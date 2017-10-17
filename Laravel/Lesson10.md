@@ -132,13 +132,14 @@ class CreateActorsTable extends Migration
 ```
 
 7. Create a table that keeps track of the relationship between actors and movies, named actor_movie: 
+
 ``` shell 
 php artisan make:migration create_actor_movie  --create=actor_movie
 ```
 
 8. Modify the table to include the actor and movie details by editing the create_actors migration to look like this: 
 
-``php
+```php
 
 <?php
 
