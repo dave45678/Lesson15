@@ -16,7 +16,7 @@
 
 7. [Adding Twitter Bootstrap to Laravel - using the CDN](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson07.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
-8. [Adding Twitter Bootstrap to Spring Boot - the Complete Way]
+8. [Adding Twitter Bootstrap to Spring Boot with Blade Templates](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson08.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
 9. [Complete data life cycle – form, list, detail, delete](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson09.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
@@ -38,5 +38,4 @@
 
 18. [Uploading images to Laravel with Cloudinary]
 
-19. REST APIs with  Laravel
 
