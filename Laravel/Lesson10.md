@@ -178,6 +178,7 @@ class ActorMovie extends Migration
 
 6. Modify the model for Actor to define its relationship to Directors:
 * Edit the Actor model to look like this:
+
 ``` php 
 <?php
 
@@ -199,6 +200,7 @@ class Actor extends Model
 
 7. Modify the model for Movie to define its relationship to Actors: 
 * Edit the Movie Model to look like this: 
+
 ``` php 
 
 <?php
@@ -225,6 +227,7 @@ class Movie extends Model
 8. Create a landing page to display a list of movies and actors: 
 
 Create a file called movieindex.blade.php in the resources\views folder and edit it to look like this: 
+
 ``` php
 <!DOCTYPE html>
 
@@ -248,8 +251,7 @@ Create a file called movieindex.blade.php in the resources\views folder and edit
                         <th>Year</th>
                         </tr>
             </thead>
-            <tbody
-"
+            <tbody>
                 @forelse($movies as $movie)
                     <tr>
                         <td>{{$movie->title}}</td>
@@ -301,7 +303,7 @@ Create a file called movieindex.blade.php in the resources\views folder and edit
 
 9. Edit the web.php file in the routes foler to look like this:
 
-``` php 
+```php 
 <?php
 
 /*
@@ -364,7 +366,7 @@ Route::resource('movies','MovieController');
 The application should look like this: 
 ![Actors and Movies](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/img/listmoviesandactors.png "Creating a many to many relationship")
 
-10. Examine the database 
+11. Examine the database 
 
 
 ## What is Going On
