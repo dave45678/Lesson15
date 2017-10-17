@@ -34,7 +34,7 @@
 
 16. [Custom Error Pages](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson16.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
-17. [Deploying to Heroku]
+17. [Deploying to Heroku](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson17.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
 18. [Email](https://github.com/ajhenley/unofficialguides/blob/master/Laravel/Lesson18.md) - ![Walkthrough](img/i_list.png "Walkthrough") ![Code](img/i_code.png "Github Code")
 
