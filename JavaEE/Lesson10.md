@@ -352,7 +352,7 @@ public class ShowCourse extends HttpServlet {
 </head>
 <body>
 
-<a href="/add">Add a Course</a><br />
+<a href="/AddCourse">Add a Course</a><br />
 <table>
     <tr>
         <th>Title</th>
@@ -409,10 +409,6 @@ public class ShowCourse extends HttpServlet {
 ```
 
 15. Open MySQL. Your username is `root` and the password is `password`. Run the following SQL Scripts to create the database tables. You may have to switch to the database you set up for this tutorial. To do this in MySQL run the following command:
-
- ```sql
-use mydatabase;
- ```
 
 ```sql
 use unofficialGuides;

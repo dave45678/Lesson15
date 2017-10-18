@@ -3,6 +3,6 @@
   <module moduleId="org.eclipse.jst.jee.server:Lesson03" serverId="Tomcat v7.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:Lesson12" serverId="Tomcat v7.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:Lesson08"/>
-  <module moduleId="org.eclipse.jst.jee.server:Lesson10"/>
+  <module moduleId="org.eclipse.jst.jee.server:Lesson10" serverId="Tomcat v7.0 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:Lesson11" serverId="Tomcat v7.0 Server at localhost"/>
 </modules>
