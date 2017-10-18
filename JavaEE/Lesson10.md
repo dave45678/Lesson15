@@ -28,9 +28,9 @@
 		* javax.persistence_2.1.0.v201304241213.jar
 		* mysql-connector-java-5.1.42-bin.jar			
 
-	* We will be working with the following JAR files for using JSTL (Java Standard Tag Library)
-			* taglibs-standard-impl-1.2.5.jar
-			* javax.servlet.jsp.jstl-api-1.2.1.jar
+	* We will be working with the following JAR files for using JSTL (Java Standard Tag Library):
+		* taglibs-standard-impl-1.2.5.jar
+		* javax.servlet.jsp.jstl-api-1.2.1.jar
 
 3. Add the ```persistence.xml``` file
  * Create a folder under the Java ```src``` folder called ```META-INF```
@@ -425,15 +425,13 @@ credit integer,
 PRIMARY KEY (`id`)
 );
 
-
 select  * from course;
 
-INSERT INTO `unofficialGuides`.`course` (`instructor`, `title`, `credit`) VALUES ('Mary Tyler Moore', 'Freshman English', '3');
-INSERT INTO `unofficialGuides`.`course` (`instructor`, `title`, `credit`) VALUES ('Neil Tyson', 'Physics', '3');
-
-
+INSERT INTO `unofficialGuides`.`course` (`instructor`, `title`, `credit`)
+	VALUES ('Mary Tyler Moore', 'Freshman English', '3');
+INSERT INTO `unofficialGuides`.`course` (`instructor`, `title`, `credit`)
+	VALUES ('Neil Tyson', 'Physics', '3');
 ```
-
 
 16. Run your application (right-click on the servlet and select `Run as`) and open a browser, if you type in the URL http://localhost:8080/add you should see the form for adding a course.
 <!-- todo add image with page to add a course -->
@@ -452,14 +450,10 @@ INSERT INTO `unofficialGuides`.`course` (`instructor`, `title`, `credit`) VALUES
 
 Congratulations on your first 'full' application! You can now add data to the database, as well as review, modify and delete it.
 
-Notice the ```@WebServlet``` annotation at the top of each servlet. This is how you specify the URL which points to the servlet. You can call lthis anything you want. We call it the same as same as the servlet class name .
+Notice the ```@WebServlet``` annotation at the top of each servlet. This is how you specify the URL which points to the servlet. You can name this URL anything you want. We give it the same as same as the servlet class name. Whenever we need to browse to the servlet from the browser or reach the servlet from a web form we can use the name specified in this annotation as the URL.
 
-
-
-* JAR files contain code developed by third parties
-* JAR files contain classes which add functionality to your application
-* JAR files must be in your program's class path.
-
-In order to connect to the database we need to write a lot of code. Or let someone else write a lot of code. We're lucky because Oracle makes JAR (Java Archive) files which contain the code we need to connect to the database. JAR files are a collection of Java code and resources that we can use in our application. This saves us time when developing applications. The JAR files must be found by your application. You do this by placing them in the ```WebContent\WEB-INF\lib``` folder of your application. Once copied, all their functionality now becomes available for your application.
+JAR files are a collection of Java code and resources that we can use in our application. The JAR files must be found by your application. You do this by placing them in the ```WebContent\WEB-INF\lib``` folder of your application. Once copied, all their functionality now becomes available for your application. JAR files contain code developed by other organizations. JAR files contain classes which add functionality to your application. To be found by your application, JAR files must be in the application's class path. In order to connect to the database we need to write a lot of code. Or let someone else write a lot of code. We're lucky because Oracle makes JAR (Java Archive) files which contain the code we need to connect to the database.
 
 > In computer programming, a third-party software component is a reusable software component developed to be either freely distributed or sold by an entity other than the original vendor of the development platform. (Source: Wikipedia, https://en.wikipedia.org/wiki/Third-party_software_component)
+
+You application consists of the following parts:
