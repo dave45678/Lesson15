@@ -113,12 +113,7 @@
       </Realm>
 
 
-      <Realm  className="org.apache.catalina.realm.JDBCRealm"
-             driverName="com.mysql.jdbc.Driver"
-          connectionURL="jdbc:mysql://localhost:3306/tomcat_realm"
-         connectionName="tomcat_access" connectionPassword="password"
-              userTable="tomcat_users" userNameCol="user_name" userCredCol="password"
-          userRoleTable="tomcat_users_roles" roleNameCol="role_name" />
+      <Realm className="org.apache.catalina.realm.JDBCRealm" connectionName="tomcat_access" connectionPassword="password" connectionURL="jdbc:mysql://localhost:3306/tomcat_realm" driverName="com.mysql.jdbc.Driver" roleNameCol="role_name" userCredCol="password" userNameCol="user_name" userRoleTable="tomcat_users_roles" userTable="tomcat_users"/>
 
 
 
@@ -136,7 +131,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log." suffix=".txt"/>
 
-      <Context docBase="Lesson16" path="/Lesson16" reloadable="true" source="org.eclipse.jst.jee.server:Lesson16"/></Host>
+      <Context docBase="Lesson03" path="/Lesson03" reloadable="true" source="org.eclipse.jst.jee.server:Lesson03"/></Host>
     </Engine>
   </Service>
 </Server>

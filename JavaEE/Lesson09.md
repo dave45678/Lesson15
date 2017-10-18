@@ -2,10 +2,12 @@
 # Lesson 9 - Looping through a table from the database using JPA
 
 ## Learning Objectives
-* create a dynamic web application with a servlet and output page
-* connect to the mySQL database using JPA
-* retrieve the data as an ArrayList in the servlet
-* use JSTL to loop through and display all the records
+* Create dynamic web application
+* Add a servlet to the dynamic web application
+* Add a JSP (Java Server Page)
+* Connect to the mySQL database using JPA
+* Retrieve existing data from the database as an ArrayList in the servlet
+* Use JSTL to loop through and display all the records
 
 ## The Walkthrough
 

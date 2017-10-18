@@ -2,14 +2,15 @@
 # Lesson 1 - Hello World with Servlet and no variable
 ## Learning Objectives
 * Create dynamic web application
-* Create Servlet
-* Create JSP (Java Server Page)
+* Add a Servlet to the dynamic web application
+* Add an HTML (Hypertext Markup Language) page to display text
+* Enter text on the HTML page for the user to see
 
 ## The Walkthrough
 
 1. Create a Java Dynamic Web Application
 	* Name it Lesson01
-	* Hit next until you finish the wizard, and then wait until it's done.    
+	* Hit next until you finish the wizard, and then wait until it's done    
 
 2. Create a Servlet
 	* Right click on the src folder under JavaResources
@@ -70,6 +71,8 @@ Run your application and open a browser, if you type in the URL http://localhost
 <!--todo screenshot maybe -->
 
 ## What is Going On
+Hypertext Markup Language (HTML) is the standard markup language for creating web pages and web applications.
+
 We notice two methods in this class: <code>doGet()</code> and <code>doPost()</code>. The first one anwsers by HTTP to the reception of a GET request. The second to the reception of a POST request. As we want that in the both cases the servlet processes the request, <code>doPost()</code> forwards to <code>doGet()</code>. When we browse to the servlet url then the doGet() method is called. DoPost would only be called by a web form. We'll work with that later.
 
 The ```@WebServlet``` attribute. It contains the url for the serlvet

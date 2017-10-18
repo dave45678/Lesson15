@@ -2,7 +2,10 @@
 # Lesson 7 - Validating form data
 
 ## Learning Objectives
-* Create a website that contains an HTML form
+* Create dynamic web application
+* Add a servlet to the dynamic web application
+* Add a JSP (Java Server Page)
+* Create an HTML form on the JSP
 * Validate the values received by the servlet
 * Redirect user back to form if invalid data is entered
 * Use the Java Standard Tag Library to display form values

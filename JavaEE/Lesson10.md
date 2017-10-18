@@ -1,32 +1,41 @@
 # Lesson 10 - Complete data life cycle – input, update, list, detail, delete
-## The Walkthrough
 
+
+## Learning Objectives
+* Create dynamic web application
+* Add a servlet to the dynamic web application
+* Add a JSP (Java Server Page)
+* Connect to the mySQL database using JPA
+* Retrieve existing data from the database as an ArrayList in the servlet
+* Create a  JSP to show a single record in the database
+* Create a web form to add a record to the database
+* Create a web form to update a record in the database
+* Create a JSP to list the data in the database
+* Use JSTL to loop through and display all the records
+* Add a button to the list of data to allow users to delete a record
+
+
+## The Walkthrough
 
 1. Create a Java Dynamic Web Application
 	* Name it Lesson10
 	* Hit next until you finish the wizard, and then wait until it's done.    
 
-2. Add the Java Archive Files (JARs) to your project
-   * JAR files contain code developed by third parties
-	 * JAR files contain classes which add functionality to your application
-	 * JAR files must be in your program's class path.
-	 >Place JAR files in the folder ```WebContent\WEB-INF\lib``` so your program will >locate the classes in the JAR files
+2. Copy the Java Archive Files (JARs) to your project
+  * Place JAR files in the folder ```WebContent\WEB-INF\lib``` so your program will locate the classes in the JAR files
+  * We will be working with the following JAR files for accessing the data with JPA:
+	  * eclipselink.jar
+		* javax.persistence_2.1.0.v201304241213.jar
+		* mysql-connector-java-5.1.42-bin.jar			
 
-	 * We will be working with the following JAR files for accessing the data with JPA:
-	    * eclipselink.jar
-			* javax.persistence_2.1.0.v201304241213.jar
-			* mysql-connector-java-5.1.42-bin.jar			
-		* We will be working with the following JAR files for using JSTL (Java Standard Tag Library)
+	* We will be working with the following JAR files for using JSTL (Java Standard Tag Library)
 			* taglibs-standard-impl-1.2.5.jar
 			* javax.servlet.jsp.jstl-api-1.2.1.jar
 
-
-> In computer programming, a third-party software component is a reusable software component developed to be either freely distributed or sold by an entity other than the original vendor of the development platform. (Source: Wikipedia, https://en.wikipedia.org/wiki/Third-party_software_component)
-
-2. Add the persistence.xml file
- * Create a folder under the Java src folder called META-INF
- * In the META-INF folder, add a new file called persistence.xml
- * Copy the XML code as shown below.
+3. Add the ```persistence.xml``` file
+ * Create a folder under the Java ```src``` folder called ```META-INF```
+ * Right-click on the ```src\META-INF``` folder and select the menu option to add a new file. Call it ```persistence.xml```
+ * Copy the XML formatted code shown below.
 
  ```java
  <?xml version="1.0" encoding="UTF-8"?>
@@ -48,27 +57,28 @@
  </persistence>
  ```
 
-
- 3. Update the persistence.xml values with those for your project
+4. Update the ```persistence.xml``` values with those for your project
  * The values are case-sensitive.
  * Replace the capitalized words with their respective values as shown in the list below
- * Remember: XML attribute values should be in quotes
+ * Remember: `XML attribute values should be in quotes`
 
-PERSISTENCE_UNIT_NAME = "Lesson10"
-TRANSACTION_TYPE = "RESOURCE_LOCAL"
-PERSISTENCE_PROVIDER = "org.eclipse.persistence.jpa.PersistenceProvider"
-DATABASE_URL = "jdbc:mysql://localhost:3306/Lesson10"
-DATABASE_USER = "root"
-DATABASE_PASSWORD = "password"
-DATABASE_DRIVER = "com.mysql.jdbc.Driver"
+|Key Name|Value (include the quotes)|
+|-|-|
+|PERSISTENCE_UNIT_NAME | "Lesson10"|
+|TRANSACTION_TYPE | "RESOURCE_LOCAL"|
+|PERSISTENCE_PROVIDER | "org.eclipse.persistence.jpa.PersistenceProvider"|
+|DATABASE_URL | "jdbc:mysql://localhost:3306/Lesson10"|
+|DATABASE_USER | "root"|
+|DATABASE_PASSWORD | "password"|
+|DATABASE_DRIVER | "com.mysql.jdbc.Driver"|
 
-4. Create the entities which are Java classes that represent your database tables
+5. Create the entities which are Java classes that represent your database tables
 * Right-click on your project and select `New`
 * Select `JPA Entities from Tables`
 * Select your connection, schema (database name) and tables
 * If your tables have relationships then you will be defining those relationships on the screens that follow.
 
-5. Create a new class called `DbUtil`
+6. Create a new class called `DbUtil`
 * Copy the following code into the DbUtil class
 * Replace the PERSISTENCE_UNIT_NAME with the value shown in Step 3
 
@@ -89,7 +99,7 @@ public class DbUtil {
 }
 ```
 
-6. Create a helper class for your course entity.
+7. Create a helper class for your course entity.
 * Name the file `DbCourse`
 
 ```java
@@ -164,10 +174,9 @@ public class DbCourse {
 		}
 	}
 
-
 }
 ```
-7. Right-click on your Java src folder and select the menu item to to Create a Servlet for adding a new course. The servlet should be called `AddCourse`
+8. Right-click on your Java ```src``` folder and select the menu item to to `Create a Servlet` for adding a new course. The servlet should be called `AddCourse`
 
 ```java
 import java.io.IOException;
@@ -199,10 +208,9 @@ public class AddCourse extends HttpServlet {
 
 }
 ```
-8. Right-click on your Java src folder and select the menu item to to Create a Servlet for listing all courses. The servlet should be called `ListCourse`
+9. Right-click on your Java src folder and select the menu item to to Create a Servlet for listing all courses. The servlet should be called `ListCourse`
 
 ```java
-
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -224,7 +232,6 @@ public class ListCourses extends HttpServlet {
 			throws ServletException, IOException {
 		HttpSession session = request.getSession();
 
-
 		ArrayList<Course> courses = (ArrayList<Course>) DbCourse.getAllCourses();
 		request.setAttribute("courses",courses );
 		request.getRequestDispatcher("/list.jsp").forward(request, response);
@@ -233,12 +240,11 @@ public class ListCourses extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-
 	}
 
 }
 ```
-9. Right-click on your Java src folder and select the menu item to to Create a Servlet for editing a course. The servlet should be called `EdittCourse`
+10. Right-click on your Java ```src``` folder and select the menu item to to Create a Servlet for editing a course. The servlet should be called `EditCourse`
 
 ```java
 import java.io.IOException;
@@ -268,7 +274,7 @@ public class EditCourse extends HttpServlet {
 }
 ```
 
-10. Right-click on your Java src folder and select the menu item to to Create a Servlet for editing a course. The servlet should be called `ShowCourse`
+11. Right-click on your Java src folder and select the menu item to to Create a Servlet for editing a course. The servlet should be called `ShowCourse`
 
 ```java
 import java.io.IOException;
@@ -307,7 +313,7 @@ public class ShowCourse extends HttpServlet {
 ### In the next few steps you will be adding some JSP files to your project.
 >JSP files must be placed in the WebContent folder. Files in the /WEB-INF folder or below will not be displayed and will generate an HTTP 404 Error.
 
-11. Right-click on the `WebContent` folder and add a JSP file called `courseform.jsp`
+12. Right-click on the `WebContent` folder and add a JSP file called `courseform.jsp`
 
 ```html
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -332,7 +338,7 @@ public class ShowCourse extends HttpServlet {
 </html>
 ```
 
-12. Right-click on the `WebContent` folder and add a JSP file called `list.jsp`
+13. Right-click on the `WebContent` folder and add a JSP file called `list.jsp`
 
 ```html
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -373,7 +379,7 @@ public class ShowCourse extends HttpServlet {
 
 ```
 
-13. Right-click on the `WebContent` folder and add a JSP file called `show.jsp`
+14. Right-click on the `WebContent` folder and add a JSP file called `show.jsp`
 
 ```html
 <%@ page language="java" contentType="text/html; charset=UTF-8"
@@ -402,7 +408,7 @@ public class ShowCourse extends HttpServlet {
 
 ```
 
-14. Open MySQL. Your username is `root` and the password is `password`. Run the following SQL Scripts to create the database tables. You may have to switch to the database you set up for this tutorial. To do this in MySQL run the following command:
+15. Open MySQL. Your username is `root` and the password is `password`. Run the following SQL Scripts to create the database tables. You may have to switch to the database you set up for this tutorial. To do this in MySQL run the following command:
 
  ```sql
 use mydatabase;
@@ -429,19 +435,31 @@ INSERT INTO `unofficialGuides`.`course` (`instructor`, `title`, `credit`) VALUES
 ```
 
 
-15. Run your application (right-click on the servlet and select `Run as`) and open a browser, if you type in the URL http://localhost:8080/add you should see the form for adding a course.
+16. Run your application (right-click on the servlet and select `Run as`) and open a browser, if you type in the URL http://localhost:8080/add you should see the form for adding a course.
 <!-- todo add image with page to add a course -->
 
-16. If you enter values and submit the form, it will show you a list of all the courses added so far. So, you should see a page that displays the list of courses.
+17. If you enter values and submit the form, it will show you a list of all the courses added so far. So, you should see a page that displays the list of courses.
 
 <!-- todo add image with page to show the list of courses -->
 
-17. If you click on a particular course you should see the details for that course.
+18. If you click on a particular course you should see the details for that course.
 
 <!-- todo add image of page to show details for a course, including delete button -->
 
-18. If you click on the delete button next to a course then the course should delete and return you to the course listing.
+19. If you click on the delete button next to a course then the course should delete and return you to the course listing.
 
 ## What is Going On
 
 Congratulations on your first 'full' application! You can now add data to the database, as well as review, modify and delete it.
+
+Notice the ```@WebServlet``` annotation at the top of each servlet. This is how you specify the URL which points to the servlet. You can call lthis anything you want. We call it the same as same as the servlet class name .
+
+
+
+* JAR files contain code developed by third parties
+* JAR files contain classes which add functionality to your application
+* JAR files must be in your program's class path.
+
+In order to connect to the database we need to write a lot of code. Or let someone else write a lot of code. We're lucky because Oracle makes JAR (Java Archive) files which contain the code we need to connect to the database. JAR files are a collection of Java code and resources that we can use in our application. This saves us time when developing applications. The JAR files must be found by your application. You do this by placing them in the ```WebContent\WEB-INF\lib``` folder of your application. Once copied, all their functionality now becomes available for your application.
+
+> In computer programming, a third-party software component is a reusable software component developed to be either freely distributed or sold by an entity other than the original vendor of the development platform. (Source: Wikipedia, https://en.wikipedia.org/wiki/Third-party_software_component)

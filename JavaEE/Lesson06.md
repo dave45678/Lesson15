@@ -1,9 +1,11 @@
 <!-- enter lesson number and title below separated by hyphen-->
-# Lesson 6 - Handling form values safely with JSTL
+# Lesson 6 - Handling form values safely with JavaServer Pages Standard Tag Library (JSTL)
 ## Learning Objectives
-* Create an HTML form on a web page
+* Create dynamic web application
+* Add a servlet to the dynamic web application
+* Add a JSP (Java Server Page)
+* Create an HTML form on the JSP
 * Capture the form values in the servlet
-* Adding the form values to the Session
 * Redirect to output page from the servlet
 * Display form values on the output page
 * Use the Java Standard Tag Library to safely display form values

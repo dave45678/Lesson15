@@ -4,8 +4,9 @@
 # Lesson 3 - Hello World with Servlet and external variables
 ## Learning Objectives
 * Create dynamic web application
-* Create Servlet
-* Create JSP (Java Server Page)
+* Add a Servlet to the dynamic web application
+* Add an HTML (Hypertext Markup Language) page to display text
+* Enter text on the HTML page for the user to see
 * Create a Resource Bundle to store messages and properties
 
 ## The Walkthrough

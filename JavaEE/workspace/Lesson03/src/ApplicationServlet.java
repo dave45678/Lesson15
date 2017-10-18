@@ -1,7 +1,9 @@
 
 
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.Properties;
 
@@ -17,6 +19,49 @@ public class ApplicationServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		
+		//https://stackoverflow.com/questions/2161054/where-to-place-and-how-to-read-configuration-resource-files-in-servlet-based-app/
+		InputStream input = getServletContext().getResourceAsStream("/WEB-INF/foo.properties");
+
+		
+		
+		
+		
+		response.getWriter().append("Served at: ").append(request.getContextPath());
+	}
+
+	public void readProperties(){
+		Properties prop = new Properties();
+		InputStream input = null;
+
+		try {
+
+			input = new FileInputStream("config.properties");
+
+			// load a properties file
+			prop.load(input);
+
+			// get the property value and print it out
+			System.out.println(prop.getProperty("database"));
+			System.out.println(prop.getProperty("dbuser"));
+			System.out.println(prop.getProperty("dbpassword"));
+
+		} catch (IOException ex) {
+			ex.printStackTrace();
+		} finally {
+			if (input != null) {
+				try {
+					input.close();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		}
+
+	}
+
+	public void saveProperties(){
 		Properties prop = new Properties();
 		OutputStream output = null;
 
@@ -44,12 +89,7 @@ public class ApplicationServlet extends HttpServlet {
 			}
 
 		}
-		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
-
-
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		doGet(request, response);
-	}
+	
 
 }

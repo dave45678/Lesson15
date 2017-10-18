@@ -2,8 +2,11 @@
 # Lesson 2 - Hello World with Servlet and variable
 ## Learning Objectives
 * Create dynamic web application
-* Create Servlet
-* Create JSP (Java Server Page)
+* Add a servlet to the dynamic web application
+* Create a variable in the servlet and set it to a value
+* Add an HTML (Hypertext Markup Language) page
+* Display the value of the variable from the servlet
+
 
 ## The Walkthrough
 

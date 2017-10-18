@@ -1,7 +1,9 @@
 <!-- enter lesson number and title below separated by hyphen-->
 # Lesson 5 - Creating a Java Bean
 ## Learning Objectives
-* Create a Dynamic Web Application with a Servlet and JSPs
+* Create dynamic web application
+* Add a servlet to the dynamic web application
+* Add a JSP (Java Server Page)
 * Create a User Bean
 * Populate the bean from a web form
 * Add the bean to the session

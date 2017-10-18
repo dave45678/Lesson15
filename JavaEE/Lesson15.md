@@ -1,5 +1,5 @@
 <!-- enter lesson number and title below separated by hyphen-->
-# Lesson 15 - JPA database relationships - one to many
+# Lesson 15 - JPA database relationships - one to one
 
 ## Learning Objectives
 * create a dynamic web application with a servlet and output page
