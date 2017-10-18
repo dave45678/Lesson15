@@ -38,7 +38,7 @@
 		* Once the software is installed, run Eclipse  
 		* Click Help -> Eclipse Marketplace and install Spring Tools
 
-5. Just to be on the safe side, reboot your machine
+5. Reboot your machine
 
 ## What's Going On
 The software you are downloading are the things you will need to write, compile and deploy java applications from your own machine.
