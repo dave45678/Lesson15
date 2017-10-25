@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<h1>List of actors and movies</h1>
+<h1>List of Employees and Laptops</h1>
 <c:forEach var="employee" items="${employees}">
     <c:out value="${employee.employeeName}"></c:out> 
     has been assigned <c:out value="${employee.laptop.laptopName}"></c:out><br/>      
